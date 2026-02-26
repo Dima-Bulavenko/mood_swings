@@ -1,0 +1,701 @@
+user_id,mood,note,town,timestamp
+U001,sad,,Sadness Town,2026-02-19 16:38:18
+U001,calm,,Calmness Town,2026-02-20 08:06:48
+U001,happy,Played with my dog,Happiness Town,2026-02-21 12:14:59
+U001,happy,Watched a movie,Happiness Town,2026-02-22 04:30:57
+U001,happy,Read a book,Happiness Town,2026-02-23 06:57:25
+U001,happy,Read a book,Happiness Town,2026-02-24 12:37:55
+U001,sad,,Sadness Town,2026-02-25 05:46:09
+U001,sad,,Sadness Town,2026-02-26 00:01:51
+U001,happy,Watched a movie,Happiness Town,2026-02-27 16:42:51
+U001,sad,,Sadness Town,2026-02-28 02:11:17
+U001,happy,Cooked a nice meal,Happiness Town,2026-03-01 18:16:16
+U001,happy,Lunch with friends,Happiness Town,2026-03-02 23:38:16
+U001,calm,,Calmness Town,2026-03-03 11:16:41
+U001,calm,,Calmness Town,2026-03-04 08:56:17
+U002,sad,,Sadness Town,2026-02-19 08:51:03
+U002,happy,Went for a walk,Happiness Town,2026-02-20 02:40:47
+U002,happy,Read a book,Happiness Town,2026-02-21 03:51:37
+U002,calm,,Calmness Town,2026-02-22 00:14:05
+U002,calm,,Calmness Town,2026-02-23 15:07:39
+U002,calm,,Calmness Town,2026-02-24 08:19:09
+U002,happy,Watched a movie,Happiness Town,2026-02-25 10:46:59
+U002,calm,,Calmness Town,2026-02-26 09:20:19
+U002,happy,Read a book,Happiness Town,2026-02-27 12:50:06
+U002,happy,Family time,Happiness Town,2026-02-28 12:14:38
+U002,happy,Had a great workout,Happiness Town,2026-03-01 21:01:13
+U002,calm,,Calmness Town,2026-03-02 11:59:03
+U002,sad,,Sadness Town,2026-03-03 10:59:09
+U002,happy,Watched a movie,Happiness Town,2026-03-04 19:04:36
+U003,happy,Family time,Happiness Town,2026-02-19 04:04:33
+U003,happy,Played with my dog,Happiness Town,2026-02-20 02:22:05
+U003,sad,,Sadness Town,2026-02-21 02:16:46
+U003,sad,,Sadness Town,2026-02-22 08:40:28
+U003,sad,,Sadness Town,2026-02-23 06:14:49
+U003,sad,,Sadness Town,2026-02-24 12:01:57
+U003,calm,,Calmness Town,2026-02-25 12:06:49
+U003,sad,,Sadness Town,2026-02-26 17:27:54
+U003,calm,,Calmness Town,2026-02-27 12:06:56
+U003,happy,Went for a walk,Happiness Town,2026-02-28 19:02:42
+U003,happy,Watched a movie,Happiness Town,2026-03-01 06:42:15
+U003,sad,,Sadness Town,2026-03-02 16:10:53
+U003,calm,,Calmness Town,2026-03-03 21:44:39
+U003,calm,,Calmness Town,2026-03-04 01:43:22
+U004,happy,Lunch with friends,Happiness Town,2026-02-19 01:34:25
+U004,happy,Family time,Happiness Town,2026-02-20 23:54:28
+U004,calm,,Calmness Town,2026-02-21 13:30:07
+U004,sad,,Sadness Town,2026-02-22 22:49:34
+U004,sad,,Sadness Town,2026-02-23 02:23:54
+U004,calm,,Calmness Town,2026-02-24 22:20:08
+U004,happy,Went for a walk,Happiness Town,2026-02-25 18:48:56
+U004,calm,,Calmness Town,2026-02-26 00:16:04
+U004,happy,Lunch with friends,Happiness Town,2026-02-27 16:08:19
+U004,happy,Played with my dog,Happiness Town,2026-02-28 07:17:26
+U004,calm,,Calmness Town,2026-03-01 14:11:31
+U004,calm,,Calmness Town,2026-03-02 05:55:23
+U004,calm,,Calmness Town,2026-03-03 17:21:42
+U004,happy,Family time,Happiness Town,2026-03-04 00:41:29
+U005,happy,Family time,Happiness Town,2026-02-19 20:09:39
+U005,happy,Family time,Happiness Town,2026-02-20 03:32:11
+U005,happy,Had a great workout,Happiness Town,2026-02-21 19:16:00
+U005,calm,,Calmness Town,2026-02-22 17:33:05
+U005,calm,,Calmness Town,2026-02-23 07:13:04
+U005,sad,,Sadness Town,2026-02-24 15:04:52
+U005,calm,,Calmness Town,2026-02-25 01:52:24
+U005,happy,Watched a movie,Happiness Town,2026-02-26 22:02:17
+U005,calm,,Calmness Town,2026-02-27 11:03:14
+U005,calm,,Calmness Town,2026-02-28 08:34:00
+U005,calm,,Calmness Town,2026-03-01 03:13:04
+U005,calm,,Calmness Town,2026-03-02 09:06:24
+U005,sad,,Sadness Town,2026-03-03 23:32:00
+U005,calm,,Calmness Town,2026-03-04 06:30:40
+U006,sad,,Sadness Town,2026-02-19 07:24:23
+U006,happy,Had a great workout,Happiness Town,2026-02-20 02:54:45
+U006,happy,Played with my dog,Happiness Town,2026-02-21 01:21:18
+U006,sad,,Sadness Town,2026-02-22 04:38:50
+U006,calm,,Calmness Town,2026-02-23 06:46:54
+U006,calm,,Calmness Town,2026-02-24 00:39:10
+U006,calm,,Calmness Town,2026-02-25 21:41:12
+U006,calm,,Calmness Town,2026-02-26 08:23:47
+U006,calm,,Calmness Town,2026-02-27 22:31:32
+U006,sad,,Sadness Town,2026-02-28 15:02:45
+U006,calm,,Calmness Town,2026-03-01 23:49:49
+U006,happy,Family time,Happiness Town,2026-03-02 08:09:27
+U006,calm,,Calmness Town,2026-03-03 17:31:02
+U006,calm,,Calmness Town,2026-03-04 12:26:02
+U007,sad,,Sadness Town,2026-02-19 04:04:08
+U007,calm,,Calmness Town,2026-02-20 09:25:50
+U007,happy,Had a great workout,Happiness Town,2026-02-21 06:22:48
+U007,sad,,Sadness Town,2026-02-22 14:02:11
+U007,happy,Played with my dog,Happiness Town,2026-02-23 17:11:27
+U007,sad,,Sadness Town,2026-02-24 20:13:11
+U007,calm,,Calmness Town,2026-02-25 11:58:12
+U007,sad,,Sadness Town,2026-02-26 23:12:23
+U007,calm,,Calmness Town,2026-02-27 13:27:07
+U007,sad,,Sadness Town,2026-02-28 01:44:02
+U007,calm,,Calmness Town,2026-03-01 10:40:31
+U007,sad,,Sadness Town,2026-03-02 14:40:11
+U007,happy,Played with my dog,Happiness Town,2026-03-03 00:38:54
+U007,calm,,Calmness Town,2026-03-04 04:36:37
+U008,calm,,Calmness Town,2026-02-19 15:50:11
+U008,happy,Lunch with friends,Happiness Town,2026-02-20 09:31:49
+U008,happy,Read a book,Happiness Town,2026-02-21 15:21:41
+U008,sad,,Sadness Town,2026-02-22 18:23:06
+U008,happy,Had a great workout,Happiness Town,2026-02-23 01:58:58
+U008,happy,Watched a movie,Happiness Town,2026-02-24 22:29:49
+U008,happy,Watched a movie,Happiness Town,2026-02-25 04:48:35
+U008,happy,Cooked a nice meal,Happiness Town,2026-02-26 20:45:10
+U008,happy,Went for a walk,Happiness Town,2026-02-27 21:11:21
+U008,happy,Went for a walk,Happiness Town,2026-02-28 02:32:59
+U008,sad,,Sadness Town,2026-03-01 22:37:27
+U008,sad,,Sadness Town,2026-03-02 11:20:04
+U008,happy,Went for a walk,Happiness Town,2026-03-03 17:31:36
+U008,calm,,Calmness Town,2026-03-04 12:05:11
+U009,happy,Played with my dog,Happiness Town,2026-02-19 10:33:59
+U009,calm,,Calmness Town,2026-02-20 01:13:49
+U009,calm,,Calmness Town,2026-02-21 18:21:39
+U009,happy,Family time,Happiness Town,2026-02-22 08:37:23
+U009,calm,,Calmness Town,2026-02-23 13:43:43
+U009,calm,,Calmness Town,2026-02-24 22:11:03
+U009,happy,Cooked a nice meal,Happiness Town,2026-02-25 11:20:09
+U009,sad,,Sadness Town,2026-02-26 21:22:14
+U009,calm,,Calmness Town,2026-02-27 03:30:24
+U009,happy,Cooked a nice meal,Happiness Town,2026-02-28 20:38:55
+U009,sad,,Sadness Town,2026-03-01 08:35:02
+U009,calm,,Calmness Town,2026-03-02 10:35:22
+U009,sad,,Sadness Town,2026-03-03 10:07:24
+U009,calm,,Calmness Town,2026-03-04 13:25:28
+U010,calm,,Calmness Town,2026-02-19 02:03:19
+U010,sad,,Sadness Town,2026-02-20 11:10:18
+U010,happy,Read a book,Happiness Town,2026-02-21 04:24:19
+U010,sad,,Sadness Town,2026-02-22 13:15:55
+U010,sad,,Sadness Town,2026-02-23 23:50:07
+U010,calm,,Calmness Town,2026-02-24 06:50:54
+U010,calm,,Calmness Town,2026-02-25 11:03:38
+U010,happy,Had a great workout,Happiness Town,2026-02-26 11:20:49
+U010,calm,,Calmness Town,2026-02-27 18:29:16
+U010,calm,,Calmness Town,2026-02-28 01:36:47
+U010,happy,Cooked a nice meal,Happiness Town,2026-03-01 16:31:11
+U010,happy,Played with my dog,Happiness Town,2026-03-02 21:39:45
+U010,calm,,Calmness Town,2026-03-03 06:55:18
+U010,happy,Played with my dog,Happiness Town,2026-03-04 04:17:11
+U011,happy,Had a great workout,Happiness Town,2026-02-19 12:06:59
+U011,calm,,Calmness Town,2026-02-20 13:26:36
+U011,sad,,Sadness Town,2026-02-21 04:50:58
+U011,happy,Lunch with friends,Happiness Town,2026-02-22 17:56:34
+U011,happy,Went for a walk,Happiness Town,2026-02-23 09:23:18
+U011,calm,,Calmness Town,2026-02-24 14:25:26
+U011,sad,,Sadness Town,2026-02-25 01:18:55
+U011,calm,,Calmness Town,2026-02-26 20:25:13
+U011,calm,,Calmness Town,2026-02-27 10:04:18
+U011,calm,,Calmness Town,2026-02-28 18:34:54
+U011,calm,,Calmness Town,2026-03-01 18:37:19
+U011,sad,,Sadness Town,2026-03-02 04:56:31
+U011,happy,Went for a walk,Happiness Town,2026-03-03 21:19:49
+U011,sad,,Sadness Town,2026-03-04 19:57:15
+U012,happy,Read a book,Happiness Town,2026-02-19 18:21:20
+U012,calm,,Calmness Town,2026-02-20 17:34:11
+U012,calm,,Calmness Town,2026-02-21 16:53:05
+U012,sad,,Sadness Town,2026-02-22 14:01:10
+U012,calm,,Calmness Town,2026-02-23 16:19:38
+U012,sad,,Sadness Town,2026-02-24 08:58:03
+U012,calm,,Calmness Town,2026-02-25 01:58:14
+U012,happy,Watched a movie,Happiness Town,2026-02-26 19:03:29
+U012,calm,,Calmness Town,2026-02-27 17:31:13
+U012,calm,,Calmness Town,2026-02-28 08:51:52
+U012,happy,Family time,Happiness Town,2026-03-01 05:36:14
+U012,sad,,Sadness Town,2026-03-02 11:51:09
+U012,happy,Watched a movie,Happiness Town,2026-03-03 20:53:47
+U012,sad,,Sadness Town,2026-03-04 02:02:22
+U013,happy,Had a great workout,Happiness Town,2026-02-19 18:58:17
+U013,calm,,Calmness Town,2026-02-20 18:35:00
+U013,calm,,Calmness Town,2026-02-21 14:18:42
+U013,happy,Read a book,Happiness Town,2026-02-22 18:15:04
+U013,calm,,Calmness Town,2026-02-23 12:50:54
+U013,calm,,Calmness Town,2026-02-24 20:44:10
+U013,happy,Played with my dog,Happiness Town,2026-02-25 23:31:06
+U013,calm,,Calmness Town,2026-02-26 09:55:50
+U013,happy,Watched a movie,Happiness Town,2026-02-27 21:32:38
+U013,calm,,Calmness Town,2026-02-28 16:52:33
+U013,sad,,Sadness Town,2026-03-01 11:17:56
+U013,sad,,Sadness Town,2026-03-02 23:16:12
+U013,calm,,Calmness Town,2026-03-03 07:42:44
+U013,calm,,Calmness Town,2026-03-04 09:11:24
+U014,happy,Played with my dog,Happiness Town,2026-02-19 07:30:20
+U014,calm,,Calmness Town,2026-02-20 21:03:11
+U014,happy,Lunch with friends,Happiness Town,2026-02-21 10:04:46
+U014,happy,Family time,Happiness Town,2026-02-22 17:47:56
+U014,happy,Played with my dog,Happiness Town,2026-02-23 10:47:21
+U014,sad,,Sadness Town,2026-02-24 13:59:01
+U014,calm,,Calmness Town,2026-02-25 18:07:10
+U014,calm,,Calmness Town,2026-02-26 07:52:53
+U014,happy,Had a great workout,Happiness Town,2026-02-27 18:22:08
+U014,happy,Played with my dog,Happiness Town,2026-02-28 04:22:02
+U014,calm,,Calmness Town,2026-03-01 18:20:32
+U014,calm,,Calmness Town,2026-03-02 21:32:25
+U014,calm,,Calmness Town,2026-03-03 10:26:28
+U014,sad,,Sadness Town,2026-03-04 10:15:32
+U015,sad,,Sadness Town,2026-02-19 18:25:29
+U015,happy,Went for a walk,Happiness Town,2026-02-20 00:24:49
+U015,happy,Went for a walk,Happiness Town,2026-02-21 22:20:59
+U015,calm,,Calmness Town,2026-02-22 22:29:36
+U015,calm,,Calmness Town,2026-02-23 03:19:06
+U015,sad,,Sadness Town,2026-02-24 10:45:53
+U015,happy,Had a great workout,Happiness Town,2026-02-25 19:47:41
+U015,calm,,Calmness Town,2026-02-26 21:40:54
+U015,happy,Read a book,Happiness Town,2026-02-27 13:55:27
+U015,happy,Went for a walk,Happiness Town,2026-02-28 18:44:49
+U015,calm,,Calmness Town,2026-03-01 02:04:12
+U015,happy,Played with my dog,Happiness Town,2026-03-02 23:16:49
+U015,calm,,Calmness Town,2026-03-03 13:10:28
+U015,calm,,Calmness Town,2026-03-04 20:51:04
+U016,happy,Read a book,Happiness Town,2026-02-19 13:18:06
+U016,calm,,Calmness Town,2026-02-20 12:10:16
+U016,happy,Watched a movie,Happiness Town,2026-02-21 21:35:01
+U016,calm,,Calmness Town,2026-02-22 22:32:43
+U016,happy,Played with my dog,Happiness Town,2026-02-23 12:01:23
+U016,calm,,Calmness Town,2026-02-24 09:37:51
+U016,calm,,Calmness Town,2026-02-25 23:49:41
+U016,happy,Cooked a nice meal,Happiness Town,2026-02-26 06:30:02
+U016,calm,,Calmness Town,2026-02-27 06:08:48
+U016,sad,,Sadness Town,2026-02-28 15:04:15
+U016,happy,Family time,Happiness Town,2026-03-01 20:27:49
+U016,sad,,Sadness Town,2026-03-02 10:06:09
+U016,happy,Cooked a nice meal,Happiness Town,2026-03-03 18:36:15
+U016,calm,,Calmness Town,2026-03-04 08:37:15
+U017,happy,Lunch with friends,Happiness Town,2026-02-19 22:20:32
+U017,happy,Had a great workout,Happiness Town,2026-02-20 02:30:00
+U017,calm,,Calmness Town,2026-02-21 08:16:47
+U017,happy,Cooked a nice meal,Happiness Town,2026-02-22 08:28:14
+U017,calm,,Calmness Town,2026-02-23 23:37:42
+U017,sad,,Sadness Town,2026-02-24 21:49:21
+U017,calm,,Calmness Town,2026-02-25 15:08:57
+U017,happy,Family time,Happiness Town,2026-02-26 09:37:02
+U017,calm,,Calmness Town,2026-02-27 17:02:08
+U017,calm,,Calmness Town,2026-02-28 08:57:19
+U017,calm,,Calmness Town,2026-03-01 14:43:28
+U017,calm,,Calmness Town,2026-03-02 16:33:48
+U017,calm,,Calmness Town,2026-03-03 01:33:39
+U017,happy,Went for a walk,Happiness Town,2026-03-04 20:47:50
+U018,happy,Read a book,Happiness Town,2026-02-19 10:45:35
+U018,happy,Went for a walk,Happiness Town,2026-02-20 12:16:05
+U018,calm,,Calmness Town,2026-02-21 10:06:21
+U018,happy,Watched a movie,Happiness Town,2026-02-22 18:09:24
+U018,happy,Cooked a nice meal,Happiness Town,2026-02-23 16:41:32
+U018,calm,,Calmness Town,2026-02-24 18:49:57
+U018,calm,,Calmness Town,2026-02-25 16:17:53
+U018,sad,,Sadness Town,2026-02-26 04:56:33
+U018,calm,,Calmness Town,2026-02-27 01:27:53
+U018,sad,,Sadness Town,2026-02-28 17:58:36
+U018,calm,,Calmness Town,2026-03-01 10:21:33
+U018,happy,Watched a movie,Happiness Town,2026-03-02 14:31:03
+U018,sad,,Sadness Town,2026-03-03 09:23:39
+U018,calm,,Calmness Town,2026-03-04 05:00:20
+U019,happy,Lunch with friends,Happiness Town,2026-02-19 04:30:03
+U019,happy,Had a great workout,Happiness Town,2026-02-20 20:46:39
+U019,sad,,Sadness Town,2026-02-21 07:49:14
+U019,sad,,Sadness Town,2026-02-22 18:13:53
+U019,happy,Played with my dog,Happiness Town,2026-02-23 13:04:01
+U019,calm,,Calmness Town,2026-02-24 15:38:49
+U019,happy,Went for a walk,Happiness Town,2026-02-25 12:10:39
+U019,calm,,Calmness Town,2026-02-26 14:55:01
+U019,happy,Had a great workout,Happiness Town,2026-02-27 05:48:21
+U019,happy,Family time,Happiness Town,2026-02-28 04:12:26
+U019,calm,,Calmness Town,2026-03-01 23:30:06
+U019,happy,Went for a walk,Happiness Town,2026-03-02 10:28:39
+U019,sad,,Sadness Town,2026-03-03 16:53:00
+U019,happy,Went for a walk,Happiness Town,2026-03-04 04:51:03
+U020,sad,,Sadness Town,2026-02-19 01:50:41
+U020,calm,,Calmness Town,2026-02-20 02:54:37
+U020,calm,,Calmness Town,2026-02-21 01:10:07
+U020,calm,,Calmness Town,2026-02-22 21:22:32
+U020,sad,,Sadness Town,2026-02-23 09:27:56
+U020,happy,Played with my dog,Happiness Town,2026-02-24 15:58:38
+U020,sad,,Sadness Town,2026-02-25 22:42:58
+U020,calm,,Calmness Town,2026-02-26 21:50:56
+U020,calm,,Calmness Town,2026-02-27 12:32:29
+U020,happy,Read a book,Happiness Town,2026-02-28 20:12:19
+U020,happy,Read a book,Happiness Town,2026-03-01 15:52:15
+U020,sad,,Sadness Town,2026-03-02 00:38:17
+U020,happy,Watched a movie,Happiness Town,2026-03-03 08:31:42
+U020,calm,,Calmness Town,2026-03-04 10:51:02
+U021,sad,,Sadness Town,2026-02-19 23:15:48
+U021,calm,,Calmness Town,2026-02-20 03:34:57
+U021,happy,Played with my dog,Happiness Town,2026-02-21 13:19:59
+U021,happy,Watched a movie,Happiness Town,2026-02-22 14:35:27
+U021,calm,,Calmness Town,2026-02-23 22:41:41
+U021,happy,Cooked a nice meal,Happiness Town,2026-02-24 23:07:51
+U021,happy,Had a great workout,Happiness Town,2026-02-25 10:24:56
+U021,sad,,Sadness Town,2026-02-26 03:09:07
+U021,calm,,Calmness Town,2026-02-27 09:41:00
+U021,happy,Had a great workout,Happiness Town,2026-02-28 10:44:39
+U021,happy,Had a great workout,Happiness Town,2026-03-01 17:51:12
+U021,happy,Went for a walk,Happiness Town,2026-03-02 00:42:31
+U021,sad,,Sadness Town,2026-03-03 20:21:50
+U021,happy,Watched a movie,Happiness Town,2026-03-04 01:21:29
+U022,happy,Watched a movie,Happiness Town,2026-02-19 20:07:20
+U022,calm,,Calmness Town,2026-02-20 11:40:56
+U022,calm,,Calmness Town,2026-02-21 09:11:16
+U022,calm,,Calmness Town,2026-02-22 00:25:49
+U022,happy,Went for a walk,Happiness Town,2026-02-23 17:13:10
+U022,sad,,Sadness Town,2026-02-24 07:00:54
+U022,happy,Watched a movie,Happiness Town,2026-02-25 19:28:27
+U022,calm,,Calmness Town,2026-02-26 17:55:59
+U022,calm,,Calmness Town,2026-02-27 22:01:51
+U022,happy,Read a book,Happiness Town,2026-02-28 22:45:13
+U022,sad,,Sadness Town,2026-03-01 16:33:09
+U022,happy,Cooked a nice meal,Happiness Town,2026-03-02 19:57:25
+U022,calm,,Calmness Town,2026-03-03 11:09:59
+U022,sad,,Sadness Town,2026-03-04 04:36:38
+U023,calm,,Calmness Town,2026-02-19 09:59:27
+U023,calm,,Calmness Town,2026-02-20 08:56:36
+U023,calm,,Calmness Town,2026-02-21 06:16:49
+U023,happy,Lunch with friends,Happiness Town,2026-02-22 10:30:09
+U023,sad,,Sadness Town,2026-02-23 03:13:38
+U023,happy,Cooked a nice meal,Happiness Town,2026-02-24 15:19:24
+U023,happy,Watched a movie,Happiness Town,2026-02-25 08:23:57
+U023,calm,,Calmness Town,2026-02-26 00:59:17
+U023,calm,,Calmness Town,2026-02-27 12:36:24
+U023,happy,Had a great workout,Happiness Town,2026-02-28 11:15:33
+U023,sad,,Sadness Town,2026-03-01 11:45:20
+U023,calm,,Calmness Town,2026-03-02 19:25:16
+U023,happy,Had a great workout,Happiness Town,2026-03-03 09:26:31
+U023,happy,Read a book,Happiness Town,2026-03-04 21:45:16
+U024,sad,,Sadness Town,2026-02-19 16:01:57
+U024,sad,,Sadness Town,2026-02-20 06:59:25
+U024,sad,,Sadness Town,2026-02-21 13:34:38
+U024,sad,,Sadness Town,2026-02-22 11:21:10
+U024,calm,,Calmness Town,2026-02-23 10:17:20
+U024,calm,,Calmness Town,2026-02-24 20:12:15
+U024,happy,Lunch with friends,Happiness Town,2026-02-25 08:24:56
+U024,calm,,Calmness Town,2026-02-26 17:47:32
+U024,happy,Played with my dog,Happiness Town,2026-02-27 16:12:30
+U024,calm,,Calmness Town,2026-02-28 11:12:06
+U024,calm,,Calmness Town,2026-03-01 07:15:54
+U024,happy,Played with my dog,Happiness Town,2026-03-02 20:45:35
+U024,calm,,Calmness Town,2026-03-03 16:56:18
+U024,happy,Watched a movie,Happiness Town,2026-03-04 12:50:09
+U025,happy,Lunch with friends,Happiness Town,2026-02-19 15:58:39
+U025,calm,,Calmness Town,2026-02-20 09:59:10
+U025,sad,,Sadness Town,2026-02-21 19:48:15
+U025,sad,,Sadness Town,2026-02-22 14:15:44
+U025,happy,Cooked a nice meal,Happiness Town,2026-02-23 13:16:44
+U025,calm,,Calmness Town,2026-02-24 11:37:53
+U025,calm,,Calmness Town,2026-02-25 21:43:57
+U025,calm,,Calmness Town,2026-02-26 09:43:57
+U025,sad,,Sadness Town,2026-02-27 03:29:14
+U025,happy,Played with my dog,Happiness Town,2026-02-28 17:38:36
+U025,calm,,Calmness Town,2026-03-01 13:33:30
+U025,happy,Watched a movie,Happiness Town,2026-03-02 14:31:20
+U025,happy,Family time,Happiness Town,2026-03-03 18:11:08
+U025,calm,,Calmness Town,2026-03-04 10:10:18
+U026,calm,,Calmness Town,2026-02-19 11:17:23
+U026,calm,,Calmness Town,2026-02-20 17:09:54
+U026,calm,,Calmness Town,2026-02-21 10:20:18
+U026,sad,,Sadness Town,2026-02-22 02:09:15
+U026,happy,Lunch with friends,Happiness Town,2026-02-23 03:03:59
+U026,sad,,Sadness Town,2026-02-24 07:28:53
+U026,calm,,Calmness Town,2026-02-25 14:41:43
+U026,happy,Lunch with friends,Happiness Town,2026-02-26 11:21:57
+U026,sad,,Sadness Town,2026-02-27 00:12:45
+U026,sad,,Sadness Town,2026-02-28 00:29:45
+U026,happy,Lunch with friends,Happiness Town,2026-03-01 12:36:10
+U026,happy,Cooked a nice meal,Happiness Town,2026-03-02 11:25:09
+U026,happy,Watched a movie,Happiness Town,2026-03-03 03:04:18
+U026,calm,,Calmness Town,2026-03-04 15:45:51
+U027,sad,,Sadness Town,2026-02-19 21:21:28
+U027,happy,Cooked a nice meal,Happiness Town,2026-02-20 17:37:42
+U027,happy,Family time,Happiness Town,2026-02-21 22:36:28
+U027,happy,Had a great workout,Happiness Town,2026-02-22 21:18:36
+U027,happy,Lunch with friends,Happiness Town,2026-02-23 06:16:16
+U027,sad,,Sadness Town,2026-02-24 12:56:45
+U027,happy,Watched a movie,Happiness Town,2026-02-25 02:38:19
+U027,sad,,Sadness Town,2026-02-26 20:39:24
+U027,calm,,Calmness Town,2026-02-27 21:28:30
+U027,happy,Played with my dog,Happiness Town,2026-02-28 20:26:58
+U027,sad,,Sadness Town,2026-03-01 02:34:51
+U027,calm,,Calmness Town,2026-03-02 15:38:23
+U027,happy,Watched a movie,Happiness Town,2026-03-03 05:12:08
+U027,happy,Read a book,Happiness Town,2026-03-04 09:20:26
+U028,sad,,Sadness Town,2026-02-19 10:14:18
+U028,happy,Played with my dog,Happiness Town,2026-02-20 22:35:24
+U028,calm,,Calmness Town,2026-02-21 11:05:02
+U028,happy,Went for a walk,Happiness Town,2026-02-22 15:36:36
+U028,calm,,Calmness Town,2026-02-23 14:00:08
+U028,happy,Cooked a nice meal,Happiness Town,2026-02-24 11:27:42
+U028,sad,,Sadness Town,2026-02-25 00:20:33
+U028,sad,,Sadness Town,2026-02-26 11:27:33
+U028,calm,,Calmness Town,2026-02-27 14:26:45
+U028,sad,,Sadness Town,2026-02-28 20:20:31
+U028,happy,Watched a movie,Happiness Town,2026-03-01 09:03:00
+U028,calm,,Calmness Town,2026-03-02 10:08:18
+U028,happy,Watched a movie,Happiness Town,2026-03-03 08:58:34
+U028,happy,Had a great workout,Happiness Town,2026-03-04 02:50:53
+U029,happy,Played with my dog,Happiness Town,2026-02-19 13:13:34
+U029,happy,Went for a walk,Happiness Town,2026-02-20 06:54:18
+U029,sad,,Sadness Town,2026-02-21 15:43:35
+U029,happy,Family time,Happiness Town,2026-02-22 21:22:24
+U029,sad,,Sadness Town,2026-02-23 20:06:22
+U029,happy,Lunch with friends,Happiness Town,2026-02-24 18:57:43
+U029,sad,,Sadness Town,2026-02-25 18:44:37
+U029,happy,Had a great workout,Happiness Town,2026-02-26 21:59:26
+U029,happy,Read a book,Happiness Town,2026-02-27 15:47:52
+U029,happy,Cooked a nice meal,Happiness Town,2026-02-28 23:29:55
+U029,sad,,Sadness Town,2026-03-01 16:05:43
+U029,happy,Family time,Happiness Town,2026-03-02 19:34:42
+U029,happy,Played with my dog,Happiness Town,2026-03-03 23:22:18
+U029,happy,Lunch with friends,Happiness Town,2026-03-04 12:19:14
+U030,calm,,Calmness Town,2026-02-19 17:12:32
+U030,calm,,Calmness Town,2026-02-20 07:51:01
+U030,happy,Read a book,Happiness Town,2026-02-21 18:17:27
+U030,calm,,Calmness Town,2026-02-22 20:25:54
+U030,calm,,Calmness Town,2026-02-23 17:50:39
+U030,happy,Read a book,Happiness Town,2026-02-24 04:04:27
+U030,happy,Went for a walk,Happiness Town,2026-02-25 01:56:40
+U030,happy,Lunch with friends,Happiness Town,2026-02-26 19:23:56
+U030,happy,Watched a movie,Happiness Town,2026-02-27 09:48:42
+U030,happy,Family time,Happiness Town,2026-02-28 18:32:49
+U030,sad,,Sadness Town,2026-03-01 01:19:54
+U030,happy,Family time,Happiness Town,2026-03-02 06:06:50
+U030,calm,,Calmness Town,2026-03-03 02:48:41
+U030,happy,Family time,Happiness Town,2026-03-04 01:22:48
+U031,calm,,Calmness Town,2026-02-19 04:29:51
+U031,sad,,Sadness Town,2026-02-20 07:35:16
+U031,happy,Had a great workout,Happiness Town,2026-02-21 05:58:22
+U031,calm,,Calmness Town,2026-02-22 00:25:52
+U031,calm,,Calmness Town,2026-02-23 23:29:48
+U031,calm,,Calmness Town,2026-02-24 09:58:46
+U031,happy,Family time,Happiness Town,2026-02-25 00:37:46
+U031,happy,Lunch with friends,Happiness Town,2026-02-26 09:57:35
+U031,calm,,Calmness Town,2026-02-27 10:21:40
+U031,calm,,Calmness Town,2026-02-28 20:06:22
+U031,sad,,Sadness Town,2026-03-01 20:55:12
+U031,sad,,Sadness Town,2026-03-02 08:16:43
+U031,calm,,Calmness Town,2026-03-03 13:36:12
+U031,happy,Cooked a nice meal,Happiness Town,2026-03-04 01:43:29
+U032,happy,Family time,Happiness Town,2026-02-19 07:08:47
+U032,calm,,Calmness Town,2026-02-20 02:37:37
+U032,happy,Watched a movie,Happiness Town,2026-02-21 09:49:04
+U032,calm,,Calmness Town,2026-02-22 06:59:57
+U032,calm,,Calmness Town,2026-02-23 14:34:48
+U032,sad,,Sadness Town,2026-02-24 13:30:14
+U032,calm,,Calmness Town,2026-02-25 23:50:30
+U032,happy,Had a great workout,Happiness Town,2026-02-26 20:09:40
+U032,sad,,Sadness Town,2026-02-27 09:51:44
+U032,happy,Cooked a nice meal,Happiness Town,2026-02-28 04:29:21
+U032,calm,,Calmness Town,2026-03-01 17:17:03
+U032,calm,,Calmness Town,2026-03-02 02:32:03
+U032,calm,,Calmness Town,2026-03-03 16:07:39
+U032,calm,,Calmness Town,2026-03-04 16:12:32
+U033,calm,,Calmness Town,2026-02-19 09:36:11
+U033,happy,Lunch with friends,Happiness Town,2026-02-20 04:31:21
+U033,sad,,Sadness Town,2026-02-21 12:29:20
+U033,sad,,Sadness Town,2026-02-22 14:37:00
+U033,sad,,Sadness Town,2026-02-23 05:16:04
+U033,calm,,Calmness Town,2026-02-24 09:10:37
+U033,calm,,Calmness Town,2026-02-25 18:44:25
+U033,happy,Watched a movie,Happiness Town,2026-02-26 04:11:09
+U033,happy,Went for a walk,Happiness Town,2026-02-27 15:57:08
+U033,calm,,Calmness Town,2026-02-28 20:22:54
+U033,calm,,Calmness Town,2026-03-01 03:46:58
+U033,happy,Read a book,Happiness Town,2026-03-02 01:19:28
+U033,calm,,Calmness Town,2026-03-03 01:39:54
+U033,happy,Cooked a nice meal,Happiness Town,2026-03-04 17:48:26
+U034,happy,Watched a movie,Happiness Town,2026-02-19 20:10:44
+U034,happy,Watched a movie,Happiness Town,2026-02-20 13:52:06
+U034,calm,,Calmness Town,2026-02-21 14:43:33
+U034,happy,Family time,Happiness Town,2026-02-22 13:46:09
+U034,happy,Played with my dog,Happiness Town,2026-02-23 19:39:53
+U034,calm,,Calmness Town,2026-02-24 09:50:59
+U034,sad,,Sadness Town,2026-02-25 21:26:58
+U034,calm,,Calmness Town,2026-02-26 17:53:38
+U034,sad,,Sadness Town,2026-02-27 08:34:22
+U034,calm,,Calmness Town,2026-02-28 07:09:17
+U034,calm,,Calmness Town,2026-03-01 01:33:53
+U034,happy,Read a book,Happiness Town,2026-03-02 08:04:44
+U034,calm,,Calmness Town,2026-03-03 04:32:17
+U034,happy,Had a great workout,Happiness Town,2026-03-04 07:32:40
+U035,happy,Cooked a nice meal,Happiness Town,2026-02-19 13:00:07
+U035,happy,Cooked a nice meal,Happiness Town,2026-02-20 18:17:51
+U035,happy,Lunch with friends,Happiness Town,2026-02-21 00:00:12
+U035,calm,,Calmness Town,2026-02-22 15:08:19
+U035,calm,,Calmness Town,2026-02-23 00:35:40
+U035,happy,Read a book,Happiness Town,2026-02-24 07:33:36
+U035,calm,,Calmness Town,2026-02-25 20:28:15
+U035,sad,,Sadness Town,2026-02-26 05:08:23
+U035,calm,,Calmness Town,2026-02-27 03:27:46
+U035,happy,Went for a walk,Happiness Town,2026-02-28 05:00:13
+U035,sad,,Sadness Town,2026-03-01 18:30:59
+U035,happy,Played with my dog,Happiness Town,2026-03-02 19:11:37
+U035,calm,,Calmness Town,2026-03-03 03:23:59
+U035,calm,,Calmness Town,2026-03-04 10:24:50
+U036,happy,Had a great workout,Happiness Town,2026-02-19 12:07:33
+U036,happy,Watched a movie,Happiness Town,2026-02-20 07:11:31
+U036,happy,Had a great workout,Happiness Town,2026-02-21 04:56:11
+U036,calm,,Calmness Town,2026-02-22 12:25:55
+U036,calm,,Calmness Town,2026-02-23 11:31:03
+U036,sad,,Sadness Town,2026-02-24 05:15:39
+U036,happy,Read a book,Happiness Town,2026-02-25 03:27:56
+U036,happy,Lunch with friends,Happiness Town,2026-02-26 17:54:01
+U036,happy,Family time,Happiness Town,2026-02-27 17:54:44
+U036,calm,,Calmness Town,2026-02-28 04:29:36
+U036,happy,Watched a movie,Happiness Town,2026-03-01 05:22:36
+U036,sad,,Sadness Town,2026-03-02 12:36:08
+U036,sad,,Sadness Town,2026-03-03 10:36:55
+U036,happy,Watched a movie,Happiness Town,2026-03-04 20:24:45
+U037,calm,,Calmness Town,2026-02-19 21:55:46
+U037,happy,Watched a movie,Happiness Town,2026-02-20 18:54:12
+U037,sad,,Sadness Town,2026-02-21 11:45:51
+U037,sad,,Sadness Town,2026-02-22 20:44:16
+U037,happy,Watched a movie,Happiness Town,2026-02-23 05:44:33
+U037,calm,,Calmness Town,2026-02-24 02:12:42
+U037,happy,Watched a movie,Happiness Town,2026-02-25 23:20:20
+U037,calm,,Calmness Town,2026-02-26 08:14:30
+U037,sad,,Sadness Town,2026-02-27 09:40:30
+U037,happy,Read a book,Happiness Town,2026-02-28 17:39:45
+U037,calm,,Calmness Town,2026-03-01 10:37:36
+U037,happy,Played with my dog,Happiness Town,2026-03-02 08:48:29
+U037,sad,,Sadness Town,2026-03-03 16:07:03
+U037,sad,,Sadness Town,2026-03-04 05:22:45
+U038,sad,,Sadness Town,2026-02-19 02:38:25
+U038,happy,Cooked a nice meal,Happiness Town,2026-02-20 00:18:55
+U038,happy,Played with my dog,Happiness Town,2026-02-21 23:37:33
+U038,happy,Went for a walk,Happiness Town,2026-02-22 17:14:51
+U038,happy,Family time,Happiness Town,2026-02-23 03:23:12
+U038,happy,Went for a walk,Happiness Town,2026-02-24 01:15:02
+U038,sad,,Sadness Town,2026-02-25 03:20:48
+U038,happy,Watched a movie,Happiness Town,2026-02-26 22:39:07
+U038,happy,Had a great workout,Happiness Town,2026-02-27 17:07:52
+U038,sad,,Sadness Town,2026-02-28 22:09:45
+U038,calm,,Calmness Town,2026-03-01 19:27:57
+U038,calm,,Calmness Town,2026-03-02 04:58:27
+U038,happy,Cooked a nice meal,Happiness Town,2026-03-03 05:03:30
+U038,happy,Read a book,Happiness Town,2026-03-04 11:33:50
+U039,calm,,Calmness Town,2026-02-19 07:53:35
+U039,calm,,Calmness Town,2026-02-20 04:43:55
+U039,sad,,Sadness Town,2026-02-21 16:15:30
+U039,sad,,Sadness Town,2026-02-22 11:31:34
+U039,happy,Went for a walk,Happiness Town,2026-02-23 15:57:56
+U039,happy,Lunch with friends,Happiness Town,2026-02-24 11:37:08
+U039,calm,,Calmness Town,2026-02-25 01:20:05
+U039,calm,,Calmness Town,2026-02-26 19:09:35
+U039,happy,Had a great workout,Happiness Town,2026-02-27 20:10:31
+U039,happy,Cooked a nice meal,Happiness Town,2026-02-28 19:22:44
+U039,sad,,Sadness Town,2026-03-01 04:06:49
+U039,happy,Lunch with friends,Happiness Town,2026-03-02 17:42:48
+U039,calm,,Calmness Town,2026-03-03 20:40:24
+U039,sad,,Sadness Town,2026-03-04 10:27:54
+U040,calm,,Calmness Town,2026-02-19 11:23:08
+U040,calm,,Calmness Town,2026-02-20 18:07:07
+U040,sad,,Sadness Town,2026-02-21 23:14:21
+U040,sad,,Sadness Town,2026-02-22 07:19:08
+U040,calm,,Calmness Town,2026-02-23 09:52:51
+U040,sad,,Sadness Town,2026-02-24 06:42:41
+U040,happy,Read a book,Happiness Town,2026-02-25 08:56:04
+U040,happy,Had a great workout,Happiness Town,2026-02-26 23:32:48
+U040,calm,,Calmness Town,2026-02-27 10:00:55
+U040,calm,,Calmness Town,2026-02-28 10:41:13
+U040,calm,,Calmness Town,2026-03-01 18:42:13
+U040,calm,,Calmness Town,2026-03-02 07:10:05
+U040,calm,,Calmness Town,2026-03-03 01:38:54
+U040,calm,,Calmness Town,2026-03-04 00:53:45
+U041,calm,,Calmness Town,2026-02-19 11:27:10
+U041,happy,Read a book,Happiness Town,2026-02-20 18:43:34
+U041,happy,Played with my dog,Happiness Town,2026-02-21 05:20:48
+U041,happy,Played with my dog,Happiness Town,2026-02-22 19:00:04
+U041,sad,,Sadness Town,2026-02-23 11:27:48
+U041,happy,Watched a movie,Happiness Town,2026-02-24 15:14:09
+U041,calm,,Calmness Town,2026-02-25 14:05:12
+U041,calm,,Calmness Town,2026-02-26 05:13:14
+U041,calm,,Calmness Town,2026-02-27 09:09:34
+U041,happy,Cooked a nice meal,Happiness Town,2026-02-28 19:09:24
+U041,calm,,Calmness Town,2026-03-01 16:39:25
+U041,sad,,Sadness Town,2026-03-02 10:17:40
+U041,calm,,Calmness Town,2026-03-03 00:12:02
+U041,calm,,Calmness Town,2026-03-04 15:03:56
+U042,happy,Cooked a nice meal,Happiness Town,2026-02-19 21:40:10
+U042,happy,Cooked a nice meal,Happiness Town,2026-02-20 20:48:53
+U042,calm,,Calmness Town,2026-02-21 14:18:40
+U042,sad,,Sadness Town,2026-02-22 18:44:26
+U042,calm,,Calmness Town,2026-02-23 03:47:38
+U042,calm,,Calmness Town,2026-02-24 16:49:57
+U042,happy,Read a book,Happiness Town,2026-02-25 03:41:43
+U042,calm,,Calmness Town,2026-02-26 13:34:20
+U042,happy,Family time,Happiness Town,2026-02-27 14:11:21
+U042,calm,,Calmness Town,2026-02-28 22:25:16
+U042,happy,Cooked a nice meal,Happiness Town,2026-03-01 19:43:46
+U042,calm,,Calmness Town,2026-03-02 18:19:19
+U042,sad,,Sadness Town,2026-03-03 23:31:02
+U042,happy,Watched a movie,Happiness Town,2026-03-04 14:14:32
+U043,calm,,Calmness Town,2026-02-19 01:18:47
+U043,calm,,Calmness Town,2026-02-20 06:21:44
+U043,happy,Read a book,Happiness Town,2026-02-21 06:04:04
+U043,sad,,Sadness Town,2026-02-22 09:01:22
+U043,happy,Went for a walk,Happiness Town,2026-02-23 21:08:25
+U043,sad,,Sadness Town,2026-02-24 15:02:46
+U043,happy,Family time,Happiness Town,2026-02-25 23:34:51
+U043,sad,,Sadness Town,2026-02-26 17:36:01
+U043,calm,,Calmness Town,2026-02-27 01:32:04
+U043,calm,,Calmness Town,2026-02-28 23:59:24
+U043,calm,,Calmness Town,2026-03-01 03:12:15
+U043,happy,Had a great workout,Happiness Town,2026-03-02 21:50:03
+U043,calm,,Calmness Town,2026-03-03 05:32:11
+U043,sad,,Sadness Town,2026-03-04 08:20:46
+U044,happy,Lunch with friends,Happiness Town,2026-02-19 08:54:29
+U044,sad,,Sadness Town,2026-02-20 15:24:34
+U044,happy,Had a great workout,Happiness Town,2026-02-21 19:06:10
+U044,happy,Watched a movie,Happiness Town,2026-02-22 17:50:37
+U044,calm,,Calmness Town,2026-02-23 01:53:03
+U044,happy,Went for a walk,Happiness Town,2026-02-24 09:35:41
+U044,sad,,Sadness Town,2026-02-25 12:12:45
+U044,happy,Played with my dog,Happiness Town,2026-02-26 09:13:38
+U044,happy,Cooked a nice meal,Happiness Town,2026-02-27 22:56:18
+U044,happy,Had a great workout,Happiness Town,2026-02-28 23:26:44
+U044,happy,Cooked a nice meal,Happiness Town,2026-03-01 02:49:10
+U044,sad,,Sadness Town,2026-03-02 08:15:41
+U044,calm,,Calmness Town,2026-03-03 14:33:21
+U044,happy,Went for a walk,Happiness Town,2026-03-04 20:03:56
+U045,happy,Family time,Happiness Town,2026-02-19 23:53:19
+U045,sad,,Sadness Town,2026-02-20 10:34:36
+U045,calm,,Calmness Town,2026-02-21 22:38:23
+U045,calm,,Calmness Town,2026-02-22 18:16:44
+U045,calm,,Calmness Town,2026-02-23 18:40:32
+U045,happy,Watched a movie,Happiness Town,2026-02-24 02:21:39
+U045,calm,,Calmness Town,2026-02-25 15:46:11
+U045,calm,,Calmness Town,2026-02-26 07:48:28
+U045,calm,,Calmness Town,2026-02-27 14:02:18
+U045,calm,,Calmness Town,2026-02-28 23:05:10
+U045,happy,Cooked a nice meal,Happiness Town,2026-03-01 07:32:04
+U045,calm,,Calmness Town,2026-03-02 20:10:15
+U045,sad,,Sadness Town,2026-03-03 12:51:47
+U045,calm,,Calmness Town,2026-03-04 01:36:12
+U046,sad,,Sadness Town,2026-02-19 18:38:13
+U046,calm,,Calmness Town,2026-02-20 13:47:43
+U046,calm,,Calmness Town,2026-02-21 15:16:56
+U046,calm,,Calmness Town,2026-02-22 13:20:23
+U046,calm,,Calmness Town,2026-02-23 12:47:28
+U046,sad,,Sadness Town,2026-02-24 00:55:56
+U046,happy,Played with my dog,Happiness Town,2026-02-25 00:04:55
+U046,calm,,Calmness Town,2026-02-26 11:09:57
+U046,happy,Watched a movie,Happiness Town,2026-02-27 12:58:54
+U046,happy,Cooked a nice meal,Happiness Town,2026-02-28 17:12:07
+U046,happy,Family time,Happiness Town,2026-03-01 04:29:15
+U046,happy,Had a great workout,Happiness Town,2026-03-02 01:34:21
+U046,happy,Played with my dog,Happiness Town,2026-03-03 22:21:44
+U046,calm,,Calmness Town,2026-03-04 01:03:04
+U047,happy,Watched a movie,Happiness Town,2026-02-19 17:53:36
+U047,calm,,Calmness Town,2026-02-20 02:25:45
+U047,calm,,Calmness Town,2026-02-21 09:07:51
+U047,sad,,Sadness Town,2026-02-22 19:05:49
+U047,happy,Had a great workout,Happiness Town,2026-02-23 05:54:18
+U047,sad,,Sadness Town,2026-02-24 07:12:17
+U047,happy,Family time,Happiness Town,2026-02-25 10:29:26
+U047,sad,,Sadness Town,2026-02-26 12:40:20
+U047,calm,,Calmness Town,2026-02-27 21:31:34
+U047,calm,,Calmness Town,2026-02-28 06:25:38
+U047,calm,,Calmness Town,2026-03-01 06:44:06
+U047,calm,,Calmness Town,2026-03-02 03:07:20
+U047,sad,,Sadness Town,2026-03-03 03:31:59
+U047,sad,,Sadness Town,2026-03-04 12:49:33
+U048,happy,Family time,Happiness Town,2026-02-19 15:52:11
+U048,happy,Lunch with friends,Happiness Town,2026-02-20 09:50:59
+U048,happy,Went for a walk,Happiness Town,2026-02-21 02:06:57
+U048,happy,Had a great workout,Happiness Town,2026-02-22 02:12:30
+U048,happy,Went for a walk,Happiness Town,2026-02-23 02:37:36
+U048,sad,,Sadness Town,2026-02-24 21:50:41
+U048,calm,,Calmness Town,2026-02-25 02:28:12
+U048,calm,,Calmness Town,2026-02-26 03:42:18
+U048,happy,Read a book,Happiness Town,2026-02-27 18:47:03
+U048,calm,,Calmness Town,2026-02-28 18:22:54
+U048,calm,,Calmness Town,2026-03-01 04:08:53
+U048,sad,,Sadness Town,2026-03-02 19:38:30
+U048,happy,Read a book,Happiness Town,2026-03-03 14:08:56
+U048,happy,Read a book,Happiness Town,2026-03-04 07:31:37
+U049,happy,Went for a walk,Happiness Town,2026-02-19 08:41:01
+U049,happy,Family time,Happiness Town,2026-02-20 17:08:34
+U049,happy,Played with my dog,Happiness Town,2026-02-21 17:19:35
+U049,calm,,Calmness Town,2026-02-22 10:03:59
+U049,happy,Had a great workout,Happiness Town,2026-02-23 04:07:53
+U049,happy,Watched a movie,Happiness Town,2026-02-24 12:53:08
+U049,sad,,Sadness Town,2026-02-25 11:42:45
+U049,happy,Cooked a nice meal,Happiness Town,2026-02-26 00:10:51
+U049,calm,,Calmness Town,2026-02-27 17:49:37
+U049,sad,,Sadness Town,2026-02-28 06:44:41
+U049,happy,Watched a movie,Happiness Town,2026-03-01 17:38:11
+U049,calm,,Calmness Town,2026-03-02 09:21:43
+U049,happy,Watched a movie,Happiness Town,2026-03-03 13:39:22
+U049,calm,,Calmness Town,2026-03-04 22:38:15
+U050,calm,,Calmness Town,2026-02-19 00:15:42
+U050,sad,,Sadness Town,2026-02-20 14:49:26
+U050,sad,,Sadness Town,2026-02-21 06:29:49
+U050,happy,Went for a walk,Happiness Town,2026-02-22 12:33:24
+U050,calm,,Calmness Town,2026-02-23 00:47:08
+U050,happy,Family time,Happiness Town,2026-02-24 06:54:39
+U050,calm,,Calmness Town,2026-02-25 07:30:41
+U050,calm,,Calmness Town,2026-02-26 17:02:57
+U050,calm,,Calmness Town,2026-02-27 12:51:56
+U050,happy,Went for a walk,Happiness Town,2026-02-28 06:01:36
+U050,happy,Lunch with friends,Happiness Town,2026-03-01 01:20:31
+U050,calm,,Calmness Town,2026-03-02 11:16:01
+U050,sad,,Sadness Town,2026-03-03 20:32:47
+U050,calm,,Calmness Town,2026-03-04 21:03:55
