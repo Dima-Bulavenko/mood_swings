@@ -1,4 +1,4 @@
-from datetime import datetime, timezone
+from datetime import date
 
 from pydantic import BaseModel, Field
 
@@ -6,4 +6,4 @@ from pydantic import BaseModel, Field
 class Note(BaseModel):
     user_id: str
     note: str = Field(max_length=100)
-    date_create: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    date_create: date = Field(default_factory=date.today)

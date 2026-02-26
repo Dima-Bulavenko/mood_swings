@@ -1,4 +1,4 @@
-from datetime import datetime, timezone
+from datetime import date
 from enum import Enum
 
 from pydantic import BaseModel, Field
@@ -32,7 +32,7 @@ class Mood(BaseModel):
     id: str
     user_id: str
     mood: MoodType
-    date_create: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    date_create: date = Field(default_factory=date.today)
 
 
 class CreateMood(BaseModel):

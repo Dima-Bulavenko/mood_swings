@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from datetime import datetime
+from datetime import date
 
 from core.domain.note import Note
 
@@ -16,7 +16,7 @@ class NoteRepository(ABC):
         pass
 
     @abstractmethod
-    def get_by_date(self, date: datetime) -> list[Note]:
+    def get_by_date(self, date: date) -> list[Note]:
         """Retrieve notes for a specific date."""
         pass
 
