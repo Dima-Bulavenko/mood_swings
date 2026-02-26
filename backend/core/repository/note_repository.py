@@ -1,6 +1,5 @@
 from abc import ABC, abstractmethod
 from datetime import datetime
-from uuid import UUID
 
 from core.domain.note import Note
 
@@ -12,7 +11,7 @@ class NoteRepository(ABC):
         pass
 
     @abstractmethod
-    def get_by_user_id(self, user_id: UUID) -> list[Note]:
+    def get_by_user_id(self, user_id: str) -> list[Note]:
         """Retrieve notes for a specific user."""
         pass
 

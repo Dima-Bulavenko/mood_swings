@@ -1,5 +1,4 @@
 from abc import ABC, abstractmethod
-from uuid import UUID
 
 from core.domain.user import User
 
@@ -10,5 +9,5 @@ class UserRepository(ABC):
         pass
 
     @abstractmethod
-    def get_by_id(self, user_id: UUID) -> User | None:
+    def get_by_id(self, user_id: str) -> User | None:
         pass

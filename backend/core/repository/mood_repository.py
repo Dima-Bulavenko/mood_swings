@@ -1,5 +1,4 @@
 from abc import ABC, abstractmethod
-from uuid import UUID
 
 from core.domain.mood import Mood
 
@@ -11,7 +10,7 @@ class MoodRepository(ABC):
         pass
 
     @abstractmethod
-    def get_by_id(self, mood_id: UUID) -> Mood | None:
+    def get_by_id(self, mood_id: str) -> Mood | None:
         """Retrieve a mood by its identifier."""
         pass
 
