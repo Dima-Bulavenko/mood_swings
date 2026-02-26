@@ -38,10 +38,14 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "fastapi", extra = ["standard-no-fastapi-cloud-cli"] },
+    { name = "pydantic" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "fastapi", extras = ["standard-no-fastapi-cloud-cli"], specifier = ">=0.133.1" }]
+requires-dist = [
+    { name = "fastapi", extras = ["standard-no-fastapi-cloud-cli"], specifier = ">=0.133.1" },
+    { name = "pydantic", specifier = ">=2.11.9" },
+]
 
 [[package]]
 name = "certifi"
