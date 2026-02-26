@@ -1,125 +1,46 @@
 # Mood Swings — Project Description
 
-## 💡 Project Overview
-
-**Mood Swings** is a web application where users:
-
-- Select their daily mood
-- Enter a town based on that mood
-- Interact with simple emotional features
-- View their personal mood analytics on a separate dashboard
-
-The **towns** focus on emotional experience.
-The **dashboard** focuses on data insights.
-
----
-
-## 🏙 The Three Towns
-
-### 🌞 Happiness Town
-
-**Purpose:** Spread positivity.
-
-**Features:**
-
-- User answers: **“What made you happy today?”**
-- The note is saved in the database
-- Notes appear on a public positivity board
-- Users can read messages from others
-
-### 🌸 Calm Town
-
-**Purpose:** Help users relax.
-
-**Features:**
-
-- Simple breathing animation
-  - or -
-- Soft relaxing background music
-
-### 🌧 Sadness Town
-
-**Purpose:** Provide emotional support.
-
-**Features:**
-
-- Display encouraging supportive message
-  - or -
-- Generate short AI-based supportive message
-
-**Example:**
-
-> “It’s okay to have difficult days. Tomorrow is a new start.”
-
----
-
-## 📊 Mood Insights Dashboard
-
-This is a separate page where all analytics charts are shown.
-
-### 1) Mood Frequency
-
-- Count how many times each mood was selected
-- Display as a bar chart
+## Pages
+The project consists of the following pages:
+- Home (index.html)
+- Town's pages, one for each town. I suggest to have only 3 towns (Happiness, Sadness, and Calmness) but in the future we can add more.
+The names of the pages can be changed to more creative ones.
+- Data Analysis
 
 
-### 2) Weekly Mood Pattern
+## Project Flow by pages
 
-- Analyze mood by day of the week
-- Display as line chart or grouped bar chart
+### Home Page
+#### Flow:
+1. User navigates to the page for the first time.
+2. Frontend checks user's local storage for user's token.
+    - 2.1 if tnehe token is not found, frontend make a request to the backend to create a w token and create a new user session. The token is returned to the frontend and stored in the local storage.
+    - 2.2 if the token is found, frontend makes uses this token in upcoming requests to the backend.
+3. User is suggested to choose their mood today (exited, happy, calm, sad, angry). User is able to choose one mood per day. If user choose one the they should be able to see a button to change their day's mood. If user skip mood selection, they should be able to see a button to choose their day's mood.
+4. On the main page, user can see the towns with short description of them, and can navigate to each town to explore their features.
+
+### Happiness Town Page
+#### Features:
+1. Read other users' notes about what made them happy today.
+2. Leave their own note about what made them happy today.
+
+### Sadness Town Page
+#### Features:
+1. Show some tips that can help users to cope with sadness.
+
+### Calmness Town Page
+#### Features:
+1. Breathing exercises to help users to calm down.
 
 
-### 3) Happiness Word Analysis
+### Data Analysis Page
+#### Features:
+To create a chart we can use a library Chart.js.
+1. Show a bar chart of the most common moods among users.
+2. Show a chart of what is the most popular mood for each day of the week.
+3. Show a history of the user's moods over time.
+4. Show the most common words in users' happiness notes.
 
-- Analyze text from Happiness Town notes
-- Count most common meaningful words
-- Display top 10 words as a bar chart
 
-**Example insight:**
-
-> “Friends” and “family” are your most common happiness sources.
-
----
-
-## ⚙ Technical Stack
-
-### Frontend
-
-- HTML
-- CSS
-- Bootstrap
-- Vanilla JavaScript
-- Chart.js (for charts)
-
-### Backend
-
-- FastAPI
-- SQLite
-- Pandas (for analysis)
-
----
-
-## 🗄 Database Structure
-
-### `users`
-
-- `id` (UUID)
-
-### `moods`
-
-- `id`
-- `user_id`
-- `mood` (`happy`, `calm`, `sad`)
-- `note` (for happiness entries)
-- `date`
-
----
-
-## 🎯 User Flow
-
-1. User enters the site.
-2. Session UUID is created and stored.
-3. User selects mood.
-4. User visits a town.
-5. Data is saved.
-6. User opens the Mood Insights dashboard to see charts and insights.
+## Some notes:
+- Check what is the fetch in JS and how to use axios (this is more modern implementation of fetch). This technologies help to do requests to the backend and get data from it.
