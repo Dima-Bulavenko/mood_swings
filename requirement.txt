@@ -1,0 +1,13 @@
+numpy
+pandas
+matplotlib
+seaborn
+plotly
+streamlit
+feature-engine
+scikit-learn
+xgboost
+kaggle
+wordcloud
+fastapi
+uvicorn[standard]
