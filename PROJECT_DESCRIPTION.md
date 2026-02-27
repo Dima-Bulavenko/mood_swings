@@ -41,7 +41,7 @@ To create a chart we can use a library Chart.js.
 1. Show a bar chart of the most common moods among users.
 2. Show a chart of what is the most popular mood for each day of the week.
 3. Show a history of the user's moods over time.
-4. Show the most common words in users' happiness notes.
+4. Show 10 the most common words the persists in all users notes happiness notes.
 
 
 ## Some notes:

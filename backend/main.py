@@ -1,4 +1,4 @@
-from src.analytics import load_data, top_happy_words, user_mood_history
+from src.analytics import load_data, user_mood_history
 
 from collections.abc import AsyncIterator, Generator
 from contextlib import asynccontextmanager
@@ -10,7 +10,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import Session, sessionmaker
 
 from core.domain.mood import Mood, MoodType
-from core.domain.analytics import MoodFrequencyChart, WeeklyPopularMoodChart
+from core.domain.analytics import MoodFrequencyChart, TopHappyWordsChart, WeeklyPopularMoodChart
 from core.domain.note import Note
 from core.domain.user import User
 from infrastructure.sqlalchemy.models import Base
@@ -79,7 +79,8 @@ def get_note_service(session: Session = Depends(get_session)) -> NoteService:
 
 def get_analytics_service(session: Session = Depends(get_session)) -> AnalyticsService:
     mood_repository = SQLAlchemyMoodRepository(session)
-    return AnalyticsService(mood_repository)
+    note_repository = SQLAlchemyNoteRepository(session)
+    return AnalyticsService(mood_repository, note_repository)
 
 
 @app.post("/users", response_model=User, status_code=status.HTTP_201_CREATED, tags=["users"])
@@ -182,9 +183,12 @@ def get_weekly_trend_endpoint(
     return analytics_service.get_weekly_popular_mood_chart()
 
 
-@app.get("/top-happy-words")
-def get_top_happy_words_endpoint():
-    return top_happy_words(df)
+@app.get("/top-happy-words", response_model=TopHappyWordsChart, tags=["analytics"])
+def get_top_happy_words_endpoint(
+    analytics_service: AnalyticsService = Depends(get_analytics_service),
+) -> TopHappyWordsChart:
+    """Return top 10 most common words in users' happiness notes."""
+    return analytics_service.get_top_happy_words_chart(limit=10)
 
 
 @app.get("/user-history/{user_id}")

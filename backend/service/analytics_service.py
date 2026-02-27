@@ -1,12 +1,14 @@
 import pandas as pd
 
-from core.domain.analytics import MoodFrequencyChart, WeeklyPopularMoodChart
+from core.domain.analytics import MoodFrequencyChart, TopHappyWordsChart, WeeklyPopularMoodChart
 from core.repository.mood_repository import MoodRepository
+from core.repository.note_repository import NoteRepository
 
 
 class AnalyticsService:
-    def __init__(self, mood_repo: MoodRepository) -> None:
+    def __init__(self, mood_repo: MoodRepository, note_repo: NoteRepository) -> None:
         self.mood_repository = mood_repo
+        self.note_repository = note_repo
 
     def get_top_mood_frequency_chart(self, limit: int = 5) -> MoodFrequencyChart:
         """Return chart-friendly payload for most common moods."""
@@ -54,3 +56,54 @@ class AnalyticsService:
         values = top_per_day["count"].astype(int).tolist()
 
         return WeeklyPopularMoodChart(labels=labels, moods=moods, values=values)
+
+    def get_top_happy_words_chart(self, limit: int = 10) -> TopHappyWordsChart:
+        """Return top common words from users' happiness notes."""
+        note_texts = self.note_repository.get_all_note_texts()
+        if not note_texts:
+            return TopHappyWordsChart(labels=[], values=[])
+
+        stopwords = {
+            "a",
+            "an",
+            "the",
+            "with",
+            "my",
+            "and",
+            "of",
+            "for",
+            "to",
+            "in",
+            "on",
+            "at",
+            "is",
+            "it",
+            "was",
+            "had",
+            "this",
+            "that",
+        }
+
+        words_series = (
+            pd.Series(note_texts)
+            .dropna()
+            .astype(str)
+            .str.lower()
+            .str.replace(r"[^a-zA-Z0-9\s]", " ", regex=True)
+            .str.split()
+            .explode()
+        )
+
+        filtered_words = words_series[
+            words_series.notna()
+            & (words_series.str.len() > 1)
+            & (~words_series.isin(stopwords))
+        ]
+
+        counts = filtered_words.value_counts().head(limit)
+        records = [(str(label), int(value)) for label, value in counts.items()]
+
+        return TopHappyWordsChart(
+            labels=[label for label, _ in records],
+            values=[value for _, value in records],
+        )

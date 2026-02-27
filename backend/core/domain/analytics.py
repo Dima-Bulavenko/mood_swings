@@ -10,3 +10,8 @@ class WeeklyPopularMoodChart(BaseModel):
     labels: list[str]
     moods: list[str]
     values: list[int]
+
+
+class TopHappyWordsChart(BaseModel):
+    labels: list[str]
+    values: list[int]

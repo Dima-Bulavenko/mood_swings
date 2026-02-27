@@ -29,3 +29,8 @@ class NoteRepository(ABC):
     def get_last_five_excluding_user(self, user_id: str) -> list[Note]:
         """Retrieve the latest five notes excluding notes created by the provided user."""
         pass
+
+    @abstractmethod
+    def get_all_note_texts(self) -> list[str]:
+        """Retrieve all note texts only."""
+        pass
