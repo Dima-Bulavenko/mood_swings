@@ -1,6 +1,8 @@
 from datetime import date
+from typing import cast
 
-from sqlalchemy import select
+from sqlalchemy import delete, select
+from sqlalchemy.engine import CursorResult
 from sqlalchemy.orm import Session
 
 from core.domain.mood import Mood, MoodType
@@ -37,6 +39,14 @@ class SQLAlchemyMoodRepository(MoodRepository):
         self._session.refresh(model)
         return self._to_domain(model)
 
+    def create_many(self, data: list[Mood]) -> list[Mood]:
+        models = [self._to_model(item) for item in data]
+        self._session.add_all(models)
+        self._session.commit()
+        for model in models:
+            self._session.refresh(model)
+        return [self._to_domain(model) for model in models]
+
     def get_by_id(self, mood_id: str) -> Mood | None:
         model = self._session.get(MoodModel, mood_id)
         if model is None:
@@ -56,12 +66,19 @@ class SQLAlchemyMoodRepository(MoodRepository):
         self._session.refresh(model)
         return self._to_domain(model)
 
-    def get_by_user_id_and_date(self, user_id: str, date_create: date) -> Mood | None:
+    def get_by_user_id_and_date(self, user_id: str, date_create: date) -> list[Mood]:
         stmt = select(MoodModel).where(
             MoodModel.user_id == user_id,
             MoodModel.date_create == date_create,
         )
-        model = self._session.execute(stmt).scalars().first()
-        if model is None:
-            return None
-        return self._to_domain(model)
+        models = self._session.execute(stmt).scalars().all()
+        return [self._to_domain(model) for model in models]
+
+    def delete_by_user_id_and_date(self, user_id: str, date_create: date) -> int:
+        stmt = delete(MoodModel).where(
+            MoodModel.user_id == user_id,
+            MoodModel.date_create == date_create,
+        )
+        result = cast(CursorResult, self._session.execute(stmt))
+        self._session.commit()
+        return result.rowcount or 0
