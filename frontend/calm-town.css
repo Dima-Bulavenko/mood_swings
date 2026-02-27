@@ -1,6 +1,9 @@
 /* ====== SKY BACKGROUND ====== */
 body {
-    background-color: #87CEEB;
+    background-image: url('/frontend/fe-assets/blue.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 /* ====== ACTIVITY CARDS ====== */
