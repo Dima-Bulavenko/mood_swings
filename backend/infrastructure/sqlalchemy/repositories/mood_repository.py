@@ -91,3 +91,17 @@ class SQLAlchemyMoodRepository(MoodRepository):
         stmt = select(MoodModel.date_create, MoodModel.mood)
         rows = self._session.execute(stmt).all()
         return [(date_create, mood) for date_create, mood in rows]
+
+    def get_user_mood_names_with_dates(
+        self,
+        user_id: str,
+        start_date: date,
+        end_date: date,
+    ) -> list[tuple[date, str]]:
+        stmt = select(MoodModel.date_create, MoodModel.mood).where(
+            MoodModel.user_id == user_id,
+            MoodModel.date_create >= start_date,
+            MoodModel.date_create <= end_date,
+        )
+        rows = self._session.execute(stmt).all()
+        return [(date_create, mood) for date_create, mood in rows]

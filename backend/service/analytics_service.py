@@ -1,6 +1,8 @@
+from datetime import date, timedelta
+
 import pandas as pd
 
-from core.domain.analytics import MoodFrequencyChart, TopHappyWordsChart, WeeklyPopularMoodChart
+from core.domain.analytics import MoodFrequencyChart, TopHappyWordsChart, UserMoodHistoryChart, WeeklyPopularMoodChart
 from core.repository.mood_repository import MoodRepository
 from core.repository.note_repository import NoteRepository
 
@@ -107,3 +109,35 @@ class AnalyticsService:
             labels=[label for label, _ in records],
             values=[value for _, value in records],
         )
+
+    def get_user_mood_history_chart(self, user_id: str, days: int = 7) -> UserMoodHistoryChart:
+        """Return user's mood history for the last N days with gaps as null."""
+        end_date = date.today()
+        start_date = end_date - timedelta(days=days - 1)
+
+        mood_rows = self.mood_repository.get_user_mood_names_with_dates(
+            user_id=user_id,
+            start_date=start_date,
+            end_date=end_date,
+        )
+
+        date_index = pd.date_range(start=start_date, end=end_date, freq="D")
+        labels = [day.strftime("%Y-%m-%d") for day in date_index]
+
+        if not mood_rows:
+            return UserMoodHistoryChart(labels=labels, moods=[None] * len(labels))
+
+        df = pd.DataFrame(mood_rows, columns=["date_create", "mood"])
+        df["date_create"] = pd.to_datetime(df["date_create"])
+
+        daily = (
+            df.groupby(["date_create", "mood"]).size().reset_index(name="count")
+            .sort_values(["date_create", "count", "mood"], ascending=[True, False, True])
+            .drop_duplicates(subset=["date_create"], keep="first")
+            .set_index("date_create")
+        )
+
+        daily = daily.reindex(date_index)
+        moods = [str(value) if pd.notna(value) else None for value in daily["mood"].tolist()]
+
+        return UserMoodHistoryChart(labels=labels, moods=moods)

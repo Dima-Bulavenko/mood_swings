@@ -44,3 +44,13 @@ class MoodRepository(ABC):
     def get_all_mood_names_with_dates(self) -> list[tuple[date, str]]:
         """Retrieve mood dates and mood names for analytics."""
         pass
+
+    @abstractmethod
+    def get_user_mood_names_with_dates(
+        self,
+        user_id: str,
+        start_date: date,
+        end_date: date,
+    ) -> list[tuple[date, str]]:
+        """Retrieve mood dates and mood names for a single user in a date range."""
+        pass

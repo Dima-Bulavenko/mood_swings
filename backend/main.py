@@ -1,5 +1,3 @@
-from src.analytics import load_data, user_mood_history
-
 from collections.abc import AsyncIterator, Generator
 from contextlib import asynccontextmanager
 from uuid import uuid4
@@ -10,7 +8,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import Session, sessionmaker
 
 from core.domain.mood import Mood, MoodType
-from core.domain.analytics import MoodFrequencyChart, TopHappyWordsChart, WeeklyPopularMoodChart
+from core.domain.analytics import MoodFrequencyChart, TopHappyWordsChart, UserMoodHistoryChart, WeeklyPopularMoodChart
 from core.domain.note import Note
 from core.domain.user import User
 from infrastructure.sqlalchemy.models import Base
@@ -164,9 +162,6 @@ def get_last_five_notes_excluding_user(
     return note_service.get_last_five_excluding_user(user_id)
 
 
-df = load_data("../data/mood_swing_data.csv")
-
-
 @app.get("/mood-frequency", response_model=MoodFrequencyChart, tags=["analytics"])
 def get_mood_frequency_endpoint(
     analytics_service: AnalyticsService = Depends(get_analytics_service),
@@ -191,6 +186,10 @@ def get_top_happy_words_endpoint(
     return analytics_service.get_top_happy_words_chart(limit=10)
 
 
-@app.get("/user-history/{user_id}")
-def get_user_history_endpoint(user_id: str):
-    return user_mood_history(df, user_id)
+@app.get("/user-history", response_model=UserMoodHistoryChart, tags=["analytics"])
+def get_user_history_endpoint(
+    user_id: str,
+    analytics_service: AnalyticsService = Depends(get_analytics_service),
+) -> UserMoodHistoryChart:
+    """Return user mood history for the last 7 days with missing days as null."""
+    return analytics_service.get_user_mood_history_chart(user_id=user_id, days=7)
