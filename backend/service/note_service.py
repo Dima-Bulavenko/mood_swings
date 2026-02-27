@@ -1,7 +1,7 @@
-from datetime import datetime
+from datetime import date
 
-from backend.core.domain.note import Note
-from backend.core.repository.note_repository import NoteRepository
+from core.domain.note import Note
+from core.repository.note_repository import NoteRepository
 
 
 class NoteService:
@@ -16,10 +16,14 @@ class NoteService:
 		"""Retrieve notes for a specific user."""
 		return self.note_repository.get_by_user_id(user_id)
 
-	def get_by_date(self, date: datetime) -> list[Note]:
+	def get_by_date(self, date: date) -> list[Note]:
 		"""Retrieve notes for a specific date."""
 		return self.note_repository.get_by_date(date)
 
 	def get(self) -> list[Note]:
 		"""Retrieve all notes."""
 		return self.note_repository.get()
+
+	def get_last_five_excluding_user(self, user_id: str) -> list[Note]:
+		"""Retrieve the latest five notes excluding notes of a specific user."""
+		return self.note_repository.get_last_five_excluding_user(user_id)

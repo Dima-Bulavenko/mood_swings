@@ -1,5 +1,5 @@
-from backend.core.domain.user import User
-from backend.core.repository.user_repository import UserRepository
+from core.domain.user import User
+from core.repository.user_repository import UserRepository
 from uuid import uuid4
 
 

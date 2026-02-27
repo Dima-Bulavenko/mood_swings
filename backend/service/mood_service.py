@@ -1,7 +1,8 @@
+from datetime import date
 from uuid import uuid4
 
-from backend.core.domain.mood import CreateMood, Mood, UpdateMood
-from backend.core.repository.mood_repository import MoodRepository
+from core.domain.mood import CreateMood, Mood, MoodType, UpdateMood
+from core.repository.mood_repository import MoodRepository
 
 
 class MoodService:
@@ -26,4 +27,20 @@ class MoodService:
         if not old_mood:
             raise ValueError("Mood record not found.")
         old_mood.mood = data.mood
+        return self.mood_repository.update(old_mood)
+
+    def get_todays_mood_by_user_id(self, user_id: str) -> Mood:
+        """Retrieve today's mood for a specific user."""
+        mood = self.mood_repository.get_by_user_id_and_date(user_id=user_id, date_create=date.today())
+        if mood is None:
+            raise ValueError("Mood record not found.")
+        return mood
+
+    def update_todays_mood_by_user_id(self, user_id: str, mood: MoodType) -> Mood:
+        """Update today's mood for a specific user."""
+        old_mood = self.mood_repository.get_by_user_id_and_date(user_id=user_id, date_create=date.today())
+        if old_mood is None:
+            raise ValueError("Mood record not found.")
+
+        old_mood.mood = mood
         return self.mood_repository.update(old_mood)
