@@ -1,4 +1,4 @@
-from src.analytics import load_data, mood_frequency, weekly_mood_trend, top_happy_words, user_mood_history
+from src.analytics import load_data, weekly_mood_trend, top_happy_words, user_mood_history
 
 from collections.abc import AsyncIterator, Generator
 from contextlib import asynccontextmanager
@@ -10,12 +10,14 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import Session, sessionmaker
 
 from core.domain.mood import Mood, MoodType
+from core.domain.analytics import MoodFrequencyChart
 from core.domain.note import Note
 from core.domain.user import User
 from infrastructure.sqlalchemy.models import Base
 from infrastructure.sqlalchemy.repositories.mood_repository import SQLAlchemyMoodRepository
 from infrastructure.sqlalchemy.repositories.note_repository import SQLAlchemyNoteRepository
 from infrastructure.sqlalchemy.repositories.user_repository import SQLAlchemyUserRepository
+from service.analytics_service import AnalyticsService
 from service.mood_service import MoodService
 from service.note_service import NoteService
 from service.user_service import UserService
@@ -73,6 +75,11 @@ def get_mood_service(session: Session = Depends(get_session)) -> MoodService:
 def get_note_service(session: Session = Depends(get_session)) -> NoteService:
     repository = SQLAlchemyNoteRepository(session)
     return NoteService(repository)
+
+
+def get_analytics_service(session: Session = Depends(get_session)) -> AnalyticsService:
+    mood_repository = SQLAlchemyMoodRepository(session)
+    return AnalyticsService(mood_repository)
 
 
 @app.post("/users", response_model=User, status_code=status.HTTP_201_CREATED, tags=["users"])
@@ -159,9 +166,12 @@ def get_last_five_notes_excluding_user(
 df = load_data("../data/mood_swing_data.csv")
 
 
-@app.get("/mood-frequency")
-def get_mood_frequency_endpoint():
-    return mood_frequency(df)
+@app.get("/mood-frequency", response_model=MoodFrequencyChart, tags=["analytics"])
+def get_mood_frequency_endpoint(
+    analytics_service: AnalyticsService = Depends(get_analytics_service),
+) -> MoodFrequencyChart:
+    """Return top 5 most common moods"""
+    return analytics_service.get_top_mood_frequency_chart(limit=5)
 
 
 @app.get("/weekly-trend")

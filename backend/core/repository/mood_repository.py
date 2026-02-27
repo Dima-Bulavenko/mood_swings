@@ -34,3 +34,8 @@ class MoodRepository(ABC):
     def delete_by_user_id_and_date(self, user_id: str, date_create: date) -> int:
         """Delete all moods for a user on a specific date and return deleted count."""
         pass
+
+    @abstractmethod
+    def get_all_mood_names(self) -> list[str]:
+        """Retrieve all mood names only."""
+        pass

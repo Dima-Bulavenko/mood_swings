@@ -82,3 +82,7 @@ class SQLAlchemyMoodRepository(MoodRepository):
         result = cast(CursorResult, self._session.execute(stmt))
         self._session.commit()
         return result.rowcount or 0
+
+    def get_all_mood_names(self) -> list[str]:
+        stmt = select(MoodModel.mood)
+        return list(self._session.execute(stmt).scalars().all())
