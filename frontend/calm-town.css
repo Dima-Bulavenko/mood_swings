@@ -207,3 +207,24 @@ body {
     0%   { left: -300px; }
     100% { left: 110%; }
 }
+
+/* ====== SCROLLING TICKER ====== */
+.ticker-wrapper {
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.ticker-text {
+    display: inline-block;
+    animation: ticker 25s linear infinite;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+}
+
+@keyframes ticker {
+    0%   { transform: translateX(30vw); }
+    100% { transform: translateX(-100%); }
+}

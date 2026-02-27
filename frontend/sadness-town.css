@@ -1,0 +1,108 @@
+/* ====== SKY BACKGROUND ====== */
+body {
+    background-color: #f8e1f4;
+}
+
+/* ====== ACTIVITY CARDS ====== */
+.card.sad-card {
+    background-color: #bba2c4;
+    min-height: 280px;
+    border: none;
+}
+
+.card.sad-card .card-body {
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* ====== BUBBLES BACKGROUND ====== */
+.bubbles-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.bubble {
+    position: absolute;
+    bottom: -100px;
+    border-radius: 50%;
+    opacity: 0.4;
+    animation: riseBubble linear infinite;
+}
+
+.bubble-1 {
+    width: 40px;
+    height: 40px;
+    left: 10%;
+    background: #f48fb1;
+    animation-duration: 8s;
+    animation-delay: 0s;
+}
+
+.bubble-2 {
+    width: 60px;
+    height: 60px;
+    left: 30%;
+    background: #ce93d8;
+    animation-duration: 12s;
+    animation-delay: 2s;
+}
+
+.bubble-3 {
+    width: 30px;
+    height: 30px;
+    left: 50%;
+    background: #f48fb1;
+    animation-duration: 10s;
+    animation-delay: 4s;
+}
+
+.bubble-4 {
+    width: 50px;
+    height: 50px;
+    left: 70%;
+    background: #ce93d8;
+    animation-duration: 9s;
+    animation-delay: 1s;
+}
+
+.bubble-5 {
+    width: 35px;
+    height: 35px;
+    left: 90%;
+    background: #f48fb1;
+    animation-duration: 11s;
+    animation-delay: 3s;
+}
+
+@keyframes riseBubble {
+    0%   { bottom: -100px; opacity: 0.4; }
+    100% { bottom: 110%; opacity: 0; }
+}
+
+/* ====== SCROLLING TICKER ====== */
+.ticker-wrapper {
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.ticker-text {
+    color: black;
+    display: inline-block;
+    animation: ticker 25s linear infinite;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+@keyframes ticker {
+    0%   { transform: translateX(30vw); }
+    100% { transform: translateX(-100%); }
+}
