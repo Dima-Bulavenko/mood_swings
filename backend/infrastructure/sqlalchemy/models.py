@@ -1,3 +1,5 @@
+from datetime import date
+
 from sqlalchemy import Date, String
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 
@@ -18,7 +20,7 @@ class MoodModel(Base):
 	id: Mapped[str] = mapped_column(String, primary_key=True)
 	user_id: Mapped[str] = mapped_column(String, nullable=False, index=True)
 	mood: Mapped[str] = mapped_column(String, nullable=False)
-	date_create: Mapped[Date] = mapped_column(Date, nullable=False)
+	date_create: Mapped[date] = mapped_column(Date, nullable=False)
 
 
 class NoteModel(Base):
@@ -27,4 +29,4 @@ class NoteModel(Base):
 	id: Mapped[str] = mapped_column(String, primary_key=True)
 	user_id: Mapped[str] = mapped_column(String, nullable=False, index=True)
 	note: Mapped[str] = mapped_column(String(100), nullable=False)
-	date_create: Mapped[Date] = mapped_column(Date, nullable=False)
+	date_create: Mapped[date] = mapped_column(Date, nullable=False)
