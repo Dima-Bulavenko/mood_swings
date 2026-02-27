@@ -47,6 +47,10 @@ body {
   color: var(--color-text);
   background-color: var(--color-background);
   line-height: 1.6;
+  background-image: url('/frontend/fe-assets/pinkclouds.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .container {
@@ -348,4 +352,11 @@ body {
   #recommendation .btn {
     min-height: 4.2rem;
   }
+}
+
+/* ====== FOOTER ====== */
+.mood-footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    margin-top: auto;
 }
