@@ -1,0 +1,701 @@
+user_id,mood_id,mood,note,hour_of_day,day_of_week,target_town,timestamp
+U012,1,happy,Cooked a nice meal,10,0,Spark City,2026-02-23 10:20:48
+U036,0,sad,"Hard day, feeling drained",1,6,Mist Haven,2026-03-01 01:42:12
+U029,0,sad,Stayed home all day,0,0,Mist Haven,2026-02-23 00:32:41
+U012,0,sad,Feeling really low,22,4,Mist Haven,2026-02-20 22:10:37
+U023,1,happy,Enjoyed a sunny afternoon,19,2,Spark City,2026-03-04 19:02:34
+U016,2,calm,,8,5,Bloom Fields,2026-02-21 08:14:39
+U017,0,sad,,23,6,Mist Haven,2026-03-01 23:11:17
+U021,1,happy,Finished a project I am proud of,12,5,Spark City,2026-02-28 12:47:52
+U022,1,happy,Had a great workout,17,2,Spark City,2026-02-25 17:24:01
+U026,0,sad,,14,2,Mist Haven,2026-02-25 14:50:22
+U049,0,sad,,2,4,Mist Haven,2026-02-20 02:03:30
+U024,1,happy,Cooked a nice meal,16,2,Spark City,2026-02-25 16:16:36
+U015,2,calm,Quiet evening at home,15,6,Bloom Fields,2026-02-22 15:48:28
+U006,1,happy,Finished a project I am proud of,18,4,Spark City,2026-02-27 18:04:34
+U043,1,happy,Had a really good laugh today,20,0,Spark City,2026-03-02 20:01:57
+U041,1,happy,Woke up feeling great,18,6,Spark City,2026-03-01 18:56:36
+U032,2,calm,"Tidied my room, felt a bit clearer",11,1,Bloom Fields,2026-03-03 11:50:10
+U037,1,happy,Played with my dog,13,6,Spark City,2026-02-22 13:27:39
+U045,0,sad,Felt really alone today,1,0,Mist Haven,2026-03-02 01:53:14
+U036,0,sad,,0,5,Mist Haven,2026-02-28 00:26:24
+U026,0,sad,Cried and didn t even know why,22,6,Mist Haven,2026-03-01 22:33:42
+U025,2,calm,Quiet evening at home,10,5,Bloom Fields,2026-02-21 10:09:49
+U040,0,sad,Couldn t get out of bed today,2,0,Mist Haven,2026-03-02 02:20:53
+U021,2,calm,,11,6,Bloom Fields,2026-03-01 11:35:29
+U021,1,happy,Watched a movie,17,0,Spark City,2026-02-23 17:02:20
+U024,0,sad,Cried and didn t even know why,1,5,Mist Haven,2026-02-28 01:54:01
+U035,1,happy,Lunch with friends,21,5,Spark City,2026-02-21 21:09:41
+U004,0,sad,"Hard day, feeling drained",2,1,Mist Haven,2026-03-03 02:42:59
+U018,1,happy,Cooked a nice meal,14,6,Spark City,2026-03-01 14:58:06
+U016,2,calm,Taking things slow,12,2,Bloom Fields,2026-03-04 12:29:06
+U010,2,calm,Just drifting today,15,3,Bloom Fields,2026-02-26 15:54:34
+U039,2,calm,,11,4,Bloom Fields,2026-02-20 11:07:29
+U010,0,sad,Too tired to explain how I feel,10,6,Mist Haven,2026-03-01 10:40:36
+U008,1,happy,Good news arrived today,11,0,Spark City,2026-03-02 11:46:56
+U013,2,calm,Did some journaling,14,2,Bloom Fields,2026-03-04 14:10:39
+U031,2,calm,Not sure what I want right now,10,1,Bloom Fields,2026-03-03 10:00:07
+U040,0,sad,Everything feels heavy,22,2,Mist Haven,2026-03-04 22:21:56
+U035,0,sad,Too tired to explain how I feel,22,3,Mist Haven,2026-02-26 22:45:13
+U037,1,happy,Family time,7,2,Spark City,2026-03-04 07:44:21
+U010,2,calm,Took a long bath,11,2,Bloom Fields,2026-02-25 11:19:00
+U013,1,happy,Went for a walk,10,4,Spark City,2026-02-27 10:20:41
+U006,1,happy,Played with my dog,23,5,Spark City,2026-02-21 23:22:31
+U019,2,calm,,14,5,Bloom Fields,2026-02-21 14:30:57
+U042,2,calm,Had a slow morning with tea,11,0,Bloom Fields,2026-02-23 11:04:27
+U047,0,sad,Just need some quiet time,17,2,Mist Haven,2026-02-25 17:48:31
+U043,2,calm,Feeling a bit lost but okay,15,4,Bloom Fields,2026-02-27 15:02:09
+U048,2,calm,Feeling a bit lost but okay,20,5,Bloom Fields,2026-02-28 20:29:45
+U026,0,sad,,2,5,Mist Haven,2026-02-21 02:54:38
+U006,1,happy,Cooked a nice meal,13,2,Spark City,2026-02-25 13:04:34
+U011,1,happy,Treated myself to something nice,18,4,Spark City,2026-02-27 18:45:42
+U025,2,calm,Taking things slow,7,6,Bloom Fields,2026-03-01 07:24:08
+U007,2,calm,Quiet evening at home,15,2,Bloom Fields,2026-02-25 15:07:37
+U039,2,calm,Just drifting today,13,5,Bloom Fields,2026-02-28 13:52:26
+U001,1,happy,Woke up feeling great,7,6,Spark City,2026-03-01 07:13:22
+U005,2,calm,"Nothing planned, just being",3,3,Bloom Fields,2026-02-26 03:32:29
+U046,1,happy,Enjoyed a sunny afternoon,14,2,Spark City,2026-02-25 14:15:07
+U038,2,calm,Taking things slow,15,3,Bloom Fields,2026-02-26 15:32:49
+U013,2,calm,Feeling a bit lost but okay,10,2,Bloom Fields,2026-02-25 10:39:01
+U019,0,sad,Feeling really low,22,0,Mist Haven,2026-02-23 22:52:33
+U048,2,calm,"Tidied my room, felt a bit clearer",10,6,Bloom Fields,2026-03-01 10:41:29
+U003,2,calm,Went for a quiet walk,13,6,Bloom Fields,2026-02-22 13:18:25
+U027,2,calm,,15,1,Bloom Fields,2026-02-24 15:18:21
+U035,0,sad,Just need some quiet time,2,5,Mist Haven,2026-02-28 02:15:01
+U006,1,happy,Lunch with friends,22,3,Spark City,2026-02-26 22:15:56
+U048,0,sad,Just need some quiet time,1,4,Mist Haven,2026-02-27 01:41:16
+U040,0,sad,,23,6,Mist Haven,2026-02-22 23:39:35
+U016,2,calm,Went for a quiet walk,12,4,Bloom Fields,2026-02-20 12:58:27
+U004,2,calm,,14,2,Bloom Fields,2026-03-04 14:38:03
+U010,2,calm,,12,5,Bloom Fields,2026-02-28 12:00:39
+U049,0,sad,,0,3,Mist Haven,2026-02-19 00:48:35
+U025,0,sad,,0,0,Mist Haven,2026-02-23 00:22:23
+U001,2,calm,"Nothing planned, just being",1,5,Bloom Fields,2026-02-21 01:59:20
+U017,2,calm,Feeling uncertain about everything,2,6,Bloom Fields,2026-02-22 02:51:11
+U006,0,sad,Couldn t get out of bed today,2,0,Mist Haven,2026-03-02 02:18:07
+U034,1,happy,Enjoyed a sunny afternoon,16,0,Spark City,2026-03-02 16:22:14
+U050,1,happy,Enjoyed a sunny afternoon,13,5,Spark City,2026-02-28 13:22:51
+U037,1,happy,Enjoyed a sunny afternoon,14,3,Spark City,2026-02-26 14:51:23
+U044,0,sad,Not in the mood for anything,0,6,Mist Haven,2026-02-22 00:11:59
+U009,0,sad,,1,4,Mist Haven,2026-02-27 01:19:24
+U023,2,calm,Not sure what I want right now,0,6,Bloom Fields,2026-02-22 00:56:29
+U015,2,calm,,13,4,Bloom Fields,2026-02-27 13:05:38
+U018,1,happy,Had a great workout,9,2,Spark City,2026-02-25 09:12:51
+U050,2,calm,Had a slow morning with tea,19,4,Bloom Fields,2026-02-20 19:24:40
+U020,1,happy,Watched a movie,6,1,Spark City,2026-02-24 06:30:55
+U010,1,happy,Caught up with an old friend,10,1,Spark City,2026-02-24 10:55:09
+U049,1,happy,Had a great workout,15,5,Spark City,2026-02-28 15:56:34
+U005,0,sad,,6,0,Mist Haven,2026-02-23 06:04:21
+U023,1,happy,Lunch with friends,15,5,Spark City,2026-02-21 15:27:50
+U003,1,happy,Treated myself to something nice,9,5,Spark City,2026-02-21 09:08:59
+U005,1,happy,Had a great workout,18,2,Spark City,2026-03-04 18:25:33
+U043,0,sad,Everything feels heavy,21,2,Mist Haven,2026-03-04 21:10:57
+U028,2,calm,,15,1,Bloom Fields,2026-03-03 15:45:05
+U004,2,calm,Took a long bath,15,5,Bloom Fields,2026-02-21 15:52:05
+U045,1,happy,Played with my dog,12,6,Spark City,2026-03-01 12:14:27
+U006,1,happy,Enjoyed a sunny afternoon,16,3,Spark City,2026-02-19 16:35:24
+U037,1,happy,Family time,14,1,Spark City,2026-03-03 14:50:08
+U047,2,calm,Feeling uncertain about everything,15,0,Bloom Fields,2026-03-02 15:24:13
+U018,1,happy,Finished a project I am proud of,2,0,Spark City,2026-03-02 02:40:59
+U015,2,calm,Just drifting today,9,2,Bloom Fields,2026-03-04 09:34:49
+U012,0,sad,Feeling invisible,22,0,Mist Haven,2026-03-02 22:06:28
+U034,1,happy,Lunch with friends,20,4,Spark City,2026-02-27 20:53:10
+U012,2,calm,Just drifting today,11,6,Bloom Fields,2026-03-01 11:18:45
+U046,1,happy,Good news arrived today,14,0,Spark City,2026-03-02 14:09:38
+U024,1,happy,Treated myself to something nice,12,4,Spark City,2026-02-20 12:30:13
+U005,1,happy,Had a great workout,4,5,Spark City,2026-02-28 04:44:03
+U030,2,calm,Just drifting today,14,6,Bloom Fields,2026-02-22 14:27:55
+U004,1,happy,Had a great workout,14,3,Spark City,2026-02-26 14:47:38
+U009,0,sad,Feeling invisible,5,2,Mist Haven,2026-02-25 05:34:50
+U014,1,happy,Enjoyed a sunny afternoon,15,6,Spark City,2026-03-01 15:13:14
+U003,1,happy,Woke up feeling great,17,0,Spark City,2026-03-02 17:35:32
+U019,0,sad,Too tired to explain how I feel,15,3,Mist Haven,2026-02-26 15:29:22
+U031,1,happy,Played with my dog,3,5,Spark City,2026-02-21 03:39:16
+U001,2,calm,Taking things slow,17,2,Bloom Fields,2026-02-25 17:57:08
+U008,0,sad,Not in the mood for anything,22,6,Mist Haven,2026-02-22 22:27:30
+U039,0,sad,"Hard day, feeling drained",22,0,Mist Haven,2026-03-02 22:00:16
+U022,0,sad,Not in the mood for anything,23,1,Mist Haven,2026-02-24 23:27:06
+U029,1,happy,Watched a movie,18,6,Spark City,2026-02-22 18:27:25
+U042,1,happy,Woke up feeling great,11,4,Spark City,2026-02-27 11:19:34
+U023,2,calm,Went for a quiet walk,19,6,Bloom Fields,2026-03-01 19:13:08
+U011,1,happy,Lunch with friends,12,1,Spark City,2026-02-24 12:55:14
+U035,1,happy,Woke up feeling great,10,0,Spark City,2026-03-02 10:38:02
+U026,2,calm,,14,6,Bloom Fields,2026-02-22 14:20:07
+U015,2,calm,,21,1,Bloom Fields,2026-03-03 21:46:22
+U050,1,happy,Enjoyed a sunny afternoon,0,6,Spark City,2026-03-01 00:43:34
+U026,1,happy,Cooked a nice meal,10,0,Spark City,2026-03-02 10:40:47
+U007,0,sad,Felt really alone today,1,5,Mist Haven,2026-02-21 01:05:57
+U046,0,sad,Not in the mood for anything,21,4,Mist Haven,2026-02-20 21:35:07
+U035,2,calm,,8,2,Bloom Fields,2026-02-25 08:00:35
+U046,1,happy,Read a book,18,0,Spark City,2026-02-23 18:16:15
+U003,1,happy,Went for a walk,14,2,Spark City,2026-03-04 14:54:21
+U008,2,calm,,19,6,Bloom Fields,2026-03-01 19:23:04
+U050,1,happy,Played with my dog,14,1,Spark City,2026-02-24 14:58:12
+U005,1,happy,Had a really good laugh today,16,3,Spark City,2026-02-19 16:51:15
+U031,1,happy,Went for a walk,16,0,Spark City,2026-02-23 16:01:40
+U037,1,happy,Lunch with friends,17,0,Spark City,2026-03-02 17:11:15
+U002,1,happy,Family time,13,6,Spark City,2026-03-01 13:32:50
+U016,2,calm,Not sure what I want right now,20,4,Bloom Fields,2026-02-27 20:41:35
+U031,1,happy,Had a really good laugh today,14,0,Spark City,2026-03-02 14:11:44
+U021,2,calm,Just drifting today,15,4,Bloom Fields,2026-02-20 15:06:24
+U008,0,sad,Miss having someone to talk to,0,1,Mist Haven,2026-03-03 00:39:03
+U006,2,calm,Quiet evening at home,10,1,Bloom Fields,2026-03-03 10:44:03
+U004,2,calm,,15,5,Bloom Fields,2026-02-28 15:15:13
+U016,0,sad,Everything feels heavy,20,6,Mist Haven,2026-03-01 20:29:38
+U048,2,calm,Taking things slow,13,0,Bloom Fields,2026-03-02 13:57:33
+U039,0,sad,,12,2,Mist Haven,2026-03-04 12:59:06
+U022,2,calm,Feeling a bit lost but okay,12,4,Bloom Fields,2026-02-27 12:03:25
+U042,1,happy,Treated myself to something nice,8,6,Spark City,2026-02-22 08:56:07
+U016,0,sad,Miss having someone to talk to,7,1,Mist Haven,2026-02-24 07:44:31
+U017,1,happy,Family time,13,0,Spark City,2026-03-02 13:24:16
+U002,1,happy,Good news arrived today,18,0,Spark City,2026-02-23 18:41:59
+U018,1,happy,Had a great workout,17,1,Spark City,2026-03-03 17:44:50
+U019,2,calm,Not sure what I want right now,14,4,Bloom Fields,2026-02-27 14:37:44
+U031,1,happy,Had a great workout,12,6,Spark City,2026-03-01 12:56:28
+U019,0,sad,,22,1,Mist Haven,2026-03-03 22:28:09
+U005,0,sad,Too tired to explain how I feel,23,1,Mist Haven,2026-02-24 23:36:21
+U016,2,calm,Had a slow morning with tea,13,6,Bloom Fields,2026-02-22 13:14:37
+U027,2,calm,,10,2,Bloom Fields,2026-03-04 10:20:09
+U003,0,sad,Feeling really low,21,4,Mist Haven,2026-02-20 21:37:23
+U014,1,happy,Went for a walk,14,3,Spark City,2026-02-19 14:33:54
+U022,2,calm,Quiet evening at home,12,1,Bloom Fields,2026-03-03 12:21:05
+U028,0,sad,Stayed home all day,1,6,Mist Haven,2026-03-01 01:03:41
+U024,0,sad,Everything feels heavy,2,3,Mist Haven,2026-02-26 02:38:49
+U032,2,calm,,11,6,Bloom Fields,2026-02-22 11:42:53
+U022,2,calm,,13,5,Bloom Fields,2026-02-21 13:49:23
+U042,2,calm,Went for a quiet walk,9,0,Bloom Fields,2026-03-02 09:52:14
+U025,1,happy,Lunch with friends,11,2,Spark City,2026-02-25 11:23:34
+U032,0,sad,Cried and didn t even know why,19,5,Mist Haven,2026-02-21 19:59:32
+U042,2,calm,"Nothing planned, just being",12,2,Bloom Fields,2026-02-25 12:15:01
+U024,2,calm,Had a slow morning with tea,10,0,Bloom Fields,2026-02-23 10:22:18
+U026,0,sad,Feeling invisible,21,1,Mist Haven,2026-03-03 21:11:16
+U045,1,happy,Family time,9,5,Spark City,2026-02-21 09:52:28
+U042,1,happy,Finished a project I am proud of,9,1,Spark City,2026-02-24 09:26:48
+U017,0,sad,Felt really alone today,23,3,Mist Haven,2026-02-26 23:16:43
+U025,0,sad,Not in the mood for anything,0,3,Mist Haven,2026-02-19 00:28:37
+U047,2,calm,,15,1,Bloom Fields,2026-03-03 15:17:55
+U012,1,happy,Had a great workout,11,5,Spark City,2026-02-28 11:03:00
+U021,0,sad,,23,2,Mist Haven,2026-02-25 23:47:22
+U044,0,sad,Miss having someone to talk to,13,0,Mist Haven,2026-03-02 13:57:09
+U038,2,calm,,1,3,Bloom Fields,2026-02-19 01:27:12
+U034,2,calm,,11,5,Bloom Fields,2026-02-21 11:33:31
+U020,1,happy,Caught up with an old friend,13,0,Spark City,2026-03-02 13:52:47
+U030,2,calm,Went for a quiet walk,10,5,Bloom Fields,2026-02-21 10:20:23
+U008,0,sad,Stayed home all day,13,2,Mist Haven,2026-02-25 13:01:10
+U009,2,calm,"Nothing planned, just being",15,5,Bloom Fields,2026-02-21 15:42:47
+U045,1,happy,Family time,11,1,Spark City,2026-03-03 11:02:53
+U042,2,calm,Watched the clouds for a while,15,1,Bloom Fields,2026-03-03 15:35:33
+U034,1,happy,Caught up with an old friend,17,1,Spark City,2026-02-24 17:39:21
+U007,1,happy,Enjoyed a sunny afternoon,12,4,Spark City,2026-02-27 12:26:53
+U001,1,happy,Woke up feeling great,15,3,Spark City,2026-02-26 15:43:07
+U007,1,happy,Enjoyed a sunny afternoon,21,1,Spark City,2026-02-24 21:53:02
+U038,2,calm,Quiet evening at home,15,0,Bloom Fields,2026-03-02 15:40:15
+U028,2,calm,"Tidied my room, felt a bit clearer",14,5,Bloom Fields,2026-02-21 14:29:23
+U038,0,sad,Called a friend but no answer,7,0,Mist Haven,2026-02-23 07:03:46
+U041,1,happy,Read a book,14,3,Spark City,2026-02-26 14:56:32
+U026,2,calm,,12,2,Bloom Fields,2026-03-04 12:15:50
+U046,2,calm,Went for a quiet walk,15,5,Bloom Fields,2026-02-28 15:56:46
+U011,1,happy,Read a book,13,3,Spark City,2026-02-19 13:39:39
+U003,1,happy,Cooked a nice meal,18,3,Spark City,2026-02-19 18:31:05
+U004,1,happy,Played with my dog,11,4,Spark City,2026-02-20 11:03:34
+U004,1,happy,Good news arrived today,1,3,Spark City,2026-02-19 01:20:29
+U006,1,happy,Woke up feeling great,2,6,Spark City,2026-02-22 02:40:29
+U012,0,sad,,22,2,Mist Haven,2026-03-04 22:34:31
+U016,2,calm,"Tidied my room, felt a bit clearer",14,3,Bloom Fields,2026-02-19 14:46:24
+U044,0,sad,Feeling really low,1,5,Mist Haven,2026-02-28 01:16:54
+U005,2,calm,Quiet evening at home,19,6,Bloom Fields,2026-03-01 19:23:11
+U001,1,happy,Enjoyed a sunny afternoon,10,0,Spark City,2026-03-02 10:46:52
+U046,1,happy,Played with my dog,18,3,Spark City,2026-02-26 18:43:10
+U041,1,happy,Woke up feeling great,14,4,Spark City,2026-02-27 14:39:12
+U013,0,sad,Felt really alone today,2,6,Mist Haven,2026-03-01 02:26:39
+U039,0,sad,Stayed home all day,21,5,Mist Haven,2026-02-21 21:58:19
+U026,1,happy,Read a book,9,3,Spark City,2026-02-26 09:55:02
+U047,2,calm,Not sure what I want right now,15,1,Bloom Fields,2026-02-24 15:59:47
+U021,0,sad,Looked through old photos,21,0,Mist Haven,2026-03-02 21:29:10
+U031,1,happy,Treated myself to something nice,9,3,Spark City,2026-02-19 09:18:08
+U013,0,sad,Not in the mood for anything,2,5,Mist Haven,2026-02-28 02:57:11
+U033,2,calm,Had a slow morning with tea,12,4,Bloom Fields,2026-02-27 12:10:48
+U032,2,calm,Did some journaling,14,6,Bloom Fields,2026-03-01 14:18:46
+U006,0,sad,Miss having someone to talk to,21,2,Mist Haven,2026-03-04 21:38:26
+U033,2,calm,Took a long bath,12,1,Bloom Fields,2026-02-24 12:47:31
+U026,0,sad,,23,0,Mist Haven,2026-02-23 23:21:21
+U039,0,sad,,22,0,Mist Haven,2026-02-23 22:59:39
+U042,0,sad,,21,5,Mist Haven,2026-02-21 21:28:55
+U006,2,calm,Watched the clouds for a while,8,5,Bloom Fields,2026-02-28 08:09:57
+U002,1,happy,Had a great workout,17,5,Spark City,2026-02-28 17:51:12
+U002,2,calm,"Tidied my room, felt a bit clearer",11,4,Bloom Fields,2026-02-20 11:32:47
+U028,0,sad,,0,6,Mist Haven,2026-02-22 00:13:55
+U021,0,sad,,21,1,Mist Haven,2026-03-03 21:41:41
+U020,2,calm,,11,5,Bloom Fields,2026-02-28 11:17:16
+U047,1,happy,Cooked a nice meal,13,6,Spark City,2026-03-01 13:50:20
+U023,0,sad,,8,2,Mist Haven,2026-02-25 08:00:10
+U044,2,calm,Feeling a bit lost but okay,21,4,Bloom Fields,2026-02-27 21:08:28
+U010,2,calm,Did some journaling,12,0,Bloom Fields,2026-03-02 12:58:13
+U035,2,calm,Watched the clouds for a while,15,6,Bloom Fields,2026-03-01 15:59:01
+U041,1,happy,Family time,15,0,Spark City,2026-03-02 15:18:50
+U003,2,calm,,10,1,Bloom Fields,2026-02-24 10:24:49
+U043,1,happy,Went for a walk,13,3,Spark City,2026-02-19 13:41:31
+U019,0,sad,Stayed home all day,6,1,Mist Haven,2026-02-24 06:41:50
+U001,0,sad,,11,5,Mist Haven,2026-02-28 11:33:09
+U002,1,happy,Woke up feeling great,18,4,Spark City,2026-02-27 18:54:27
+U039,0,sad,Miss having someone to talk to,4,1,Mist Haven,2026-03-03 04:10:55
+U016,2,calm,"Tidied my room, felt a bit clearer",11,0,Bloom Fields,2026-03-02 11:38:01
+U029,2,calm,Quiet evening at home,20,1,Bloom Fields,2026-03-03 20:29:12
+U049,2,calm,Watched the clouds for a while,15,2,Bloom Fields,2026-03-04 15:33:15
+U024,2,calm,Had a slow morning with tea,12,1,Bloom Fields,2026-03-03 12:48:59
+U007,1,happy,Good news arrived today,18,3,Spark City,2026-02-19 18:19:27
+U024,2,calm,Quiet evening at home,11,2,Bloom Fields,2026-03-04 11:03:33
+U018,0,sad,,22,5,Mist Haven,2026-02-28 22:11:07
+U042,2,calm,,5,5,Bloom Fields,2026-02-28 05:14:26
+U045,1,happy,Enjoyed a sunny afternoon,10,1,Spark City,2026-02-24 10:31:25
+U015,0,sad,Not in the mood for anything,21,3,Mist Haven,2026-02-26 21:23:03
+U015,1,happy,Watched a movie,3,3,Spark City,2026-02-19 03:28:21
+U049,1,happy,Lunch with friends,16,6,Spark City,2026-03-01 16:12:44
+U024,0,sad,,23,1,Mist Haven,2026-02-24 23:06:15
+U029,2,calm,,10,3,Bloom Fields,2026-02-26 10:46:14
+U007,1,happy,Treated myself to something nice,15,5,Spark City,2026-02-28 15:28:12
+U042,1,happy,Good news arrived today,9,4,Spark City,2026-02-20 09:12:19
+U022,0,sad,Feeling invisible,1,3,Mist Haven,2026-02-19 01:21:27
+U019,0,sad,Stayed home all day,23,2,Mist Haven,2026-03-04 23:11:00
+U027,1,happy,Treated myself to something nice,21,0,Spark City,2026-03-02 21:44:05
+U014,2,calm,Taking things slow,12,5,Bloom Fields,2026-02-21 12:42:33
+U049,2,calm,"Tidied my room, felt a bit clearer",5,1,Bloom Fields,2026-03-03 05:37:55
+U037,1,happy,Woke up feeling great,14,5,Spark City,2026-02-28 14:52:41
+U011,2,calm,Sat by the window and thought,10,2,Bloom Fields,2026-03-04 10:00:53
+U006,2,calm,,13,1,Bloom Fields,2026-02-24 13:13:30
+U024,0,sad,Cried and didn t even know why,22,6,Mist Haven,2026-03-01 22:22:57
+U005,1,happy,Played with my dog,10,1,Spark City,2026-03-03 10:50:49
+U045,1,happy,Caught up with an old friend,11,3,Spark City,2026-02-19 11:02:09
+U014,1,happy,Family time,22,2,Spark City,2026-02-25 22:48:46
+U017,2,calm,,19,1,Bloom Fields,2026-03-03 19:06:02
+U007,1,happy,Woke up feeling great,17,0,Spark City,2026-02-23 17:17:46
+U043,0,sad,,21,6,Mist Haven,2026-02-22 21:42:56
+U009,0,sad,Sitting in the dark listening to music,23,1,Mist Haven,2026-02-24 23:46:22
+U009,0,sad,Miss having someone to talk to,23,2,Mist Haven,2026-03-04 23:54:08
+U041,0,sad,Looked through old photos,2,1,Mist Haven,2026-03-03 02:52:10
+U018,1,happy,Good news arrived today,17,3,Spark City,2026-02-19 17:37:47
+U001,2,calm,Feeling uncertain about everything,20,3,Bloom Fields,2026-02-19 20:38:57
+U050,1,happy,Played with my dog,22,2,Spark City,2026-02-25 22:01:53
+U038,1,happy,Read a book,10,2,Spark City,2026-03-04 10:25:05
+U035,0,sad,Stayed home all day,2,4,Mist Haven,2026-02-20 02:30:54
+U044,1,happy,Had a really good laugh today,14,3,Spark City,2026-02-26 14:04:41
+U020,1,happy,Treated myself to something nice,14,1,Spark City,2026-03-03 14:08:32
+U009,0,sad,,2,0,Mist Haven,2026-02-23 02:23:01
+U017,2,calm,Taking things slow,12,0,Bloom Fields,2026-02-23 12:10:57
+U050,1,happy,Good news arrived today,18,1,Spark City,2026-03-03 18:50:10
+U023,0,sad,Not in the mood for anything,22,0,Mist Haven,2026-03-02 22:13:19
+U020,1,happy,Had a great workout,21,4,Spark City,2026-02-27 21:46:33
+U036,1,happy,Finished a project I am proud of,10,6,Spark City,2026-02-22 10:17:55
+U011,1,happy,Good news arrived today,9,0,Spark City,2026-02-23 09:32:53
+U028,1,happy,Treated myself to something nice,17,0,Spark City,2026-02-23 17:12:05
+U031,1,happy,Lunch with friends,20,2,Spark City,2026-02-25 20:20:04
+U046,2,calm,,6,5,Bloom Fields,2026-02-21 06:31:57
+U036,1,happy,Cooked a nice meal,14,0,Spark City,2026-03-02 14:24:29
+U020,2,calm,Feeling a bit lost but okay,14,5,Bloom Fields,2026-02-21 14:19:25
+U034,1,happy,Read a book,13,6,Spark City,2026-02-22 13:43:10
+U004,2,calm,Went for a quiet walk,14,0,Bloom Fields,2026-02-23 14:31:22
+U019,2,calm,Just drifting today,10,5,Bloom Fields,2026-02-28 10:19:01
+U014,1,happy,Caught up with an old friend,10,2,Spark City,2026-03-04 10:02:36
+U050,1,happy,Went for a walk,13,2,Spark City,2026-03-04 13:20:39
+U042,2,calm,Taking things slow,10,6,Bloom Fields,2026-03-01 10:58:35
+U008,0,sad,"Hard day, feeling drained",21,5,Mist Haven,2026-02-28 21:04:28
+U034,2,calm,Not sure what I want right now,15,3,Bloom Fields,2026-02-19 15:51:16
+U038,1,happy,Read a book,18,6,Spark City,2026-02-22 18:24:09
+U039,2,calm,,10,3,Bloom Fields,2026-02-19 10:42:52
+U008,0,sad,Everything feels heavy,2,5,Mist Haven,2026-02-21 02:00:50
+U026,0,sad,Feeling really low,23,3,Mist Haven,2026-02-19 23:13:59
+U045,2,calm,Not sure what I want right now,15,5,Bloom Fields,2026-02-28 15:01:31
+U024,0,sad,Cried and didn t even know why,22,0,Mist Haven,2026-03-02 22:44:20
+U013,2,calm,"Tidied my room, felt a bit clearer",14,0,Bloom Fields,2026-03-02 14:16:25
+U022,2,calm,,13,6,Bloom Fields,2026-03-01 13:12:48
+U025,0,sad,Couldn t get out of bed today,0,2,Mist Haven,2026-03-04 00:33:10
+U011,1,happy,Had a really good laugh today,9,5,Spark City,2026-02-28 09:46:39
+U009,0,sad,Called a friend but no answer,2,1,Mist Haven,2026-03-03 02:54:47
+U040,0,sad,,2,2,Mist Haven,2026-02-25 02:05:36
+U044,1,happy,Had a great workout,18,0,Spark City,2026-02-23 18:51:23
+U014,1,happy,Family time,9,6,Spark City,2026-02-22 09:00:24
+U031,2,calm,Not sure what I want right now,14,4,Bloom Fields,2026-02-27 14:22:46
+U037,1,happy,Read a book,16,5,Spark City,2026-02-21 16:07:06
+U050,1,happy,Woke up feeling great,16,0,Spark City,2026-02-23 16:49:26
+U025,2,calm,"Tidied my room, felt a bit clearer",18,4,Bloom Fields,2026-02-27 18:42:57
+U047,1,happy,Watched a movie,15,4,Spark City,2026-02-20 15:39:12
+U011,2,calm,,15,5,Bloom Fields,2026-02-21 15:38:26
+U011,1,happy,Good news arrived today,11,4,Spark City,2026-02-20 11:07:41
+U029,2,calm,"Tidied my room, felt a bit clearer",14,4,Bloom Fields,2026-02-20 14:19:25
+U023,2,calm,Just drifting today,15,1,Bloom Fields,2026-03-03 15:32:35
+U002,2,calm,,14,1,Bloom Fields,2026-02-24 14:31:03
+U013,2,calm,,2,0,Bloom Fields,2026-02-23 02:51:57
+U048,2,calm,Sat by the window and thought,15,0,Bloom Fields,2026-02-23 15:25:10
+U023,0,sad,Everything feels heavy,0,0,Mist Haven,2026-02-23 00:52:15
+U047,2,calm,Watched the clouds for a while,12,3,Bloom Fields,2026-02-26 12:02:15
+U001,0,sad,Feeling invisible,21,1,Mist Haven,2026-03-03 21:28:14
+U022,2,calm,Went for a quiet walk,14,0,Bloom Fields,2026-03-02 14:07:37
+U002,2,calm,"Nothing planned, just being",10,0,Bloom Fields,2026-03-02 10:51:48
+U038,2,calm,Sat by the window and thought,11,4,Bloom Fields,2026-02-20 11:39:08
+U013,0,sad,Everything feels heavy,1,4,Mist Haven,2026-02-20 01:18:47
+U035,0,sad,Too tired to explain how I feel,7,0,Mist Haven,2026-02-23 07:25:48
+U030,1,happy,Woke up feeling great,14,1,Spark City,2026-02-24 14:16:04
+U018,1,happy,Had a great workout,18,3,Spark City,2026-02-26 18:49:14
+U022,2,calm,Had a slow morning with tea,12,0,Bloom Fields,2026-02-23 12:43:33
+U032,1,happy,Read a book,12,3,Spark City,2026-02-19 12:48:34
+U020,1,happy,Caught up with an old friend,15,2,Spark City,2026-02-25 15:44:51
+U012,0,sad,Feeling invisible,9,3,Mist Haven,2026-02-19 09:51:56
+U010,2,calm,,11,3,Bloom Fields,2026-02-19 11:19:27
+U039,2,calm,Did some journaling,14,3,Bloom Fields,2026-02-26 14:06:48
+U025,0,sad,Feeling invisible,22,1,Mist Haven,2026-02-24 22:36:07
+U021,2,calm,Listened to lo-fi and did nothing,12,3,Bloom Fields,2026-02-26 12:20:22
+U009,0,sad,Not in the mood for anything,2,4,Mist Haven,2026-02-20 02:25:44
+U027,2,calm,Feeling a bit lost but okay,12,6,Bloom Fields,2026-02-22 12:23:36
+U013,0,sad,Couldn t get out of bed today,23,1,Mist Haven,2026-02-24 23:58:45
+U026,2,calm,,11,1,Bloom Fields,2026-02-24 11:01:28
+U005,2,calm,Had a slow morning with tea,12,4,Bloom Fields,2026-02-20 12:27:57
+U032,1,happy,Woke up feeling great,12,5,Spark City,2026-02-28 12:17:17
+U016,1,happy,Family time,16,1,Spark City,2026-03-03 16:30:33
+U021,1,happy,Treated myself to something nice,17,3,Spark City,2026-02-19 17:12:40
+U002,1,happy,Woke up feeling great,0,6,Spark City,2026-02-22 00:04:25
+U029,2,calm,Did some journaling,12,2,Bloom Fields,2026-03-04 12:04:24
+U024,0,sad,Felt really alone today,22,3,Mist Haven,2026-02-19 22:03:24
+U019,0,sad,Couldn t get out of bed today,0,6,Mist Haven,2026-02-22 00:19:59
+U030,1,happy,Woke up feeling great,22,0,Spark City,2026-03-02 22:58:26
+U048,1,happy,Lunch with friends,12,1,Spark City,2026-03-03 12:14:36
+U014,2,calm,,11,4,Bloom Fields,2026-02-27 11:14:58
+U032,2,calm,,12,1,Bloom Fields,2026-02-24 12:10:45
+U045,1,happy,Treated myself to something nice,11,4,Spark City,2026-02-20 11:12:53
+U049,0,sad,,1,3,Mist Haven,2026-02-26 01:16:31
+U007,2,calm,Sat by the window and thought,14,6,Bloom Fields,2026-03-01 14:46:24
+U013,2,calm,Had a slow morning with tea,13,1,Bloom Fields,2026-03-03 13:53:42
+U022,2,calm,,15,3,Bloom Fields,2026-02-26 15:38:40
+U046,2,calm,,5,1,Bloom Fields,2026-03-03 05:23:19
+U037,2,calm,Listened to lo-fi and did nothing,15,4,Bloom Fields,2026-02-27 15:00:19
+U046,2,calm,Had a slow morning with tea,10,2,Bloom Fields,2026-03-04 10:36:21
+U033,2,calm,Not sure what I want right now,12,6,Bloom Fields,2026-02-22 12:44:54
+U031,1,happy,Went for a walk,8,5,Spark City,2026-02-28 08:18:25
+U001,1,happy,Watched a movie,11,1,Spark City,2026-02-24 11:06:20
+U050,1,happy,Finished a project I am proud of,18,3,Spark City,2026-02-19 18:02:58
+U004,2,calm,,15,6,Bloom Fields,2026-02-22 15:52:30
+U029,2,calm,Took a long bath,11,2,Bloom Fields,2026-02-25 11:07:23
+U038,1,happy,Woke up feeling great,13,4,Spark City,2026-02-27 13:45:04
+U013,2,calm,"Tidied my room, felt a bit clearer",13,6,Bloom Fields,2026-02-22 13:19:04
+U002,1,happy,Read a book,7,5,Spark City,2026-02-21 07:21:26
+U004,0,sad,,22,2,Mist Haven,2026-02-25 22:26:41
+U049,0,sad,Sitting in the dark listening to music,0,0,Mist Haven,2026-02-23 00:22:16
+U046,2,calm,"Tidied my room, felt a bit clearer",14,6,Bloom Fields,2026-03-01 14:31:27
+U001,1,happy,Had a really good laugh today,9,6,Spark City,2026-02-22 09:26:58
+U033,2,calm,"Nothing planned, just being",12,4,Bloom Fields,2026-02-20 12:00:54
+U030,2,calm,Sat by the window and thought,13,2,Bloom Fields,2026-02-25 13:15:33
+U023,1,happy,Played with my dog,4,4,Spark City,2026-02-27 04:51:41
+U047,2,calm,Sat by the window and thought,15,3,Bloom Fields,2026-02-19 15:49:47
+U021,0,sad,"Hard day, feeling drained",0,6,Mist Haven,2026-02-22 00:37:25
+U036,1,happy,Had a really good laugh today,10,2,Spark City,2026-03-04 10:13:34
+U021,1,happy,Lunch with friends,18,1,Spark City,2026-02-24 18:24:11
+U049,1,happy,Caught up with an old friend,11,2,Spark City,2026-02-25 11:11:39
+U017,2,calm,Just drifting today,13,4,Bloom Fields,2026-02-20 13:21:16
+U002,2,calm,Sat by the window and thought,11,1,Bloom Fields,2026-03-03 11:02:48
+U040,0,sad,,0,5,Mist Haven,2026-02-21 00:57:14
+U019,2,calm,"Nothing planned, just being",14,0,Bloom Fields,2026-03-02 14:22:46
+U004,0,sad,Everything feels heavy,1,4,Mist Haven,2026-02-27 01:59:57
+U027,2,calm,,14,3,Bloom Fields,2026-02-19 14:03:19
+U017,0,sad,,16,1,Mist Haven,2026-02-24 16:34:12
+U003,1,happy,Went for a walk,19,5,Spark City,2026-02-28 19:10:48
+U012,0,sad,Felt really alone today,2,6,Mist Haven,2026-02-22 02:52:23
+U017,0,sad,Too tired to explain how I feel,2,2,Mist Haven,2026-03-04 02:19:45
+U048,2,calm,Feeling uncertain about everything,7,2,Bloom Fields,2026-03-04 07:43:55
+U027,2,calm,Taking things slow,4,6,Bloom Fields,2026-03-01 04:56:51
+U027,2,calm,Watched the clouds for a while,20,2,Bloom Fields,2026-02-25 20:30:35
+U013,1,happy,Watched a movie,12,3,Spark City,2026-02-26 12:25:57
+U044,0,sad,Not in the mood for anything,20,4,Mist Haven,2026-02-20 20:47:28
+U035,0,sad,"Hard day, feeling drained",4,1,Mist Haven,2026-02-24 04:00:14
+U037,1,happy,Played with my dog,15,6,Spark City,2026-03-01 15:31:31
+U014,2,calm,,11,1,Bloom Fields,2026-03-03 11:38:16
+U043,0,sad,,23,2,Mist Haven,2026-02-25 23:57:32
+U044,1,happy,Watched a movie,9,3,Spark City,2026-02-19 09:54:02
+U031,2,calm,Went for a quiet walk,14,1,Bloom Fields,2026-02-24 14:48:47
+U032,2,calm,,12,0,Bloom Fields,2026-03-02 12:14:40
+U033,2,calm,Just drifting today,12,3,Bloom Fields,2026-02-19 12:15:29
+U049,1,happy,Woke up feeling great,13,6,Spark City,2026-02-22 13:37:09
+U042,2,calm,,12,3,Bloom Fields,2026-02-26 12:28:46
+U047,2,calm,"Nothing planned, just being",14,4,Bloom Fields,2026-02-27 14:28:18
+U005,0,sad,Couldn t get out of bed today,10,0,Mist Haven,2026-03-02 10:36:11
+U039,2,calm,Quiet evening at home,14,6,Bloom Fields,2026-02-22 14:09:35
+U013,2,calm,Taking things slow,21,3,Bloom Fields,2026-02-19 21:20:13
+U032,2,calm,,6,2,Bloom Fields,2026-03-04 06:27:02
+U012,1,happy,Had a really good laugh today,11,4,Spark City,2026-02-27 11:46:49
+U023,1,happy,Cooked a nice meal,11,4,Spark City,2026-02-20 11:16:15
+U014,1,happy,Cooked a nice meal,15,0,Spark City,2026-03-02 15:28:17
+U035,1,happy,Woke up feeling great,23,6,Spark City,2026-02-22 23:34:55
+U027,1,happy,Lunch with friends,14,4,Spark City,2026-02-20 14:20:53
+U028,2,calm,Did some journaling,11,1,Bloom Fields,2026-02-24 11:57:42
+U046,2,calm,Quiet evening at home,11,3,Bloom Fields,2026-02-19 11:48:08
+U036,2,calm,,13,3,Bloom Fields,2026-02-26 13:17:14
+U011,2,calm,,0,1,Bloom Fields,2026-03-03 00:45:36
+U043,1,happy,Lunch with friends,9,6,Spark City,2026-03-01 09:59:27
+U044,2,calm,,2,5,Bloom Fields,2026-02-21 02:44:46
+U017,0,sad,,22,5,Mist Haven,2026-02-21 22:49:13
+U033,2,calm,Did some journaling,23,5,Bloom Fields,2026-02-28 23:11:37
+U040,0,sad,Sitting in the dark listening to music,22,1,Mist Haven,2026-03-03 22:09:31
+U008,2,calm,Listened to lo-fi and did nothing,12,1,Bloom Fields,2026-02-24 12:56:16
+U031,2,calm,Did some journaling,22,4,Bloom Fields,2026-02-20 22:56:59
+U044,0,sad,Felt really alone today,2,2,Mist Haven,2026-03-04 02:27:23
+U038,1,happy,Watched a movie,9,6,Spark City,2026-03-01 09:16:47
+U006,1,happy,Enjoyed a sunny afternoon,11,0,Spark City,2026-02-23 11:48:35
+U009,2,calm,Sat by the window and thought,12,6,Bloom Fields,2026-02-22 12:51:14
+U030,1,happy,Finished a project I am proud of,5,4,Spark City,2026-02-20 05:18:59
+U049,0,sad,Just need some quiet time,23,5,Mist Haven,2026-02-21 23:22:21
+U009,1,happy,Caught up with an old friend,15,3,Spark City,2026-02-26 15:56:16
+U004,0,sad,,2,0,Mist Haven,2026-03-02 02:21:57
+U011,1,happy,Family time,17,0,Spark City,2026-03-02 17:53:50
+U029,2,calm,Just drifting today,10,0,Bloom Fields,2026-03-02 10:11:10
+U048,2,calm,Taking things slow,14,4,Bloom Fields,2026-02-20 14:45:13
+U015,0,sad,Miss having someone to talk to,21,0,Mist Haven,2026-03-02 21:25:40
+U050,2,calm,"Nothing planned, just being",15,5,Bloom Fields,2026-02-21 15:03:12
+U035,0,sad,Couldn t get out of bed today,2,1,Mist Haven,2026-03-03 02:28:38
+U034,1,happy,Cooked a nice meal,7,2,Spark City,2026-02-25 07:27:04
+U039,1,happy,Watched a movie,17,2,Spark City,2026-02-25 17:53:55
+U001,1,happy,Cooked a nice meal,12,4,Spark City,2026-02-27 12:01:05
+U047,1,happy,Good news arrived today,9,6,Spark City,2026-02-22 09:02:44
+U003,1,happy,Family time,11,4,Spark City,2026-02-27 11:47:15
+U033,2,calm,Quiet evening at home,11,0,Bloom Fields,2026-02-23 11:31:02
+U010,2,calm,Just drifting today,10,2,Bloom Fields,2026-03-04 10:22:14
+U019,1,happy,Played with my dog,11,4,Spark City,2026-02-20 11:28:53
+U022,2,calm,Sat by the window and thought,14,5,Bloom Fields,2026-02-28 14:32:35
+U046,0,sad,Feeling invisible,0,6,Mist Haven,2026-02-22 00:28:58
+U038,2,calm,Went for a quiet walk,11,5,Bloom Fields,2026-02-28 11:45:12
+U027,2,calm,Quiet evening at home,11,0,Bloom Fields,2026-02-23 11:29:17
+U005,0,sad,Felt really alone today,2,6,Mist Haven,2026-02-22 02:53:47
+U008,2,calm,Had a slow morning with tea,11,2,Bloom Fields,2026-03-04 11:57:50
+U036,1,happy,Cooked a nice meal,9,3,Spark City,2026-02-19 09:09:35
+U048,2,calm,Did some journaling,12,5,Bloom Fields,2026-02-21 12:14:11
+U036,1,happy,Caught up with an old friend,17,0,Spark City,2026-02-23 17:30:48
+U019,0,sad,Couldn t get out of bed today,1,6,Mist Haven,2026-03-01 01:34:36
+U042,2,calm,Went for a quiet walk,13,2,Bloom Fields,2026-03-04 13:06:48
+U022,2,calm,Feeling a bit lost but okay,11,6,Bloom Fields,2026-02-22 11:18:35
+U030,0,sad,Stayed home all day,23,4,Mist Haven,2026-02-27 23:03:57
+U011,1,happy,Caught up with an old friend,4,6,Spark City,2026-03-01 04:55:36
+U031,2,calm,Sat by the window and thought,14,2,Bloom Fields,2026-03-04 14:11:05
+U040,0,sad,,0,4,Mist Haven,2026-02-27 00:37:50
+U032,0,sad,,21,2,Mist Haven,2026-02-25 21:39:43
+U048,2,calm,,14,3,Bloom Fields,2026-02-26 14:22:23
+U020,1,happy,Family time,13,3,Spark City,2026-02-19 13:11:36
+U044,0,sad,Felt really alone today,21,2,Mist Haven,2026-02-25 21:20:08
+U026,0,sad,,21,5,Mist Haven,2026-02-28 21:43:04
+U045,1,happy,Treated myself to something nice,9,0,Spark City,2026-02-23 09:16:42
+U003,1,happy,Woke up feeling great,17,6,Spark City,2026-03-01 17:34:24
+U010,0,sad,,23,4,Mist Haven,2026-02-20 23:37:50
+U031,1,happy,Woke up feeling great,13,6,Spark City,2026-02-22 13:34:40
+U030,2,calm,,10,6,Bloom Fields,2026-03-01 10:34:59
+U022,2,calm,Not sure what I want right now,11,2,Bloom Fields,2026-03-04 11:22:29
+U015,0,sad,,22,5,Mist Haven,2026-02-21 22:31:31
+U026,2,calm,Just drifting today,14,4,Bloom Fields,2026-02-20 14:43:31
+U036,1,happy,Enjoyed a sunny afternoon,9,1,Spark City,2026-02-24 09:22:23
+U011,1,happy,Cooked a nice meal,10,2,Spark City,2026-02-25 10:26:30
+U033,2,calm,Had a slow morning with tea,22,5,Bloom Fields,2026-02-21 22:23:56
+U047,0,sad,,21,0,Mist Haven,2026-02-23 21:34:51
+U038,1,happy,Enjoyed a sunny afternoon,12,1,Spark City,2026-02-24 12:37:23
+U030,1,happy,Had a great workout,16,2,Spark City,2026-03-04 16:23:13
+U032,2,calm,"Tidied my room, felt a bit clearer",7,4,Bloom Fields,2026-02-27 07:24:26
+U045,1,happy,Enjoyed a sunny afternoon,16,2,Spark City,2026-02-25 16:00:28
+U011,1,happy,Family time,13,3,Spark City,2026-02-26 13:19:10
+U040,0,sad,Too tired to explain how I feel,21,4,Mist Haven,2026-02-20 21:47:18
+U025,0,sad,"Hard day, feeling drained",9,1,Mist Haven,2026-03-03 09:20:35
+U034,1,happy,Lunch with friends,9,4,Spark City,2026-02-20 09:12:33
+U024,0,sad,Too tired to explain how I feel,23,6,Mist Haven,2026-02-22 23:33:09
+U014,1,happy,Read a book,11,0,Spark City,2026-02-23 11:49:36
+U009,0,sad,Couldn t get out of bed today,23,0,Mist Haven,2026-03-02 23:44:05
+U043,0,sad,Feeling really low,21,1,Mist Haven,2026-02-24 21:45:04
+U007,2,calm,Not sure what I want right now,10,1,Bloom Fields,2026-03-03 10:20:25
+U011,1,happy,Cooked a nice meal,13,6,Spark City,2026-02-22 13:26:54
+U018,1,happy,Treated myself to something nice,10,4,Spark City,2026-02-20 10:23:07
+U029,2,calm,"Tidied my room, felt a bit clearer",14,5,Bloom Fields,2026-02-21 14:14:21
+U034,2,calm,,12,3,Bloom Fields,2026-02-26 12:52:33
+U015,1,happy,Woke up feeling great,10,4,Spark City,2026-02-20 10:54:34
+U007,2,calm,Just drifting today,10,2,Bloom Fields,2026-03-04 10:33:40
+U027,0,sad,Looked through old photos,21,3,Mist Haven,2026-02-26 21:17:51
+U024,0,sad,,1,5,Mist Haven,2026-02-21 01:42:01
+U020,2,calm,,10,2,Bloom Fields,2026-03-04 10:10:03
+U021,1,happy,Caught up with an old friend,14,2,Spark City,2026-03-04 14:00:43
+U029,2,calm,Went for a quiet walk,13,4,Bloom Fields,2026-02-27 13:05:11
+U009,0,sad,Not in the mood for anything,22,6,Mist Haven,2026-03-01 22:40:36
+U014,1,happy,Read a book,18,4,Spark City,2026-02-20 18:35:46
+U015,2,calm,"Tidied my room, felt a bit clearer",4,2,Bloom Fields,2026-02-25 04:24:47
+U032,2,calm,Feeling uncertain about everything,10,0,Bloom Fields,2026-02-23 10:16:23
+U018,1,happy,Enjoyed a sunny afternoon,2,4,Spark City,2026-02-27 02:58:05
+U030,1,happy,Woke up feeling great,17,5,Spark City,2026-02-28 17:52:52
+U045,1,happy,Caught up with an old friend,13,6,Spark City,2026-02-22 13:25:48
+U010,2,calm,Listened to lo-fi and did nothing,19,6,Bloom Fields,2026-02-22 19:32:19
+U029,0,sad,Too tired to explain how I feel,0,6,Mist Haven,2026-03-01 00:47:42
+U040,2,calm,Had a slow morning with tea,12,0,Bloom Fields,2026-02-23 12:33:56
+U039,0,sad,Called a friend but no answer,1,6,Mist Haven,2026-03-01 01:19:51
+U016,1,happy,Had a great workout,12,5,Spark City,2026-02-28 12:57:56
+U046,2,calm,"Nothing planned, just being",9,1,Bloom Fields,2026-02-24 09:36:52
+U038,2,calm,Went for a quiet walk,11,1,Bloom Fields,2026-03-03 11:10:36
+U046,2,calm,,12,4,Bloom Fields,2026-02-27 12:25:22
+U039,1,happy,Had a really good laugh today,13,1,Spark City,2026-02-24 13:26:56
+U028,2,calm,,17,4,Bloom Fields,2026-02-27 17:04:02
+U049,0,sad,Stayed home all day,9,1,Mist Haven,2026-02-24 09:52:55
+U037,1,happy,Went for a walk,13,1,Spark City,2026-02-24 13:09:45
+U020,2,calm,Taking things slow,15,4,Bloom Fields,2026-02-20 15:43:58
+U032,2,calm,"Nothing planned, just being",14,3,Bloom Fields,2026-02-26 14:11:47
+U036,1,happy,Enjoyed a sunny afternoon,10,2,Spark City,2026-02-25 10:56:00
+U009,0,sad,Looked through old photos,1,3,Mist Haven,2026-02-19 01:05:00
+U017,2,calm,,12,4,Bloom Fields,2026-02-27 12:19:05
+U044,0,sad,Not in the mood for anything,4,1,Mist Haven,2026-02-24 04:35:45
+U027,2,calm,,15,5,Bloom Fields,2026-02-28 15:46:13
+U017,1,happy,Treated myself to something nice,18,5,Spark City,2026-02-28 18:59:37
+U040,0,sad,,1,1,Mist Haven,2026-02-24 01:30:52
+U023,0,sad,Too tired to explain how I feel,2,5,Mist Haven,2026-02-28 02:29:23
+U030,1,happy,Finished a project I am proud of,17,0,Spark City,2026-02-23 17:50:46
+U045,2,calm,Took a long bath,2,4,Bloom Fields,2026-02-27 02:10:52
+U026,0,sad,,0,4,Mist Haven,2026-02-27 00:46:24
+U019,0,sad,,22,2,Mist Haven,2026-02-25 22:39:20
+U021,1,happy,Played with my dog,13,5,Spark City,2026-02-21 13:18:59
+U027,2,calm,,12,1,Bloom Fields,2026-03-03 12:45:25
+U028,1,happy,Finished a project I am proud of,5,2,Spark City,2026-02-25 05:14:17
+U017,1,happy,Watched a movie,21,3,Spark City,2026-02-19 21:03:19
+U048,2,calm,Feeling uncertain about everything,15,2,Bloom Fields,2026-02-25 15:42:06
+U041,1,happy,Had a really good laugh today,18,5,Spark City,2026-02-28 18:24:19
+U034,1,happy,Caught up with an old friend,12,6,Spark City,2026-03-01 12:31:05
+U025,0,sad,Not in the mood for anything,0,0,Mist Haven,2026-03-02 00:13:40
+U037,2,calm,,21,4,Bloom Fields,2026-02-20 21:32:35
+U050,1,happy,Good news arrived today,9,6,Spark City,2026-02-22 09:53:35
+U047,1,happy,Caught up with an old friend,17,2,Spark City,2026-03-04 17:58:24
+U045,0,sad,Sitting in the dark listening to music,23,2,Mist Haven,2026-03-04 23:59:51
+U043,0,sad,Everything feels heavy,9,3,Mist Haven,2026-02-26 09:17:37
+U040,1,happy,Went for a walk,13,6,Spark City,2026-03-01 13:56:47
+U007,2,calm,Just drifting today,12,4,Bloom Fields,2026-02-20 12:27:56
+U018,1,happy,Went for a walk,17,0,Spark City,2026-02-23 17:45:31
+U012,1,happy,Played with my dog,14,1,Spark City,2026-02-24 14:27:39
+U038,2,calm,,17,2,Bloom Fields,2026-02-25 17:25:48
+U003,1,happy,Finished a project I am proud of,9,3,Spark City,2026-02-26 09:47:11
+U039,2,calm,Just drifting today,16,4,Bloom Fields,2026-02-27 16:38:26
+U013,2,calm,"Nothing planned, just being",0,5,Bloom Fields,2026-02-21 00:46:04
+U043,1,happy,Treated myself to something nice,11,5,Spark City,2026-02-28 11:45:41
+U043,1,happy,Lunch with friends,14,4,Spark City,2026-02-20 14:49:34
+U048,2,calm,,0,3,Bloom Fields,2026-02-19 00:14:39
+U007,2,calm,Just drifting today,14,0,Bloom Fields,2026-03-02 14:54:55
+U041,1,happy,Played with my dog,14,6,Spark City,2026-02-22 14:19:51
+U018,1,happy,Finished a project I am proud of,10,5,Spark City,2026-02-21 10:45:46
+U042,2,calm,Taking things slow,10,3,Bloom Fields,2026-02-19 10:18:21
+U033,1,happy,Treated myself to something nice,13,1,Spark City,2026-03-03 13:29:41
+U040,0,sad,,1,3,Mist Haven,2026-02-26 01:19:02
+U044,1,happy,Woke up feeling great,21,6,Spark City,2026-03-01 21:53:32
+U015,0,sad,,1,6,Mist Haven,2026-03-01 01:53:52
+U029,2,calm,Went for a quiet walk,15,3,Bloom Fields,2026-02-19 15:59:58
+U029,2,calm,,12,1,Bloom Fields,2026-02-24 12:49:42
+U043,2,calm,,13,5,Bloom Fields,2026-02-21 13:28:58
+U016,2,calm,,13,3,Bloom Fields,2026-02-26 13:32:58
+U001,2,calm,Did some journaling,15,0,Bloom Fields,2026-02-23 15:46:50
+U045,1,happy,Read a book,17,3,Spark City,2026-02-26 17:06:13
+U040,2,calm,,13,3,Bloom Fields,2026-02-19 13:22:41
+U008,0,sad,,16,3,Mist Haven,2026-02-19 16:04:30
+U041,1,happy,Family time,17,2,Spark City,2026-03-04 17:27:13
+U030,2,calm,Watched the clouds for a while,15,3,Bloom Fields,2026-02-19 15:04:34
+U036,1,happy,Had a great workout,18,1,Spark City,2026-03-03 18:16:36
+U004,0,sad,"Hard day, feeling drained",2,1,Mist Haven,2026-02-24 02:57:02
+U003,1,happy,Watched a movie,17,0,Spark City,2026-02-23 17:32:39
+U015,1,happy,Good news arrived today,14,0,Spark City,2026-02-23 14:56:09
+U010,2,calm,,17,4,Bloom Fields,2026-02-27 17:13:52
+U002,0,sad,Couldn t get out of bed today,22,2,Mist Haven,2026-03-04 22:27:53
+U050,1,happy,Treated myself to something nice,17,3,Spark City,2026-02-26 17:28:45
+U017,1,happy,Woke up feeling great,10,2,Spark City,2026-02-25 10:51:31
+U035,1,happy,Enjoyed a sunny afternoon,13,2,Spark City,2026-03-04 13:18:52
+U028,0,sad,,22,3,Mist Haven,2026-02-19 22:34:00
+U021,0,sad,Cried and didn t even know why,3,4,Mist Haven,2026-02-27 03:10:50
+U030,1,happy,Woke up feeling great,7,1,Spark City,2026-03-03 07:34:18
+U028,1,happy,Watched a movie,14,2,Spark City,2026-03-04 14:47:56
+U043,1,happy,Cooked a nice meal,15,0,Spark City,2026-02-23 15:48:52
+U036,1,happy,Caught up with an old friend,16,4,Spark City,2026-02-27 16:11:50
+U010,0,sad,Too tired to explain how I feel,22,1,Mist Haven,2026-03-03 22:39:07
+U005,0,sad,Not in the mood for anything,2,2,Mist Haven,2026-02-25 02:45:51
+U034,1,happy,Read a book,18,5,Spark City,2026-02-28 18:11:05
+U010,1,happy,Went for a walk,18,5,Spark City,2026-02-21 18:50:44
+U049,0,sad,,22,4,Mist Haven,2026-02-27 22:12:15
+U038,2,calm,"Nothing planned, just being",13,5,Bloom Fields,2026-02-21 13:21:40
+U005,1,happy,Read a book,10,4,Spark City,2026-02-27 10:51:30
+U002,1,happy,Had a really good laugh today,4,3,Spark City,2026-02-19 04:41:38
+U012,1,happy,Went for a walk,10,5,Spark City,2026-02-21 10:58:43
+U003,1,happy,Played with my dog,7,1,Spark City,2026-03-03 07:06:02
+U036,1,happy,Watched a movie,12,5,Spark City,2026-02-21 12:12:58
+U028,0,sad,Sitting in the dark listening to music,2,4,Mist Haven,2026-02-20 02:59:43
+U014,1,happy,Played with my dog,11,1,Spark City,2026-02-24 11:36:43
+U016,2,calm,,11,2,Bloom Fields,2026-02-25 11:39:26
+U004,0,sad,,22,6,Mist Haven,2026-03-01 22:31:22
+U025,2,calm,,16,4,Bloom Fields,2026-02-20 16:55:08
+U022,2,calm,,10,4,Bloom Fields,2026-02-20 10:41:07
+U018,1,happy,Had a really good laugh today,22,2,Spark City,2026-03-04 22:52:54
+U033,2,calm,Quiet evening at home,12,2,Bloom Fields,2026-03-04 12:22:05
+U033,0,sad,Looked through old photos,14,3,Mist Haven,2026-02-26 14:19:18
+U050,1,happy,Woke up feeling great,17,0,Spark City,2026-03-02 17:56:07
+U020,0,sad,Too tired to explain how I feel,23,6,Mist Haven,2026-02-22 23:04:32
+U015,1,happy,Woke up feeling great,16,1,Spark City,2026-02-24 16:02:44
+U012,0,sad,,1,3,Mist Haven,2026-02-26 01:28:29
+U040,1,happy,Lunch with friends,22,5,Spark City,2026-02-28 22:57:49
+U029,2,calm,Just drifting today,10,5,Bloom Fields,2026-02-28 10:39:37
+U035,0,sad,Stayed home all day,21,3,Mist Haven,2026-02-19 21:31:07
+U008,1,happy,Finished a project I am proud of,17,3,Spark City,2026-02-26 17:33:17
+U041,1,happy,Cooked a nice meal,12,1,Spark City,2026-02-24 12:17:48
+U028,1,happy,Had a great workout,10,0,Spark City,2026-03-02 10:27:57
+U001,1,happy,Watched a movie,16,4,Spark City,2026-02-20 16:23:02
+U047,0,sad,Feeling really low,23,5,Mist Haven,2026-02-28 23:22:23
+U041,2,calm,Not sure what I want right now,7,4,Bloom Fields,2026-02-20 07:14:31
+U006,2,calm,,11,6,Bloom Fields,2026-03-01 11:08:49
+U015,2,calm,,14,5,Bloom Fields,2026-02-28 14:33:24
+U003,2,calm,,13,2,Bloom Fields,2026-02-25 13:15:25
+U037,2,calm,,12,0,Bloom Fields,2026-02-23 12:12:56
+U031,1,happy,Watched a movie,17,3,Spark City,2026-02-26 17:08:03
+U033,0,sad,Everything feels heavy,22,2,Mist Haven,2026-02-25 22:55:27
+U027,0,sad,Just need some quiet time,0,5,Mist Haven,2026-02-21 00:56:44
+U007,1,happy,Watched a movie,12,3,Spark City,2026-02-26 12:25:07
+U025,2,calm,,22,6,Bloom Fields,2026-02-22 22:33:07
+U041,1,happy,Played with my dog,14,0,Spark City,2026-02-23 14:44:54
+U025,2,calm,Quiet evening at home,11,5,Bloom Fields,2026-02-28 11:37:46
+U018,1,happy,Read a book,5,6,Spark City,2026-02-22 05:40:07
+U001,2,calm,Went for a quiet walk,11,2,Bloom Fields,2026-03-04 11:07:23
+U023,0,sad,,17,3,Mist Haven,2026-02-26 17:54:05
+U043,2,calm,,11,1,Bloom Fields,2026-03-03 11:59:42
+U028,0,sad,Feeling invisible,23,5,Mist Haven,2026-02-28 23:24:20
+U020,2,calm,,14,3,Bloom Fields,2026-02-26 14:00:54
+U012,0,sad,Cried and didn t even know why,23,1,Mist Haven,2026-03-03 23:07:53
+U050,1,happy,Cooked a nice meal,15,4,Spark City,2026-02-27 15:54:16
+U047,2,calm,,5,5,Bloom Fields,2026-02-21 05:47:26
+U035,0,sad,Feeling really low,23,4,Mist Haven,2026-02-27 23:13:59
+U049,1,happy,Had a great workout,13,0,Spark City,2026-03-02 13:30:53
+U037,1,happy,Enjoyed a sunny afternoon,12,3,Spark City,2026-02-19 12:30:01
+U018,1,happy,Played with my dog,9,1,Spark City,2026-02-24 09:39:31
+U041,1,happy,Cooked a nice meal,0,2,Spark City,2026-02-25 00:13:33
+U041,2,calm,Took a long bath,14,5,Bloom Fields,2026-02-21 14:56:16
+U014,1,happy,Went for a walk,9,3,Spark City,2026-02-26 09:22:36
+U034,1,happy,Enjoyed a sunny afternoon,15,2,Spark City,2026-03-04 15:44:34
+U037,1,happy,Read a book,12,2,Spark City,2026-02-25 12:13:09
+U005,0,sad,Not in the mood for anything,21,5,Mist Haven,2026-02-21 21:11:52
+U034,1,happy,Read a book,20,1,Spark City,2026-03-03 20:13:26
+U041,1,happy,Played with my dog,9,3,Spark City,2026-02-19 09:00:24
+U019,0,sad,,1,3,Mist Haven,2026-02-19 01:31:55
+U002,1,happy,Had a really good laugh today,12,3,Spark City,2026-02-26 12:56:52
+U023,2,calm,Took a long bath,10,1,Bloom Fields,2026-02-24 10:22:49
+U033,2,calm,Taking things slow,15,0,Bloom Fields,2026-03-02 15:42:26
+U012,0,sad,,23,2,Mist Haven,2026-02-25 23:58:55
+U020,2,calm,,7,6,Bloom Fields,2026-03-01 07:24:45
+U014,2,calm,,11,5,Bloom Fields,2026-02-28 11:15:06
+U028,2,calm,"Tidied my room, felt a bit clearer",14,3,Bloom Fields,2026-02-26 14:41:25
+U030,0,sad,"Hard day, feeling drained",2,3,Mist Haven,2026-02-26 02:08:19
+U036,1,happy,Family time,10,4,Spark City,2026-02-20 10:27:45
+U025,0,sad,,2,3,Mist Haven,2026-02-26 02:35:10
+U023,0,sad,Too tired to explain how I feel,14,3,Mist Haven,2026-02-19 14:56:54
+U048,2,calm,Had a slow morning with tea,11,6,Bloom Fields,2026-02-22 11:29:12
+U010,1,happy,Treated myself to something nice,5,0,Spark City,2026-02-23 05:36:10
+U048,2,calm,,7,1,Bloom Fields,2026-02-24 07:25:29
+U008,2,calm,,14,4,Bloom Fields,2026-02-20 14:36:09
+U027,2,calm,Did some journaling,21,4,Bloom Fields,2026-02-27 21:44:32
+U007,0,sad,,21,6,Mist Haven,2026-02-22 21:20:10
+U033,1,happy,Treated myself to something nice,23,6,Spark City,2026-03-01 23:23:58
+U024,0,sad,Too tired to explain how I feel,23,4,Mist Haven,2026-02-27 23:06:26
+U016,0,sad,,1,0,Mist Haven,2026-02-23 01:59:47
+U034,1,happy,Cooked a nice meal,11,0,Spark City,2026-02-23 11:12:46
+U009,2,calm,Sat by the window and thought,13,5,Bloom Fields,2026-02-28 13:46:21
+U044,0,sad,Sitting in the dark listening to music,0,1,Mist Haven,2026-03-03 00:10:13
+U002,1,happy,Read a book,12,2,Spark City,2026-02-25 12:12:31
+U006,1,happy,Cooked a nice meal,16,4,Spark City,2026-02-20 16:34:48
+U008,0,sad,,5,4,Mist Haven,2026-02-27 05:32:23
+U020,1,happy,Watched a movie,10,0,Spark City,2026-02-23 10:23:58
+U032,2,calm,,10,4,Bloom Fields,2026-02-20 10:12:37
+U008,1,happy,Went for a walk,11,0,Spark City,2026-02-23 11:58:49
