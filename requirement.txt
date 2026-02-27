@@ -12,3 +12,4 @@ kaggle
 wordcloud
 fastapi
 uvicorn[standard]
+nbformat>=4.2.0
