@@ -1,0 +1,66 @@
+/* ====== ACTIVITY CARDS ====== */
+.card.calm-card {
+    background-color: #332da5;
+    min-height: 280px;
+}
+
+.card.calm-card .card-body {
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* ====== BREATHE OVERLAY ====== */
+#breatheOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+#breatheOverlay[hidden] {
+    display: none;
+}
+
+.breathe-box {
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.breatheCircle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #a8d8ea;
+    margin: 0 auto 20px;
+    transition: transform 4s ease-in-out;
+}
+
+.breatheCircle.isBreathing {
+    animation: breathePulse 12s ease-in-out infinite;
+}
+
+@keyframes breathePulse {
+    0%   { transform: scale(1); }
+    33%  { transform: scale(1.6); }
+    66%  { transform: scale(1.6); }
+    100% { transform: scale(1); }
+}
+
+.breathe-close {
+    display: block;
+    margin: 0 auto 20px;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
