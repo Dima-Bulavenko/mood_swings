@@ -49,6 +49,17 @@ Windows (PowerShell):
 .venv\Scripts\Activate.ps1
 ```
 
+## 4) Run FastAPI server
+
+From `backend/` (with `.venv` activated), start the dev server:
+
+```bash
+uv run fastapi dev
+```
+
+Then open: `http://127.0.0.1:8000`  
+API docs: `http://127.0.0.1:8000/docs`
+
 ## Team Git Flow (Simple)
 
 ### Roles

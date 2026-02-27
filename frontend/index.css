@@ -1,0 +1,351 @@
+:root {
+  /* ===== DESIGN TOKENS ===== */
+  /* Colors */
+  --color-primary: #6c63ff;
+  --color-secondary: #a8e6cf;
+  --color-accent: #e6e1ff;
+  --color-background: #fff7ed;
+  --color-text: #2e2a4a;
+
+  /* Typography */
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-emotional: 'Nunito', sans-serif;
+
+  /* Type scale */
+  --text-sm: 1rem;
+  --text-md: 1.125rem;
+  --text-xl: 2.25rem;
+
+  /* Layout */
+  --container-max: 1100px;
+  --container-pad: 1rem;
+
+  /* Spacing */
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-7: 3rem;
+
+  /* Radius */
+  --radius-lg: 24px;
+  --radius-nav: 12px;
+
+  /* Effects */
+  --shadow-card: 0 6px 18px rgba(46, 42, 74, 0.08);
+  --shadow-button: 0 6px 14px rgba(108, 99, 255, 0.2);
+  --shadow-button-hover: 0 10px 20px rgba(108, 99, 255, 0.28);
+  --ease-standard: 200ms ease;
+}
+
+/* ===== BASE ===== */
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: var(--container-max);
+}
+
+/* Buttons (global) */
+.btn {
+  min-height: 2.75rem;
+  padding: 0.65rem 1rem;
+  border-radius: var(--radius-nav);
+  font-weight: 600;
+  transition:
+    background-color var(--ease-standard),
+    color var(--ease-standard),
+    transform var(--ease-standard),
+    box-shadow var(--ease-standard),
+    border-color var(--ease-standard);
+}
+
+.btn:focus-visible {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(108, 99, 255, 0.22);
+}
+
+.btn:disabled,
+.btn.disabled {
+  opacity: 0.65;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ===== NAVBAR ===== */
+/* Shell */
+.mood-navbar {
+  background-color: var(--color-background);
+  margin: 0 0 var(--space-4);
+  box-shadow: var(--shadow-card);
+}
+
+.mood-navbar .container {
+  padding-top: var(--space-2);
+  padding-bottom: var(--space-2);
+}
+
+/* Brand */
+.mood-navbar .navbar-brand.mood-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.mood-navbar .navbar-brand.mood-brand:hover,
+.mood-navbar .navbar-brand.mood-brand:focus {
+  color: var(--color-primary);
+}
+
+.mood-navbar .navbar-brand.mood-brand i,
+.mood-navbar .navbar-nav .nav-link i {
+  margin-right: 0;
+}
+
+/* Menu */
+.mood-navbar .mood-nav {
+  row-gap: 0.25rem;
+  gap: 0.25rem;
+}
+
+.mood-navbar .navbar-nav .nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--space-2);
+  padding: 0.55rem 0.85rem;
+  border-radius: var(--radius-nav);
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+  color: var(--color-text);
+  background-color: transparent;
+  transition:
+    background-color var(--ease-standard),
+    color var(--ease-standard),
+    transform var(--ease-standard);
+}
+
+/* States */
+.mood-navbar .navbar-nav .nav-link:hover,
+.mood-navbar .navbar-nav .nav-link:focus {
+  color: var(--color-primary);
+  background-color: rgba(230, 225, 255, 0.6);
+  transform: translateY(-1px);
+}
+
+.mood-navbar .navbar-nav .nav-link.active,
+.mood-navbar .navbar-nav .nav-link.active:hover,
+.mood-navbar .navbar-nav .nav-link.active:focus {
+  color: var(--color-primary);
+  background-color: rgba(230, 225, 255, 0.78);
+}
+
+.mood-navbar .navbar-collapse {
+  align-items: center;
+}
+
+/* Toggler */
+.mood-navbar .navbar-toggler {
+  padding: 0.4rem 0.5rem;
+  color: var(--color-text);
+  border: 1px solid rgba(46, 42, 74, 0.2);
+  border-radius: 0.5rem;
+}
+
+.mood-navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* ===== RESPONSIVE ===== */
+/* Desktop */
+@media (min-width: 992px) {
+  .mood-navbar .navbar-collapse {
+    margin-left: var(--space-4);
+  }
+
+  .mood-navbar .mood-nav {
+    gap: 0.35rem;
+  }
+}
+
+/* Tablet and down */
+@media (max-width: 991.98px) {
+  .mood-navbar .navbar-collapse {
+    margin-top: var(--space-2);
+    padding: var(--space-2);
+    border-radius: var(--radius-nav);
+    background-color: rgba(255, 255, 255, 0.72);
+  }
+
+  .mood-navbar .mood-nav {
+    gap: 0.4rem;
+  }
+
+  .mood-navbar .navbar-nav .nav-link {
+    width: 100%;
+    padding: 0.65rem 0.85rem;
+    border-radius: var(--radius-nav);
+    transform: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 575.98px) {
+  .mood-navbar .container {
+    padding-left: var(--space-3);
+    padding-right: var(--space-3);
+  }
+
+  .mood-navbar .navbar-brand.mood-brand {
+    font-size: 1.1rem;
+  }
+
+  .mood-navbar .navbar-nav .nav-link {
+    font-size: 0.98rem;
+  }
+}
+
+/* ===== PREVIEW PAGE ===== */
+.mood-preview {
+  padding-top: var(--space-7);
+}
+
+.mood-preview-title {
+  margin: 0 0 var(--space-3);
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 700;
+}
+
+.mood-preview-text {
+  margin: 0;
+  font-size: var(--text-md);
+}
+
+/* ===== INDEX PAGE ===== */
+/* Sections */
+.hero {
+  padding-top: clamp(2rem, 4vw, 3.5rem);
+  padding-bottom: clamp(2rem, 4vw, 3.5rem);
+}
+
+#mood-picker,
+#skip-section,
+#recommendation {
+  padding-top: clamp(2rem, 3vw, 3rem);
+}
+
+/* Buttons (filled) */
+.btn:not(.btn-link):not(.mood-word) {
+  border: 0;
+  background-color: var(--color-primary);
+  color: #fff;
+  box-shadow: var(--shadow-button);
+}
+
+.btn:not(.btn-link):not(.mood-word):hover,
+.btn:not(.btn-link):not(.mood-word):focus {
+  background-color: #5b53e6;
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-button-hover);
+}
+
+.btn:not(.btn-link):not(.mood-word):active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-button);
+}
+
+/* CTA alignment (skip/recommendation) */
+#skip-section [class*='col-'],
+#recommendation [class*='col-'] {
+  display: flex;
+}
+
+#skip-section .btn,
+#recommendation .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 4.8rem;
+  text-align: center;
+}
+
+/* Keep same size even with Bootstrap utility classes in HTML */
+#skip-section .btn.btn-lg,
+#recommendation .btn.btn-lg {
+  font-size: 1.12rem;
+  line-height: 1.25;
+}
+
+#skip-section .btn.p-4,
+#recommendation .btn.p-4 {
+  padding: 0.95rem 1rem !important;
+}
+
+/* Link button */
+#skip-btn {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#skip-btn:hover,
+#skip-btn:focus {
+  color: #4e47c7;
+  text-decoration: underline;
+}
+
+/* Mood words */
+.mood-word {
+  border: 1px solid rgba(46, 42, 74, 0.12);
+  background-color: #fff;
+  color: var(--color-text);
+}
+
+.mood-word:hover,
+.mood-word:focus {
+  border-color: rgba(108, 99, 255, 0.45);
+  background-color: rgba(230, 225, 255, 0.5);
+  color: var(--color-primary);
+}
+
+.mood-word.selected {
+  border-color: var(--color-primary);
+  background-color: rgba(108, 99, 255, 0.14);
+  color: var(--color-primary);
+}
+
+/* Small screens */
+@media (max-width: 575.98px) {
+  #mood-btn,
+  #submit-mood,
+  #recommended-town-btn {
+    width: 100%;
+  }
+
+  .btn {
+    min-height: 2.6rem;
+  }
+
+  .hero .lead {
+    font-size: 1.02rem;
+  }
+
+  #skip-section .btn,
+  #recommendation .btn {
+    min-height: 4.2rem;
+  }
+}
