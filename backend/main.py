@@ -7,7 +7,7 @@ from pydantic import BaseModel, Field
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session, sessionmaker
 
-from core.domain.mood import CreateMood, Mood, MoodType
+from core.domain.mood import Mood, MoodType
 from core.domain.note import Note
 from core.domain.user import User
 from infrastructure.sqlalchemy.models import Base
@@ -35,11 +35,11 @@ app = FastAPI(lifespan=lifespan)
 
 
 class CreateMoodRequest(BaseModel):
-	mood: MoodType
+    moods: list[MoodType] = Field(min_length=1)
 
 
 class UpdateMoodRequest(BaseModel):
-	mood: MoodType
+    moods: list[MoodType] = Field(min_length=1)
 
 
 class CreateNoteRequest(BaseModel):
@@ -79,59 +79,59 @@ def create_user(user_service: UserService = Depends(get_user_service)) -> User:
 	return user_service.create_user()
 
 
-@app.post("/moods", response_model=Mood, status_code=status.HTTP_201_CREATED, tags=["moods"])
+@app.post("/moods", response_model=list[Mood], status_code=status.HTTP_201_CREATED, tags=["moods"])
 def create_mood(
-	request: CreateMoodRequest,
-	user_id: str,
-	mood_service: MoodService = Depends(get_mood_service),
-) -> Mood:
-	"""Create today's mood entry for the user provided via query parameter."""
-	return mood_service.create_mood(CreateMood(user_id=user_id, mood=request.mood))
+    request: CreateMoodRequest,
+    user_id: str,
+    mood_service: MoodService = Depends(get_mood_service),
+) -> list[Mood]:
+    """Create multiple today's mood entries for the user provided via query parameter."""
+    return mood_service.create_moods(user_id=user_id, moods=request.moods)
 
 
 @app.get(
-	"/moods/today",
-	response_model=Mood,
-	tags=["moods"],
-	responses={
-		404: {
-			"model": ErrorResponse,
-			"description": "Mood for today was not found for the provided user.",
-		},
-	},
+    "/moods/today",
+    response_model=list[Mood],
+    tags=["moods"],
+    responses={
+        404: {
+            "model": ErrorResponse,
+            "description": "Mood for today was not found for the provided user.",
+        },
+    },
 )
 def get_todays_mood(
-	user_id: str,
-	mood_service: MoodService = Depends(get_mood_service),
-) -> Mood:
-	"""Retrieve today's mood for the user provided via query parameter."""
-	try:
-		return mood_service.get_todays_mood_by_user_id(user_id)
-	except ValueError as error:
-		raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=str(error)) from error
+    user_id: str,
+    mood_service: MoodService = Depends(get_mood_service),
+) -> list[Mood]:
+    """Retrieve all today's moods for the user provided via query parameter."""
+    try:
+        return mood_service.get_todays_moods_by_user_id(user_id)
+    except ValueError as error:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=str(error)) from error
 
 
 @app.put(
-	"/moods/today",
-	response_model=Mood,
-	tags=["moods"],
-	responses={
-		404: {
-			"model": ErrorResponse,
-			"description": "Mood for today was not found for the provided user.",
-		},
-	},
+    "/moods/today",
+    response_model=list[Mood],
+    tags=["moods"],
+    responses={
+        404: {
+            "model": ErrorResponse,
+            "description": "Mood for today was not found for the provided user.",
+        },
+    },
 )
 def update_todays_mood(
-	request: UpdateMoodRequest,
-	user_id: str,
-	mood_service: MoodService = Depends(get_mood_service),
-) -> Mood:
-	"""Update today's mood for the user provided via query parameter."""
-	try:
-		return mood_service.update_todays_mood_by_user_id(user_id=user_id, mood=request.mood)
-	except ValueError as error:
-		raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=str(error)) from error
+    request: UpdateMoodRequest,
+    user_id: str,
+    mood_service: MoodService = Depends(get_mood_service),
+) -> list[Mood]:
+    """Replace today's mood choices for the user provided via query parameter."""
+    try:
+        return mood_service.update_todays_moods_by_user_id(user_id=user_id, moods=request.moods)
+    except ValueError as error:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=str(error)) from error
 
 
 @app.post("/notes", response_model=Note, status_code=status.HTTP_201_CREATED, tags=["notes"])
