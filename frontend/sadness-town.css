@@ -106,3 +106,112 @@ body {
     0%   { transform: translateX(30vw); }
     100% { transform: translateX(-100%); }
 }
+
+/* ====== OVERLAYS ====== */
+#funnyOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+#funnyOverlay[hidden] {
+    display: none;
+}
+
+.breathe-box {
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.breathe-close {
+    display: block;
+    margin: 0 auto 20px;
+    background: #9b59b6;
+    border: none;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(155, 89, 182, 0.3);
+    border-top-color: #9b59b6;
+    animation: spin 1s linear infinite;
+    border-radius: 50%;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ====== MUSIC OVERLAY ====== */
+#sadMusicOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+#sadMusicOverlay[hidden] {
+    display: none;
+}
+
+/* ====== POETRY OVERLAY ====== */
+#poetryOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+#poetryOverlay[hidden] {
+    display: none;
+}
+
+.poetry-box {
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 500px;
+    padding: 20px;
+}
+
+.poetry-scroll {
+    overflow: hidden;
+    height: 300px;
+    width: 100%;
+}
+
+.poetry-text {
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-style: italic;
+    animation: scrollPoem 35s linear infinite;
+    margin: 0;
+}
+
+@keyframes scrollPoem {
+    0%   { transform: translateY(300px); }
+    100% { transform: translateY(-100%); }
+}
