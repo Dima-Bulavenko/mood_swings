@@ -102,7 +102,7 @@ body {
   overflow: hidden;
 }
 
-/* Reset cloud defaults — we turn them into confetti */
+/* Reset cloud defaults */
 .cloud {
   position: absolute;
   top: -40px;
@@ -117,7 +117,7 @@ body {
   display: none;
 }
 
-/* Confetti 1 — pink rectangle */
+/* Confetti 1 */
 .cloud-1 {
   width: 12px;
   height: 28px;
@@ -126,7 +126,7 @@ body {
   animation: fallConfetti 6s linear infinite;
 }
 
-/* Confetti 2 — gold square */
+/* Confetti 2 */
 .cloud-2 {
   width: 14px;
   height: 14px;
@@ -136,7 +136,7 @@ body {
   animation: fallConfetti 8s linear infinite 1.5s;
 }
 
-/* Confetti 3 — coral strip */
+/* Confetti 3 */
 .cloud-3 {
   width: 8px;
   height: 32px;
@@ -145,7 +145,7 @@ body {
   animation: fallConfetti 7s linear infinite 3s;
 }
 
-/* Confetti 4 — magenta dot */
+/* Confetti 4 */
 .cloud-4 {
   width: 16px;
   height: 16px;
