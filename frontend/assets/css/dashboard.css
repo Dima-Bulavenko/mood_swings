@@ -1,0 +1,7 @@
+/* ====== BACKGROUND ====== */
+body {
+    background-image: url('/frontend/assets/images/pink.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
