@@ -47,6 +47,10 @@ body {
   color: var(--color-text);
   background-color: var(--color-background);
   line-height: 1.6;
+  background-image: url('/frontend/fe-assets/pinkclouds.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .container {

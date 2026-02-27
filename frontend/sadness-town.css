@@ -1,6 +1,6 @@
 /* ====== SKY BACKGROUND ====== */
 body {
-    background-image: url('/frontend/fe-assets/pink.jpg');
+    background-image: url('/frontend/fe-assets/purple.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -8,7 +8,7 @@ body {
 
 /* ====== ACTIVITY CARDS ====== */
 .card.sad-card {
-    background-color: #bba2c4;
+    background-color: #864a9c;
     min-height: 280px;
     border: none;
 }
