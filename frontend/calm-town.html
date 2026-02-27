@@ -93,16 +93,13 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Soothing Music</h5>
                                     <p class="card-text">Listen to our curated playlist of calming music to help you unwind and find tranquility.</p>
-                                    <a href="#" class="btn btn-primary">Listen Now</a>
+                                    <button class="btn btn-primary" id="musicBtn">Listen Now</button>
                                 </div>
                             </div>  
                         </div>
                     </div>
                 </div>
             </section>
-
-            
-
 
             <!-- BREATHE OVERLAY -->
             <div id="breatheOverlay" hidden>
@@ -118,6 +115,7 @@
             <div id="headspaceOverlay" hidden>
                 <div class="breathe-box">
                     <button id="headspaceCloseBtn" class="breathe-close">✕ Close</button>
+                    <div id="headspaceSpinner" class="loading-spinner"></div>
                     <iframe 
                         id="headspaceVideo"
                         width="560" 
@@ -134,6 +132,7 @@
             <div id="adrieneOverlay" hidden>
                 <div class="breathe-box">
                     <button id="adrieneCloseBtn" class="breathe-close">✕ Close</button>
+                    <div id="adrieneSpinner" class="loading-spinner"></div>
                     <iframe 
                         id="adrieneVideo"
                         width="560" 
@@ -141,6 +140,25 @@
                         src="" 
                         title="Yoga with Adriene"
                         frameborder="0" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            
+            <!-- MUSIC OVERLAY -->
+            <div id="musicOverlay" hidden>
+                <div class="breathe-box">
+                    <button id="musicCloseBtn" class="breathe-close">✕ Close</button>
+                    <div id="musicSpinner" class="loading-spinner"></div>
+                    <iframe 
+                        id="musicVideo"
+                        width="560" 
+                        height="315" 
+                        src="" 
+                        title="Soothing Music"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
                         allowfullscreen>
                     </iframe>
                 </div>

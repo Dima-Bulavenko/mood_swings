@@ -64,3 +64,18 @@
     border-radius: 6px;
     cursor: pointer;
 }
+
+/* ====== LOADING SPINNER ====== */
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(108, 99, 255, 0.3);
+    border-top-color: #6c63ff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}

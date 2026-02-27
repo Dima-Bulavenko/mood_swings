@@ -58,9 +58,9 @@ function stopBreathing() {
 // Button wiring
 if (breatheStartBtn) breatheStartBtn.addEventListener("click", startBreathing);
 if (breatheCloseBtn) breatheCloseBtn.addEventListener("click", closeBreatheOverlay);
-
 const pageBreatheBtn = document.getElementById("pageBreatheBtn");
 if (pageBreatheBtn) pageBreatheBtn.addEventListener("click", openBreatheOverlay);
+
 
 // ====== VIDEO OVERLAYS ======
 const headspaceOverlay = document.getElementById("headspaceOverlay");
@@ -73,9 +73,22 @@ const adrieneCloseBtn = document.getElementById("adrieneCloseBtn");
 const adrieneVideo = document.getElementById("adrieneVideo");
 const adrieneBtn = document.getElementById("adrieneBtn");
 
+const musicOverlay = document.getElementById("musicOverlay");
+const musicCloseBtn = document.getElementById("musicCloseBtn");
+const musicVideo = document.getElementById("musicVideo");
+const musicBtn = document.getElementById("musicBtn");
+
 function openHeadspace() {
+    document.getElementById("headspaceSpinner").style.display = "block";
+    document.getElementById("headspaceVideo").style.display = "none";
     headspaceVideo.src = "https://www.youtube.com/embed/inpok4MKVLM?autoplay=1";
+    headspaceVideo.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share");
+    headspaceVideo.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
     headspaceOverlay.hidden = false;
+    headspaceVideo.onload = function() {
+        document.getElementById("headspaceSpinner").style.display = "none";
+        document.getElementById("headspaceVideo").style.display = "block";
+    };
 }
 
 function closeHeadspace() {
@@ -83,11 +96,18 @@ function closeHeadspace() {
     headspaceOverlay.hidden = true;
 }
 
+
 function openAdriene() {
+    document.getElementById("adrieneSpinner").style.display = "block";
+    document.getElementById("adrieneVideo").style.display = "none";
     adrieneVideo.src = "https://www.youtube.com/embed/ZiQh8jA5tVM?si=pJA-7xeKPX0fHBzR&autoplay=1";
     adrieneVideo.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share");
     adrieneVideo.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
     adrieneOverlay.hidden = false;
+    adrieneVideo.onload = function() {
+        document.getElementById("adrieneSpinner").style.display = "none";
+        document.getElementById("adrieneVideo").style.display = "block";
+    };
 }
 
 function closeAdriene() {
@@ -99,3 +119,26 @@ if (headspaceBtn) headspaceBtn.addEventListener("click", openHeadspace);
 if (headspaceCloseBtn) headspaceCloseBtn.addEventListener("click", closeHeadspace);
 if (adrieneBtn) adrieneBtn.addEventListener("click", openAdriene);
 if (adrieneCloseBtn) adrieneCloseBtn.addEventListener("click", closeAdriene);
+
+
+function openMusic() {
+    document.getElementById("musicSpinner").style.display = "block";
+    document.getElementById("musicVideo").style.display = "none";
+    musicVideo.src = "https://www.youtube.com/embed/dnBAU8Co6PA?si=vaEUO0nEcnpxm_fl&autoplay=1";
+    musicVideo.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share");
+    musicVideo.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
+    musicOverlay.hidden = false;
+    musicVideo.onload = function() {
+        document.getElementById("musicSpinner").style.display = "none";
+        document.getElementById("musicVideo").style.display = "block";
+    };
+}
+
+
+function closeMusic() {
+    musicVideo.src = "";
+    musicOverlay.hidden = true;
+}
+
+if (musicBtn) musicBtn.addEventListener("click", openMusic);
+if (musicCloseBtn) musicCloseBtn.addEventListener("click", closeMusic);
