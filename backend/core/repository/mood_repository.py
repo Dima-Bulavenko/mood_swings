@@ -39,3 +39,8 @@ class MoodRepository(ABC):
     def get_all_mood_names(self) -> list[str]:
         """Retrieve all mood names only."""
         pass
+
+    @abstractmethod
+    def get_all_mood_names_with_dates(self) -> list[tuple[date, str]]:
+        """Retrieve mood dates and mood names for analytics."""
+        pass

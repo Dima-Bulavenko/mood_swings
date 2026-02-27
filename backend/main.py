@@ -1,4 +1,4 @@
-from src.analytics import load_data, weekly_mood_trend, top_happy_words, user_mood_history
+from src.analytics import load_data, top_happy_words, user_mood_history
 
 from collections.abc import AsyncIterator, Generator
 from contextlib import asynccontextmanager
@@ -10,7 +10,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import Session, sessionmaker
 
 from core.domain.mood import Mood, MoodType
-from core.domain.analytics import MoodFrequencyChart
+from core.domain.analytics import MoodFrequencyChart, WeeklyPopularMoodChart
 from core.domain.note import Note
 from core.domain.user import User
 from infrastructure.sqlalchemy.models import Base
@@ -174,9 +174,12 @@ def get_mood_frequency_endpoint(
     return analytics_service.get_top_mood_frequency_chart(limit=5)
 
 
-@app.get("/weekly-trend")
-def get_weekly_trend_endpoint():
-    return weekly_mood_trend(df)
+@app.get("/weekly-trend", response_model=WeeklyPopularMoodChart, tags=["analytics"])
+def get_weekly_trend_endpoint(
+    analytics_service: AnalyticsService = Depends(get_analytics_service),
+) -> WeeklyPopularMoodChart:
+    """Return the most popular mood for each day of the week."""
+    return analytics_service.get_weekly_popular_mood_chart()
 
 
 @app.get("/top-happy-words")

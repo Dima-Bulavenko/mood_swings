@@ -86,3 +86,8 @@ class SQLAlchemyMoodRepository(MoodRepository):
     def get_all_mood_names(self) -> list[str]:
         stmt = select(MoodModel.mood)
         return list(self._session.execute(stmt).scalars().all())
+
+    def get_all_mood_names_with_dates(self) -> list[tuple[date, str]]:
+        stmt = select(MoodModel.date_create, MoodModel.mood)
+        rows = self._session.execute(stmt).all()
+        return [(date_create, mood) for date_create, mood in rows]
