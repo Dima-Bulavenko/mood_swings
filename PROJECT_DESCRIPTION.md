@@ -19,21 +19,23 @@ The names of the pages can be changed to more creative ones.
 3. User is suggested to choose their mood today (exited, happy, calm, sad, angry). User is able to choose one mood per day. If user choose one the they should be able to see a button to change their day's mood. If user skip mood selection, they should be able to see a button to choose their day's mood.
 4. On the main page, user can see the towns with short description of them, and can navigate to each town to explore their features.
 
-### Happiness Town Page
+### The Happy Place (happiness-town.html)
 #### Features:
 1. Read other users' notes about what made them happy today.
 2. Leave their own note about what made them happy today.
+related words: Happy, Peaceful, Proud, Excited, Grateful, Joyful
 
-### Sadness Town Page
+### The UP-SAD Down (sadness-town.html)
 #### Features:
 1. Show some tips that can help users to cope with sadness.
+related words: Sad, Lonely, Meh, Hurt, Broken-Hearted, Unmotivated, Dejected
 
-### Calmness Town Page
+### The Calm-Down Corner (calm-town.html)
 #### Features:
 1. Breathing exercises to help users to calm down.
+related words: Spiralling, Lost, overwhelmed, Anxious, Angry, Tired
 
-
-### Data Analysis Page
+### Mood Tracker (dashboard.html)
 #### Features:
 To create a chart we can use a library Chart.js.
 1. Show a bar chart of the most common moods among users.
