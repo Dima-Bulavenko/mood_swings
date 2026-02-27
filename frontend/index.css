@@ -353,3 +353,10 @@ body {
     min-height: 4.2rem;
   }
 }
+
+/* ====== FOOTER ====== */
+.mood-footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    margin-top: auto;
+}
