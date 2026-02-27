@@ -1,6 +1,6 @@
 /* ====== WARM SUNSHINE BACKGROUND ====== */
 body {
-  background-image: url('/frontend/fe-assets/pinkclouds.jpg');
+  background-image: url('/frontend/assets/images/pinkclouds.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
