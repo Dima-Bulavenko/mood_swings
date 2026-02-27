@@ -61,3 +61,7 @@ class SQLAlchemyNoteRepository(NoteRepository):
         )
         models = self._session.execute(stmt).scalars().all()
         return [self._to_domain(model) for model in models]
+
+    def get_all_note_texts(self) -> list[str]:
+        stmt = select(NoteModel.note)
+        return list(self._session.execute(stmt).scalars().all())

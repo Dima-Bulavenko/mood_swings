@@ -11,6 +11,11 @@ class MoodRepository(ABC):
         pass
 
     @abstractmethod
+    def create_many(self, data: list[Mood]) -> list[Mood]:
+        """Create and persist multiple mood records."""
+        pass
+
+    @abstractmethod
     def get_by_id(self, mood_id: str) -> Mood | None:
         """Retrieve a mood by its identifier."""
         pass
@@ -21,6 +26,31 @@ class MoodRepository(ABC):
         pass
 
     @abstractmethod
-    def get_by_user_id_and_date(self, user_id: str, date_create: date) -> Mood | None:
-        """Retrieve a user's mood for a specific date."""
+    def get_by_user_id_and_date(self, user_id: str, date_create: date) -> list[Mood]:
+        """Retrieve all moods for a user on a specific date."""
+        pass
+
+    @abstractmethod
+    def delete_by_user_id_and_date(self, user_id: str, date_create: date) -> int:
+        """Delete all moods for a user on a specific date and return deleted count."""
+        pass
+
+    @abstractmethod
+    def get_all_mood_names(self) -> list[str]:
+        """Retrieve all mood names only."""
+        pass
+
+    @abstractmethod
+    def get_all_mood_names_with_dates(self) -> list[tuple[date, str]]:
+        """Retrieve mood dates and mood names for analytics."""
+        pass
+
+    @abstractmethod
+    def get_user_mood_names_with_dates(
+        self,
+        user_id: str,
+        start_date: date,
+        end_date: date,
+    ) -> list[tuple[date, str]]:
+        """Retrieve mood dates and mood names for a single user in a date range."""
         pass
