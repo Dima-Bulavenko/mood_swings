@@ -1,5 +1,6 @@
 from datetime import date
 from uuid import uuid4
+from collections import Counter
 
 from core.domain.mood import CreateMood, Mood, MoodType, UpdateMood
 from core.repository.mood_repository import MoodRepository
@@ -53,3 +54,7 @@ class MoodService:
         self.mood_repository.delete_by_user_id_and_date(user_id=user_id, date_create=date.today())
         mood_records = [Mood(id=uuid4().hex, user_id=user_id, mood=mood) for mood in moods]
         return self.mood_repository.create_many(mood_records)
+
+    def get_user_history(self, user_id: str) -> list[Mood]:
+        """Return all mood records for a specific user, sorted by date."""
+        return self.mood_repository.get_all_by_user_id(user_id)

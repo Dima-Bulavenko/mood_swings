@@ -3,6 +3,8 @@ from contextlib import asynccontextmanager
 from uuid import uuid4
 
 from fastapi import Depends, FastAPI, HTTPException, status
+from fastapi import Query
+from collections import Counter
 from pydantic import BaseModel, Field
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session, sessionmaker
@@ -154,6 +156,32 @@ def get_last_five_notes_excluding_user(
 	return note_service.get_last_five_excluding_user(user_id)
 
 
+@app.get("/users/{user_id}/history", response_model=list[Mood], tags=["users"])
+def get_user_history(
+    user_id: str,
+    mood_service: MoodService = Depends(get_mood_service),
+) -> list[Mood]:
+    """Retrieve all moods recorded by the user (history)."""
+    try:
+        return mood_service.mood_repository.get_by_user_id(user_id)
+    except ValueError as error:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=str(error))
 
+
+@app.get("/notes/top-happy-words", response_model=list[str], tags=["notes"])
+def get_top_happy_words(
+    limit: int = Query(10, description="Number of top words to return"),
+    note_service: NoteService = Depends(get_note_service),
+) -> list[str]:
+    """Return the most common words in users' notes."""
+    all_notes = note_service.get()  
+    words = []
+
+    for note in all_notes:
+        words.extend(note.note.lower().split())
+
+    counter = Counter(words)
+    top_words = [word for word, count in counter.most_common(limit)]
+    return top_words
 
 

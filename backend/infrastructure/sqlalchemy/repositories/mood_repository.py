@@ -82,3 +82,9 @@ class SQLAlchemyMoodRepository(MoodRepository):
         result = cast(CursorResult, self._session.execute(stmt))
         self._session.commit()
         return result.rowcount or 0
+    
+def get_all_by_user_id(self, user_id: str) -> list[Mood]:
+    """Retrieve all mood records for a specific user, sorted by date ascending."""
+    stmt = select(MoodModel).where(MoodModel.user_id == user_id).order_by(MoodModel.date_create.asc())
+    models = self._session.execute(stmt).scalars().all()
+    return [self._to_domain(model) for model in models]
