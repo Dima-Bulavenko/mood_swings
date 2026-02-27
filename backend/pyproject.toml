@@ -5,6 +5,7 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "fastapi[standard-no-fastapi-cloud-cli]>=0.133.1",
+    "pandas>=3.0.1",
     "pydantic>=2.11.9",
     "sqlalchemy>=2.0.47",
 ]
