@@ -349,3 +349,82 @@ body {
     min-height: 4.2rem;
   }
 }
+
+/* ===== HAPPINESS TOWN PAGE ===== */
+.happiness-page {
+  padding-bottom: var(--space-7);
+}
+
+.happiness-hero {
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-5);
+  padding: clamp(1.5rem, 3vw, 2.2rem);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-accent);
+  box-shadow: var(--shadow-card);
+}
+
+.happiness-title {
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+}
+
+.happiness-subtitle {
+  margin: 0;
+  font-size: var(--text-md);
+}
+
+.happiness-card {
+  border: 0;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.happiness-card .card-body {
+  padding: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.happiness-label {
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+#happy-note {
+  border-radius: var(--radius-nav);
+  border: 1px solid rgba(46, 42, 74, 0.18);
+  min-height: 7rem;
+  resize: vertical;
+}
+
+#happy-note:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 0.2rem rgba(108, 99, 255, 0.18);
+}
+
+.status-text {
+  min-height: 1.4rem;
+  margin-top: var(--space-2);
+  margin-bottom: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.positivity-board {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: var(--space-3);
+}
+
+.positivity-note {
+  padding: 0.9rem 1rem;
+  border-radius: var(--radius-nav);
+  background-color: rgba(230, 225, 255, 0.45);
+}
+
+.positivity-empty {
+  margin: 0;
+  color: rgba(46, 42, 74, 0.72);
+}

@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Mood Swings Happiness Town - share what made you happy and read positive notes." />
+    <title>Mood Swings | Happiness Town</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Nunito:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light mood-navbar" aria-label="Main navigation">
+      <div class="container">
+        <a class="navbar-brand mood-brand" href="index.html">
+          <i class="fas fa-heart" aria-hidden="true"></i>
+          <span>Mood Swings</span>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mood-navbar"
+          aria-controls="mood-navbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mood-navbar">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 mood-nav">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#mood-picker">Mood Picker</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="happiness-town.html">Happy Place</a></li>
+            <li class="nav-item"><a class="nav-link" href="calm-town.html">Calm-down Corner</a></li>
+            <li class="nav-item"><a class="nav-link" href="sadness-town.html">UP-SAD Down</a></li>
+            <li class="nav-item"><a class="nav-link" href="dashboard.html">Mood Tracker</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container happiness-page">
+      <section class="happiness-hero text-center">
+        <h1 class="happiness-title">🌞 Welcome to Happiness Town</h1>
+        <p class="happiness-subtitle">Share a bright moment and read uplifting notes from the community.</p>
+      </section>
+
+      <section class="row g-4" aria-label="Happiness Town content">
+        <div class="col-lg-5">
+          <article class="card happiness-card h-100">
+            <div class="card-body">
+              <h2 class="h4 mb-3">Share your happiness</h2>
+              <label for="happy-note" class="happiness-label mb-2">What made you happy today?</label>
+              <textarea
+                id="happy-note"
+                class="form-control"
+                maxlength="100"
+                placeholder="I had a great walk in the sun..."
+                aria-describedby="happy-note-help"
+              ></textarea>
+              <div id="happy-note-help" class="form-text">Max 100 characters.</div>
+              <button id="happy-submit" class="btn mt-3 w-100" type="button">Save my positive note</button>
+              <p id="submit-status" class="status-text" role="status" aria-live="polite"></p>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-lg-7">
+          <article class="card happiness-card h-100">
+            <div class="card-body">
+              <h2 class="h4 mb-3">Public positivity board</h2>
+              <p class="mb-3">Latest happy notes from other users:</p>
+              <p id="board-status" class="status-text" role="status" aria-live="polite"></p>
+              <ul id="positivity-board" class="positivity-board" aria-live="polite"></ul>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const API_BASE =
+        window.location.origin.includes('localhost:8000') || window.location.origin.includes('127.0.0.1:8000')
+          ? window.location.origin
+          : 'http://127.0.0.1:8000';
+
+      const USER_ID_STORAGE_KEY = 'moodSwingsUserId';
+      const noteInput = document.getElementById('happy-note');
+      const submitButton = document.getElementById('happy-submit');
+      const submitStatus = document.getElementById('submit-status');
+      const boardStatus = document.getElementById('board-status');
+      const boardList = document.getElementById('positivity-board');
+
+      async function ensureUserId() {
+        const storedId = localStorage.getItem(USER_ID_STORAGE_KEY);
+        if (storedId) {
+          return storedId;
+        }
+
+        const response = await fetch(`${API_BASE}/users`, { method: 'POST' });
+        if (!response.ok) {
+          throw new Error('Unable to create user session.');
+        }
+
+        const data = await response.json();
+        localStorage.setItem(USER_ID_STORAGE_KEY, data.id);
+        return data.id;
+      }
+
+      function renderNotes(notes) {
+        boardList.innerHTML = '';
+
+        if (!notes.length) {
+          const emptyItem = document.createElement('li');
+          emptyItem.className = 'positivity-empty';
+          emptyItem.textContent = 'No notes yet. Be the first to spread positivity.';
+          boardList.appendChild(emptyItem);
+          return;
+        }
+
+        notes.forEach((note) => {
+          const item = document.createElement('li');
+          item.className = 'positivity-note';
+          item.textContent = `✨ ${note.note}`;
+          boardList.appendChild(item);
+        });
+      }
+
+      async function loadPositivityBoard(userId) {
+        boardStatus.textContent = 'Loading positivity board...';
+
+        try {
+          const response = await fetch(`${API_BASE}/notes/latest?user_id=${encodeURIComponent(userId)}`);
+          if (!response.ok) {
+            throw new Error('Failed to load notes.');
+          }
+
+          const notes = await response.json();
+          renderNotes(notes);
+          boardStatus.textContent = '';
+        } catch (error) {
+          boardStatus.textContent = 'Unable to load notes from the backend right now.';
+          renderNotes([]);
+        }
+      }
+
+      async function submitHappyNote() {
+        const note = noteInput.value.trim();
+
+        if (!note) {
+          submitStatus.textContent = 'Please write something before submitting.';
+          return;
+        }
+
+        submitButton.disabled = true;
+        submitStatus.textContent = 'Saving your note...';
+
+        try {
+          const userId = await ensureUserId();
+          const response = await fetch(`${API_BASE}/notes?user_id=${encodeURIComponent(userId)}`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ note }),
+          });
+
+          if (!response.ok) {
+            throw new Error('Failed to save note.');
+          }
+
+          noteInput.value = '';
+          submitStatus.textContent = 'Your positive note has been shared.';
+          await loadPositivityBoard(userId);
+        } catch (error) {
+          submitStatus.textContent = 'Could not save your note. Please try again.';
+        } finally {
+          submitButton.disabled = false;
+        }
+      }
+
+      submitButton.addEventListener('click', submitHappyNote);
+
+      (async () => {
+        try {
+          const userId = await ensureUserId();
+          await loadPositivityBoard(userId);
+        } catch (error) {
+          boardStatus.textContent = 'Unable to connect to backend. Start FastAPI and refresh.';
+          renderNotes([]);
+        }
+      })();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
