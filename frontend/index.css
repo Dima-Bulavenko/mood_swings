@@ -1,0 +1,162 @@
+:root {
+  /* ===== BRAND COLORS ===== */
+  --color-primary: #6c63ff;
+  --color-secondary: #a8e6cf;
+  --color-accent: #e6e1ff;
+  --color-background: #fff7ed;
+  --color-text: #2e2a4a;
+
+  /* ===== TYPOGRAPHY ===== */
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-emotional: 'Nunito', sans-serif;
+
+  /* ===== TYPE SCALE ===== */
+  --text-sm: 1rem;
+  --text-md: 1.125rem;
+  --text-xl: 2.25rem;
+
+  /* ===== LAYOUT ===== */
+  --container-max: 1100px;
+  --container-pad: 1rem;
+
+  /* ===== SPACING ===== */
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-7: 3rem;
+
+  /* ===== RADIUS ===== */
+  --radius-lg: 24px;
+
+  /* ===== SHADOWS ===== */
+  --shadow-card: 0 6px 18px rgba(46, 42, 74, 0.08);
+
+  /* ===== TRANSITIONS ===== */
+  --ease-standard: 200ms ease;
+}
+
+/* ===== BASE ===== */
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: var(--container-max);
+}
+
+/* ===== NAVBAR (Bootstrap-friendly, minimal overrides) ===== */
+.mood-navbar {
+  background-color: var(--color-background);
+  border: 0;
+  border-radius: 0;
+  margin: 0;
+  box-shadow: var(--shadow-card);
+}
+
+/* Remove Bootstrap default spacing that makes it feel chunky */
+.mood-navbar.navbar {
+  min-height: 60px;
+}
+
+.mood-navbar .navbar-brand.mood-brand {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.mood-navbar .navbar-brand.mood-brand:hover,
+.mood-navbar .navbar-brand.mood-brand:focus {
+  color: var(--color-primary);
+}
+
+.mood-navbar .navbar-brand.mood-brand i {
+  margin-right: var(--space-2);
+}
+
+/* Links spacing and alignment */
+.mood-navbar .navbar-nav > li > a {
+  font-weight: 600;
+  color: var(--color-text);
+  background-color: transparent;
+  padding: 18px 14px;
+  transition:
+    background-color var(--ease-standard),
+    color var(--ease-standard);
+}
+
+.mood-navbar .navbar-nav > li > a i {
+  margin-right: var(--space-2);
+}
+
+/* Subtle pill hover/active, without breaking layout */
+.mood-navbar .navbar-nav > li > a:hover,
+.mood-navbar .navbar-nav > li > a:focus {
+  color: var(--color-primary);
+  background-color: var(--color-accent);
+  border-radius: var(--radius-lg);
+}
+
+.mood-navbar .navbar-nav > .active > a,
+.mood-navbar .navbar-nav > .active > a:hover,
+.mood-navbar .navbar-nav > .active > a:focus {
+  color: var(--color-primary);
+  background-color: var(--color-accent);
+  border-radius: var(--radius-lg);
+}
+
+/* Sign Up button */
+.mood-navbar .mood-signup {
+  background-color: var(--color-primary);
+  color: var(--color-background) !important;
+  border-radius: var(--radius-lg);
+  margin-left: var(--space-2);
+}
+
+.mood-navbar .mood-signup:hover,
+.mood-navbar .mood-signup:focus {
+  background-color: var(--color-secondary);
+  color: var(--color-text) !important;
+  text-decoration: none;
+}
+
+/* Keep collapse clean */
+.mood-navbar .navbar-collapse {
+  border-top: 0;
+  box-shadow: none;
+}
+
+/* Toggle styling */
+.mood-navbar .navbar-toggle {
+  border: 0;
+  background: transparent;
+  margin-top: 13px;
+  margin-bottom: 13px;
+}
+
+.mood-navbar .navbar-toggle .icon-bar {
+  background-color: var(--color-text);
+}
+
+/* Preview content styles (not navbar logic, just for this page) */
+.mood-preview {
+  padding-top: var(--space-7);
+}
+
+.mood-preview-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: var(--text-xl);
+  margin: 0 0 var(--space-3);
+}
+
+.mood-preview-text {
+  margin: 0;
+  font-size: var(--text-md);
+}
