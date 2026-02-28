@@ -65,23 +65,15 @@
         </div>
       </section>
 
-      <!-- Wordcloud Section -->
-      <section class="wordcloud py-4">
-        <div class="container text-center">
-          <!-- Scrolling title -->
-          <div class="ticker-wrapper">
-            <div class="ticker-text">🌻 How people in The Happy Place are feeling today 🌻</div>
-          </div>
-          <img src="/notebooks/assets/wordclouds/happy_place.png" alt="Mood wordcloud" class="img-fluid w-50 rounded-5 shadow" />
-        </div>
-      </section>
-
       <!-- Happy Activities Section -->
       <section class="calm-content py-5">
         <div class="container">
-          <h2 class="mb-4 text-center">Happy Activities</h2>
-          <div class="row">
-            <div class="col-6 col-md-3 mb-4 d-flex">
+          <div class="ticker-wrapper">
+            <div class="ticker-text">🌻 Spread the joy with these activities 🌻</div>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-6 col-md-4 mb-4 d-flex">
               <div class="card happy-card rounded-5 shadow h-100">
                 <div class="card-body d-flex flex-column">
                   <h5 class="card-title">Dance Party</h5>
@@ -101,7 +93,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-6 col-md-3 mb-4 d-flex">
+            <div class="col-6 col-md-4 mb-4 d-flex">
               <div class="card happy-card rounded-5 shadow h-100">
                 <div class="card-body d-flex flex-column">
                   <h5 class="card-title">Comedy Break</h5>
@@ -121,7 +113,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-6 col-md-3 mb-4 d-flex">
+            <div class="col-6 col-md-4 mb-4 d-flex">
               <div class="card happy-card rounded-5 shadow h-100">
                 <div class="card-body d-flex flex-column">
                   <h5 class="card-title">Positive Affirmations</h5>
@@ -141,7 +133,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-6 col-md-3 mb-4 d-flex">
+            <div class="col-6 col-md-4 mb-4 d-flex">
               <div class="card happy-card rounded-5 shadow h-100">
                 <div class="card-body d-flex flex-column">
                   <h5 class="card-title">Upbeat Music</h5>
@@ -161,6 +153,27 @@
                 </div>
               </div>
             </div>
+
+            <div class="col-6 col-md-4 mb-4 d-flex">
+              <div class="card happy-card rounded-5 shadow h-100">
+                <div class="card-body d-flex flex-column">
+                  <h5 class="card-title">Word Cloud</h5>
+                  <p class="card-text flex-grow-1">
+                    See how people in The Happy Place are feeling today.
+                  </p>
+                  <button
+                    type="button"
+                    class="btn btn-primary mt-auto"
+                    data-bs-toggle="modal"
+                    data-bs-target="#wordCloudModal"
+                    aria-label="See the happy place word cloud"
+                  >
+                    See Word Cloud
+                  </button>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -306,6 +319,28 @@
                   allowfullscreen
                 ></iframe>
               </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WORD CLOUD OVERLAY -->
+      <div class="modal fade" id="wordCloudModal" tabindex="-1" aria-labelledby="wordCloudModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="wordCloudModalLabel">How people in The Happy Place are feeling today</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <img
+                src="/notebooks/assets/wordclouds/happy_place.png"
+                alt="Word cloud showing how people in The Happy Place are feeling today"
+                class="img-fluid rounded-5 shadow"
+              />
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

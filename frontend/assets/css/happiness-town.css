@@ -1,6 +1,8 @@
 /* ====== WARM SUNSHINE BACKGROUND ====== */
 body {
-  background: linear-gradient(135deg, #fff8e1 0%, #f1f8e9 50%, #fff8e1 100%);
+  background-image: url('/frontend/assets/images/orange.jpg');
+  background-size: cover;
+  background-position: center;
   background-attachment: fixed;
 }
 
