@@ -19,10 +19,56 @@ const upbeatMusicCloseBtn = document.getElementById('upbeatMusicCloseBtn');
 const upbeatMusicVideo = document.getElementById('upbeatMusicVideo');
 const upbeatMusicBtn = document.getElementById('upbeatMusicBtn');
 
+// Destroys the iframe when the modal closes (guaranteed media stop) and recreates it on open.
+function setupModalMediaReset(modalId) {
+  const modalElement = document.getElementById(modalId);
+  if (!modalElement) return;
+
+  const container = modalElement.querySelector('.ratio');
+  if (!container) return;
+
+  const templateIframe = container.querySelector('iframe');
+  if (!templateIframe) return;
+
+  const embedSrc = templateIframe.getAttribute('data-embed-src') || '';
+  if (!embedSrc) return;
+
+  // Stores original iframe attributes to recreate it identically each time.
+  const savedAttrs = {};
+  Array.from(templateIframe.attributes).forEach(function (attr) {
+    savedAttrs[attr.name] = attr.value;
+  });
+
+  modalElement.addEventListener('shown.bs.modal', function () {
+    const newIframe = document.createElement('iframe');
+    Object.keys(savedAttrs).forEach(function (name) {
+      if (name !== 'src') newIframe.setAttribute(name, savedAttrs[name]);
+    });
+    // Sets src last so the browser loads the video only when modal is fully visible.
+    newIframe.src = embedSrc;
+    container.innerHTML = '';
+    container.appendChild(newIframe);
+  });
+
+  // Removes the iframe entirely from the DOM, destroying the audio context.
+  modalElement.addEventListener('hide.bs.modal', function () {
+    container.innerHTML = '';
+  });
+}
+
+setupModalMediaReset('danceModal');
+setupModalMediaReset('comedyModal');
+setupModalMediaReset('upbeatMusicModal');
+
+setupModalMediaReset('danceModal');
+setupModalMediaReset('comedyModal');
+setupModalMediaReset('upbeatMusicModal');
+
 // ====== DANCE PARTY ======
 function openDance() {
-  document.getElementById('danceSpinner').style.display = 'block';
-  document.getElementById('danceVideo').style.display = 'none';
+  const danceSpinner = document.getElementById('danceSpinner');
+  danceSpinner.style.display = 'block';
+  danceVideo.style.display = 'block';
   danceVideo.src = 'https://www.youtube.com/embed/gCzgc_RelBA?autoplay=1';
   danceVideo.setAttribute(
     'allow',
@@ -30,24 +76,34 @@ function openDance() {
   );
   danceVideo.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
   danceOverlay.hidden = false;
+  // Fallback hides spinner even if iframe load event is delayed.
+  window.setTimeout(function () {
+    danceSpinner.style.display = 'none';
+  }, 1200);
   danceVideo.onload = function () {
-    document.getElementById('danceSpinner').style.display = 'none';
-    document.getElementById('danceVideo').style.display = 'block';
+    danceSpinner.style.display = 'none';
+    danceVideo.style.display = 'block';
   };
 }
 
 function closeDance() {
   danceVideo.src = '';
+  document.getElementById('danceSpinner').style.display = 'none';
   danceOverlay.hidden = true;
 }
 
-if (danceBtn) danceBtn.addEventListener('click', openDance);
+if (danceBtn)
+  danceBtn.addEventListener('click', function (event) {
+    event.preventDefault();
+    openDance();
+  });
 if (danceCloseBtn) danceCloseBtn.addEventListener('click', closeDance);
 
 // ====== COMEDY BREAK ======
 function openComedy() {
-  document.getElementById('comedySpinner').style.display = 'block';
-  document.getElementById('comedyVideo').style.display = 'none';
+  const comedySpinner = document.getElementById('comedySpinner');
+  comedySpinner.style.display = 'block';
+  comedyVideo.style.display = 'block';
   comedyVideo.src = 'https://www.youtube.com/embed/Z4C82eyhwgU?autoplay=1';
   comedyVideo.setAttribute(
     'allow',
@@ -55,24 +111,34 @@ function openComedy() {
   );
   comedyVideo.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
   comedyOverlay.hidden = false;
+  // Fallback hides spinner even if iframe load event is delayed.
+  window.setTimeout(function () {
+    comedySpinner.style.display = 'none';
+  }, 1200);
   comedyVideo.onload = function () {
-    document.getElementById('comedySpinner').style.display = 'none';
-    document.getElementById('comedyVideo').style.display = 'block';
+    comedySpinner.style.display = 'none';
+    comedyVideo.style.display = 'block';
   };
 }
 
 function closeComedy() {
   comedyVideo.src = '';
+  document.getElementById('comedySpinner').style.display = 'none';
   comedyOverlay.hidden = true;
 }
 
-if (comedyBtn) comedyBtn.addEventListener('click', openComedy);
+if (comedyBtn)
+  comedyBtn.addEventListener('click', function (event) {
+    event.preventDefault();
+    openComedy();
+  });
 if (comedyCloseBtn) comedyCloseBtn.addEventListener('click', closeComedy);
 
 // ====== POSITIVE AFFIRMATIONS ======
 function openAffirmations() {
-  document.getElementById('affirmationsSpinner').style.display = 'block';
-  document.getElementById('affirmationsVideo').style.display = 'none';
+  const affirmationsSpinner = document.getElementById('affirmationsSpinner');
+  affirmationsSpinner.style.display = 'block';
+  affirmationsVideo.style.display = 'block';
   affirmationsVideo.src = 'https://www.youtube.com/embed/z0He0Bp45C4?autoplay=1';
   affirmationsVideo.setAttribute(
     'allow',
@@ -80,43 +146,59 @@ function openAffirmations() {
   );
   affirmationsVideo.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
   affirmationsOverlay.hidden = false;
+  // Fallback hides spinner even if iframe load event is delayed.
+  window.setTimeout(function () {
+    affirmationsSpinner.style.display = 'none';
+  }, 1200);
   affirmationsVideo.onload = function () {
-    document.getElementById('affirmationsSpinner').style.display = 'none';
-    document.getElementById('affirmationsVideo').style.display = 'block';
+    affirmationsSpinner.style.display = 'none';
+    affirmationsVideo.style.display = 'block';
   };
 }
 
 function closeAffirmations() {
   affirmationsVideo.src = '';
+  document.getElementById('affirmationsSpinner').style.display = 'none';
   affirmationsOverlay.hidden = true;
 }
 
-if (affirmationsBtn) affirmationsBtn.addEventListener('click', openAffirmations);
+if (affirmationsBtn)
+  affirmationsBtn.addEventListener('click', function (event) {
+    event.preventDefault();
+    openAffirmations();
+  });
 if (affirmationsCloseBtn) affirmationsCloseBtn.addEventListener('click', closeAffirmations);
 
 // ====== UPBEAT MUSIC ======
 function openUpbeatMusic() {
-  document.getElementById('upbeatMusicSpinner').style.display = 'block';
-  document.getElementById('upbeatMusicVideo').style.display = 'none';
-  upbeatMusicVideo.src = 'https://www.youtube.com/embed/y6Sxv-sUYtM?autoplay=1';
-  upbeatMusicVideo.setAttribute(
-    'allow',
-    'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share',
-  );
+  const upbeatMusicSpinner = document.getElementById('upbeatMusicSpinner');
+  upbeatMusicSpinner.style.display = 'block';
+  upbeatMusicVideo.style.display = 'block';
+  upbeatMusicVideo.src = 'https://www.youtube.com/embed/FcYp2AZUl1Q?enablejsapi=1';
+  upbeatMusicVideo.setAttribute('allow', 'accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
   upbeatMusicVideo.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
   upbeatMusicOverlay.hidden = false;
+  // Fallback hides spinner even if iframe load event is delayed.
+  window.setTimeout(function () {
+    upbeatMusicSpinner.style.display = 'none';
+  }, 1200);
   upbeatMusicVideo.onload = function () {
-    document.getElementById('upbeatMusicSpinner').style.display = 'none';
-    document.getElementById('upbeatMusicVideo').style.display = 'block';
+    upbeatMusicSpinner.style.display = 'none';
+    upbeatMusicVideo.style.display = 'block';
   };
 }
 
 function closeUpbeatMusic() {
   upbeatMusicVideo.src = '';
+  document.getElementById('upbeatMusicSpinner').style.display = 'none';
   upbeatMusicOverlay.hidden = true;
 }
 
-if (upbeatMusicBtn) upbeatMusicBtn.addEventListener('click', openUpbeatMusic);
+if (upbeatMusicBtn)
+  upbeatMusicBtn.addEventListener('click', function (event) {
+    event.preventDefault();
+    openUpbeatMusic();
+  });
 if (upbeatMusicCloseBtn) upbeatMusicCloseBtn.addEventListener('click', closeUpbeatMusic);
 
 // ====== SHARE YOUR HAPPINESS & POSITIVITY BOARD ======
