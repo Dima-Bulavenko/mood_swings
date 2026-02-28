@@ -56,3 +56,19 @@ function closePoetry() {
 
 if (poetryBtn) poetryBtn.addEventListener("click", openPoetry);
 if (poetryCloseBtn) poetryCloseBtn.addEventListener("click", closePoetry);
+
+// ====== WORD CLOUD OVERLAY ======
+const sadWordCloudOverlay = document.getElementById("sadWordCloudOverlay");
+const sadWordCloudBtn = document.getElementById("sadWordCloudBtn");
+const sadWordCloudCloseBtn = document.getElementById("sadWordCloudCloseBtn");
+
+function openSadWordCloud() {
+    sadWordCloudOverlay.hidden = false;
+}
+
+function closeSadWordCloud() {
+    sadWordCloudOverlay.hidden = true;
+}
+
+if (sadWordCloudBtn) sadWordCloudBtn.addEventListener("click", openSadWordCloud);
+if (sadWordCloudCloseBtn) sadWordCloudCloseBtn.addEventListener("click", closeSadWordCloud);
