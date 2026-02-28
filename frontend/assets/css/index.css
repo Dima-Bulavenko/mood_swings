@@ -47,6 +47,14 @@ body {
   color: var(--color-text);
   background-color: var(--color-background);
   line-height: 1.6;
+  background-image: url('/frontend/assets/images/pinkclouds.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  /* Push footer to the bottom when content is short */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .container {
@@ -170,10 +178,6 @@ body {
 /* ===== RESPONSIVE ===== */
 /* Desktop */
 @media (min-width: 992px) {
-  .mood-navbar .navbar-collapse {
-    margin-left: var(--space-4);
-  }
-
   .mood-navbar .mood-nav {
     gap: 0.35rem;
   }
@@ -348,4 +352,16 @@ body {
   #recommendation .btn {
     min-height: 4.2rem;
   }
+}
+
+/* ====== FOOTER ====== */
+/* Main content fills remaining space so footer stays at the bottom */
+main {
+  flex: 1;
+}
+
+.mood-footer {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  margin-top: auto;
 }

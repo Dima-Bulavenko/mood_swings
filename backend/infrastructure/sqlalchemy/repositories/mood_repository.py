@@ -88,3 +88,26 @@ def get_all_by_user_id(self, user_id: str) -> list[Mood]:
     stmt = select(MoodModel).where(MoodModel.user_id == user_id).order_by(MoodModel.date_create.asc())
     models = self._session.execute(stmt).scalars().all()
     return [self._to_domain(model) for model in models]
+
+    def get_all_mood_names(self) -> list[str]:
+        stmt = select(MoodModel.mood)
+        return list(self._session.execute(stmt).scalars().all())
+
+    def get_all_mood_names_with_dates(self) -> list[tuple[date, str]]:
+        stmt = select(MoodModel.date_create, MoodModel.mood)
+        rows = self._session.execute(stmt).all()
+        return [(date_create, mood) for date_create, mood in rows]
+
+    def get_user_mood_names_with_dates(
+        self,
+        user_id: str,
+        start_date: date,
+        end_date: date,
+    ) -> list[tuple[date, str]]:
+        stmt = select(MoodModel.date_create, MoodModel.mood).where(
+            MoodModel.user_id == user_id,
+            MoodModel.date_create >= start_date,
+            MoodModel.date_create <= end_date,
+        )
+        rows = self._session.execute(stmt).all()
+        return [(date_create, mood) for date_create, mood in rows]

@@ -1,0 +1,260 @@
+/* ====== SKY BACKGROUND ====== */
+body {
+  background-image: url('/frontend/assets/images/blue.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* ====== ACTIVITY CARDS ====== */
+.card.calm-card {
+  background-color: #332da5;
+  min-height: 280px;
+  border: none;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card.calm-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(51, 45, 165, 0.35);
+}
+
+.card.calm-card .card-body {
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* ====== BREATHE OVERLAY ====== */
+#breatheOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+#breatheOverlay[hidden] {
+  display: none;
+}
+
+.breathe-box {
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.breatheCircle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #a8d8ea;
+  margin: 0 auto 20px;
+  transition: transform 4s ease-in-out;
+}
+
+.breatheCircle.isBreathing {
+  animation: breathePulse 12s ease-in-out infinite;
+}
+
+@keyframes breathePulse {
+  0% {
+    transform: scale(1);
+  }
+  33% {
+    transform: scale(1.6);
+  }
+  66% {
+    transform: scale(1.6);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.breathe-close {
+  display: block;
+  margin: 0 auto 20px;
+  background: #332da5;
+  border: 1px solid white;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ====== LOADING SPINNER ====== */
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(108, 99, 255, 0.3);
+  border-top-color: #6c63ff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ====== CLOUDS BACKGROUND ====== */
+.clouds-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.cloud {
+  position: absolute;
+  background: white;
+  border-radius: 50px;
+  opacity: 0.6;
+}
+
+.cloud::before,
+.cloud::after {
+  content: '';
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+}
+
+.cloud-1 {
+  width: 200px;
+  height: 60px;
+  top: 10%;
+  left: -200px;
+  animation: moveClouds 25s linear infinite;
+}
+
+.cloud-1::before {
+  width: 100px;
+  height: 100px;
+  top: -50px;
+  left: 30px;
+}
+
+.cloud-1::after {
+  width: 70px;
+  height: 70px;
+  top: -35px;
+  left: 100px;
+}
+
+.cloud-2 {
+  width: 150px;
+  height: 50px;
+  top: 30%;
+  left: -150px;
+  animation: moveClouds 35s linear infinite;
+  animation-delay: 5s;
+}
+
+.cloud-2::before {
+  width: 80px;
+  height: 80px;
+  top: -40px;
+  left: 20px;
+}
+
+.cloud-2::after {
+  width: 60px;
+  height: 60px;
+  top: -30px;
+  left: 80px;
+}
+
+.cloud-3 {
+  width: 250px;
+  height: 70px;
+  top: 55%;
+  left: -250px;
+  animation: moveClouds 30s linear infinite;
+  animation-delay: 10s;
+}
+
+.cloud-3::before {
+  width: 120px;
+  height: 120px;
+  top: -60px;
+  left: 40px;
+}
+
+.cloud-3::after {
+  width: 90px;
+  height: 90px;
+  top: -45px;
+  left: 130px;
+}
+
+.cloud-4 {
+  width: 180px;
+  height: 55px;
+  top: 75%;
+  left: -180px;
+  animation: moveClouds 40s linear infinite;
+  animation-delay: 15s;
+}
+
+.cloud-4::before {
+  width: 90px;
+  height: 90px;
+  top: -45px;
+  left: 25px;
+}
+
+.cloud-4::after {
+  width: 70px;
+  height: 70px;
+  top: -35px;
+  left: 95px;
+}
+
+@keyframes moveClouds {
+  0% {
+    left: -300px;
+  }
+  100% {
+    left: 110%;
+  }
+}
+
+/* ====== SCROLLING TICKER ====== */
+.ticker-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+.ticker-text {
+  display: inline-block;
+  animation: ticker 25s linear infinite;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(30vw);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
