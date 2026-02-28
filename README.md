@@ -191,16 +191,15 @@ Python (Pandas, Scikit-learn, XGBoost, Plotly, WordCloud)
 - PostgreSQL
 - Unit tests
 - Rate limiting
+
 ## Credits & Acknowledgements
 This project was built by the Mood Coders team:
-
 - [Monica] — Frontend
 - [Dario] — Frontend
 - [Dima] — Backend
 - [Victor] — Backend
 - [Femi] — Data
 - [Chahinez] — Data
-
 
 ### Images
 - The HappyPlace background
