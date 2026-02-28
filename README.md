@@ -112,3 +112,54 @@ API docs: `http://127.0.0.1:8000/docs`
 - **Fix**: open the conflicted file, choose the correct lines (or combine both), save, then complete merge and commit.
 
 **Rule**: the person who gets the conflict resolves it. If unclear, do a quick call with the teammate who changed the other version.
+
+
+
+# Mood Swings Data Analytics Documentation
+
+## Overview
+This module implements a comprehensive data analytics and machine learning pipeline for the Mood Swings project, handling synthetic mood data from 700 records (50 users × 14 days) stored in SQLite database and CSV format.
+
+## Database Overview
+- **Database File**: `mood_swings.db` (SQLite)
+- **Purpose**: Persistent storage and querying of mood records
+- **Data Source**: Mirrors `data/mood_swing_data.csv`
+
+**Table: moods**
+| Column      | Type       | Description                                          |
+| ----------- | ---------- | ---------------------------------------------------- |
+| id          | INTEGER PK | Unique record identifier                             |
+| user_id     | INTEGER    | References user account                              |
+| mood        | TEXT       | Mood classification: `"happy"`, `"sad"`, or `"calm"` |
+| tags        | TEXT       | Optional additional labels relating to the mood      |
+| town_name   | TEXT       | Geographic location associated with the mood         |
+| note        | TEXT       | Optional user comments                               |
+| hour_of_day | INTEGER    | Hour of the day (0–23)                               |
+| day_of_week | INTEGER    | Day of the week (0 = Sunday, 6 = Saturday)           |
+| timestamp   | DATETIME   | Recording date and time                              |
+
+
+### Installation & Setup
+Install dependencies and initialize the database with the following steps:
+1. Install required packages
+2. Import SQLAlchemy base models
+3. Create database engine connection
+4. Generate all tables from model definitions
+
+## Key Features
+**Data Pipeline**: Follows a structured 7-step process including data generation, EDA, feature engineering, model training, evaluation, saving, and wordcloud generation.
+**Data Seeding**: Load initial data from CSV file into the database using pandas. The CSV serves as the data source for analysis, while the database provides persistent storage for application runtime access.
+**Models**: Implements Random Forest and XGBoost classifiers to predict user town based on mood, hour of day, and day of week features. Both achieve 100% accuracy on synthetic data.
+**Feature Engineering**: Converts categorical mood labels to numerical values, applies MinMaxScaler normalization, and splits data 80/20 for training/testing.
+**Visualizations**: Includes EDA charts (bar charts, heatmaps, Plotly interactive visualizations) and town-specific wordclouds generated from user notes with custom color themes.
+
+## Output Artifacts
+- Training data: `data/mood_swing_data.csv`
+- Trained model: `mood_model.joblib`
+- Wordclouds: `assets/wordclouds/{calm-down_corner, happy_place, up-sad_down}.png`
+
+## Tech Stack
+Python (Pandas, Scikit-learn, XGBoost, Plotly, WordCloud)
+
+## Future Enhancements
+Real user data migration, sentiment analysis, time-series modeling, API productionization.
