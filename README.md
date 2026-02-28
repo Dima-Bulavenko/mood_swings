@@ -142,36 +142,45 @@ moods of all users. Users can also view mood trends on the dashboard.
 
 ## Live Link
 
+## Deployment
+
 
 ## Wireframes
-![App Flow](assets/images/wireframe1.png)
-![Town Map](assets/images/wireframe2.png)
-
+- Wireframes created using AI image generation
+- ![App Flow](/frontend/assets/images/wireframe1.png)
+- ![Town Map](/frontend/assets/images/wireframe2.png)
 
 ## Features
-- 🎭 Daily mood selection - users can log their mood once per day
-- 🏘️ Mood towns - explore different towns based on your mood
+- 🎭 **Daily mood selection** - users can log their mood once per day
+- 🏘️ **Mood towns** - explore different towns based on your mood
   - The Happy Place - share and read notes about what made users happy
   - The UP-SAD Down - tips to help cope with sadness
   - The Calm-Down Corner - breathing exercises to help calm down
-- ☁️ Word cloud - live word cloud showing current moods of all users
-- 📊 Mood dashboard - view mood trends and data insights including:
+- ☁️ **Word cloud** - live word cloud showing current moods of all users
+- 📊 **Mood dashboard** - view mood trends and data insights including:
   - Most common moods among users
   - Most popular mood by day of the week
   - Personal mood history over the last 7 days
   - Most common words from happiness notes
+
+- **Data Pipeline**: Follows a structured 7-step process including data generation, EDA, feature engineering, model training, evaluation, saving, and wordcloud generation.
+- **Data Seeding**: Load initial data from CSV file into the database using pandas. The CSV serves as the data source for analysis, while the database provides persistent storage for application runtime access.
+- **Models**: Implements Random Forest and XGBoost classifiers to predict user town based on mood, hour of day, and day of week features. Both achieve 100% accuracy on synthetic data.
+- **Feature Engineering**: Converts categorical mood labels to numerical values, applies MinMaxScaler normalization, and splits data 80/20 for training/testing.
+- **Visualizations**: Includes EDA charts (bar charts, heatmaps, Plotly interactive visualizations) and town-specific wordclouds generated from user notes with custom color themes.
 
 ## ScreenShots
 
 
 ## Frontend
  ### Technologies Used
- - HTML5 
+- HTML5 
 - CSS3 
 - JavaScript (ES6)
- - Bootstrap 5
+- Bootstrap 5
 
 ### Folder Structure
+```
 frontend/
 ├── assets/
 │   ├── css/
@@ -194,6 +203,7 @@ frontend/
 ├── happinesstown.html
 ├── sadness-town.html
 └── 404.html
+```
 
 ### How to Run Locally
 1. Clone the repository
@@ -202,7 +212,6 @@ frontend/
 
 > 💡 We recommend using the **Live Server** extension in VS Code for the best experience
 
----
 ## Backend
 ### Mood Swings Data Analytics Documentation
 
@@ -235,46 +244,32 @@ Install dependencies and initialize the database with the following steps:
 3. Create database engine connection
 4. Generate all tables from model definitions
 
-## Key Features
-**Data Pipeline**: Follows a structured 7-step process including data generation, EDA, feature engineering, model training, evaluation, saving, and wordcloud generation.
-**Data Seeding**: Load initial data from CSV file into the database using pandas. The CSV serves as the data source for analysis, while the database provides persistent storage for application runtime access.
-**Models**: Implements Random Forest and XGBoost classifiers to predict user town based on mood, hour of day, and day of week features. Both achieve 100% accuracy on synthetic data.
-**Feature Engineering**: Converts categorical mood labels to numerical values, applies MinMaxScaler normalization, and splits data 80/20 for training/testing.
-**Visualizations**: Includes EDA charts (bar charts, heatmaps, Plotly interactive visualizations) and town-specific wordclouds generated from user notes with custom color themes.
-
-## Output Artifacts
+### Output Artifacts
 - Training data: `data/mood_swing_data.csv`
 - Trained model: `mood_model.joblib`
 - Wordclouds: `assets/wordclouds/{calm-down_corner, happy_place, up-sad_down}.png`
 
-## Tech Stack
+### Tech Stack
 Python (Pandas, Scikit-learn, XGBoost, Plotly, WordCloud)
 
-## Future Enhancements
+### Future Enhancements
 Real user data migration, sentiment analysis, time-series modeling, API productionization.
 
----
-## Data Analytics
-
-
- ---
 ## Credits & Acknowledgements
 
-### Wireframes
-- Wireframes created using AI image generation
-
 ### Images
-The HappyPlace background
-(https://www.istockphoto.com/vector/abstract-fresh-green-light-yellow-gradient-with-wavy-texture-glowing-smooth-fluid-gm2160692092-581206282)
-Calm-Down corner Background
-(https://www.istockphoto.com/vector/blue-gradient-background-a-seamless-abstract-background-featuring-a-smooth-gradient-gm2197713783-615653745)
-The UP-SAD Down Background
-(https://www.istockphoto.com/vector/calm-pastel-blue-and-violet-mesh-gradient-gm2170087661-590032872)
-Home Page / Dashboard / 404 Background
-(https://www.istockphoto.com/vector/abstract-background-gradient-soft-tone-purple-pink-beige-pastel-colors-copy-space-gm2208849925-625984584)
+- The HappyPlace background
+https://www.istockphoto.com/vector/abstract-fresh-green-light-yellow-gradient-with-wavy-texture-glowing-smooth-fluid-gm2160692092-581206282
+- Calm-Down corner Background
+https://www.istockphoto.com/vector/blue-gradient-background-a-seamless-abstract-background-featuring-a-smooth-gradient-gm2197713783-615653745
+- The UP-SAD Down Background
+https://www.istockphoto.com/vector/calm-pastel-blue-and-violet-mesh-gradient-gm2170087661-590032872
+ - Home Page / Dashboard / 404 Background
+ https://www.istockphoto.com/vector/abstract-background-gradient-soft-tone-purple-pink-beige-pastel-colors-copy-space-gm2208849925-625984584
 
 
 ### Resources & Links
 - [Bootstrap 5](https://getbootstrap.com/)
 - [Chart.js](https://www.chartjs.org/)
-- (any other libraries, tutorials or resources you used)
+- You Tube
+- Spotify
