@@ -204,7 +204,72 @@ frontend/
 
 ---
 ## Backend
-### Mood Swings Data Analytics Documentation
+
+This project features a FastAPI backend with analytics engine. Users log daily moods, write happiness notes, and explore emotional trends through interactive charts.
+
+### Features
+
+- **User Sessions** – Anonymous session creation using UUIDs, managed via browser local storage
+- **Mood Tracking** – Log moods (happy, calm, sad, anxious, angry) once per day
+- **Happiness Notes** – Submit notes (≤100 characters) and read others' recent notes
+- **Analytics Dashboard** – API endpoints exposing mood frequency, weekly trends, word clouds, and personal history
+
+### Architecture
+
+The backend follows a layered architecture:
+
+- **Domain** – Core business models and DTOs
+- **Infrastructure** – SQLAlchemy ORM and repositories
+- **Service** – Business logic and analytics
+- **API** – FastAPI routes
+
+### Tech Stack
+
+- Python 3.13+
+- FastAPI
+- SQLAlchemy
+- Pydantic
+- SQLite
+- `uv` (dependency manager)
+
+### Project Structure
+
+```
+backend/
+├── core/domain/
+├── infrastructure/sqlalchemy/
+├── service/
+├── main.py
+├── seed_data.py
+├── pyproject.toml
+└── mood_swings.db
+```
+
+### API Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/users` | Create anonymous session |
+| POST | `/moods?user_id=` | Create today's mood |
+| GET | `/moods/today?user_id=` | Retrieve today's mood |
+| PUT | `/moods/today?user_id=` | Update today's mood |
+| POST | `/notes?user_id=` | Create happiness note |
+| GET | `/notes/latest?user_id=` | Get 10 most recent notes |
+| GET | `/mood-frequency` | Top 5 moods |
+| GET | `/weekly-trend` | Mood by weekday |
+| GET | `/top-happy-words` | Top 10 words |
+| GET | `/user-history?user_id=` | 7-day mood history |
+
+### Future Enhancements
+
+- JWT/OAuth authentication
+- Docker deployment
+- PostgreSQL
+- Unit tests
+- Rate limiting
+
+---
+## Data Analytics
 
 ### Overview
 This module implements a comprehensive data analytics and machine learning pipeline for the Mood Swings project, handling synthetic mood data from 700 records (50 users × 14 days) stored in SQLite database and CSV format.
@@ -237,9 +302,13 @@ Install dependencies and initialize the database with the following steps:
 
 ## Key Features
 **Data Pipeline**: Follows a structured 7-step process including data generation, EDA, feature engineering, model training, evaluation, saving, and wordcloud generation.
+
 **Data Seeding**: Load initial data from CSV file into the database using pandas. The CSV serves as the data source for analysis, while the database provides persistent storage for application runtime access.
+
 **Models**: Implements Random Forest and XGBoost classifiers to predict user town based on mood, hour of day, and day of week features. Both achieve 100% accuracy on synthetic data.
+
 **Feature Engineering**: Converts categorical mood labels to numerical values, applies MinMaxScaler normalization, and splits data 80/20 for training/testing.
+
 **Visualizations**: Includes EDA charts (bar charts, heatmaps, Plotly interactive visualizations) and town-specific wordclouds generated from user notes with custom color themes.
 
 ## Output Artifacts
@@ -252,9 +321,6 @@ Python (Pandas, Scikit-learn, XGBoost, Plotly, WordCloud)
 
 ## Future Enhancements
 Real user data migration, sentiment analysis, time-series modeling, API productionization.
-
----
-## Data Analytics
 
 
  ---
