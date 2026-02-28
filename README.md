@@ -210,9 +210,9 @@ This project features a FastAPI backend with analytics engine. Users log daily m
 ### Features
 
 - **User Sessions** – Anonymous session creation using UUIDs, managed via browser local storage
-- **Mood Tracking** – Log moods (happy, calm, sad, anxious, angry) once per day
+- **Mood Tracking** – Log 1–3 moods per day from the full set of supported mood types (see the backend `MoodType` enum / API docs)
 - **Happiness Notes** – Submit notes (≤100 characters) and read others' recent notes
-- **Analytics Dashboard** – API endpoints exposing mood frequency, weekly trends, word clouds, and personal history
+- **Analytics Dashboard** – API endpoints exposing mood frequency, weekly trends, top words/word frequency, and personal history
 
 ### Architecture
 
@@ -242,7 +242,7 @@ backend/
 ├── main.py
 ├── seed_data.py
 ├── pyproject.toml
-└── mood_swings.db
+└── mood_swings.db  # generated at runtime
 ```
 
 ### API Endpoints
@@ -254,7 +254,7 @@ backend/
 | GET | `/moods/today?user_id=` | Retrieve today's mood |
 | PUT | `/moods/today?user_id=` | Update today's mood |
 | POST | `/notes?user_id=` | Create happiness note |
-| GET | `/notes/latest?user_id=` | Get 10 most recent notes |
+| GET | `/notes/latest?user_id=` | Get 5 most recent notes from other users |
 | GET | `/mood-frequency` | Top 5 moods |
 | GET | `/weekly-trend` | Mood by weekday |
 | GET | `/top-happy-words` | Top 10 words |
