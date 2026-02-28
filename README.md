@@ -60,6 +60,23 @@ uv run fastapi dev
 Then open: `http://127.0.0.1:8000`  
 API docs: `http://127.0.0.1:8000/docs`
 
+## 5) Seed the database with sample data
+
+`backend/seed_data.py` populates the database with realistic sample data useful for development and data analytics:
+
+- **100 users** with five personality profiles (optimist, pessimist, anxious, balanced, calm)
+- **~8 000 mood entries** spread across the last 90 days — users occasionally skip days, and weekends skew slightly happier
+- **~1 600 happiness notes** (≤ 100 chars each) written on days when the user logged a positive mood
+
+Run it from the `backend/` directory (no extra dependencies needed beyond the project's own):
+
+```bash
+cd backend
+uv run python seed_data.py
+```
+
+The script is **idempotent per run** — each execution generates fresh UUIDs, so running it a second time adds another batch of 100 users. To start fresh, delete `mood_swings.db` before re-running.
+
 ## Team Git Flow (Simple)
 
 ### Roles
