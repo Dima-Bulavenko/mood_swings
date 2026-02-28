@@ -142,3 +142,19 @@ function closeMusic() {
 
 if (musicBtn) musicBtn.addEventListener("click", openMusic);
 if (musicCloseBtn) musicCloseBtn.addEventListener("click", closeMusic);
+
+// ====== WORD CLOUD OVERLAY ======
+const wordCloudOverlay = document.getElementById("wordCloudOverlay");
+const wordCloudBtn = document.getElementById("wordCloudBtn");
+const wordCloudCloseBtn = document.getElementById("wordCloudCloseBtn");
+
+function openWordCloud() {
+    wordCloudOverlay.hidden = false;
+}
+
+function closeWordCloud() {
+    wordCloudOverlay.hidden = true;
+}
+
+if (wordCloudBtn) wordCloudBtn.addEventListener("click", openWordCloud);
+if (wordCloudCloseBtn) wordCloudCloseBtn.addEventListener("click", closeWordCloud);
