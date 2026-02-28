@@ -1,3 +1,36 @@
+const USER_ID_STORAGE_KEY = 'user_id';
+
+async function ensureMoodSwingsUserId() {
+    const storedUserId = localStorage.getItem(USER_ID_STORAGE_KEY);
+    if (storedUserId) {
+        return storedUserId;
+    }
+
+    if (!window.MoodSwingsClient) {
+        throw new Error('MoodSwingsClient is not available. Include client.js before page scripts.');
+    }
+
+    const client = window.MoodSwingsClient.createClient();
+    const createdUser = await client.createUser();
+
+    if (!createdUser || !createdUser.id) {
+        throw new Error('Failed to create user session.');
+    }
+
+    localStorage.setItem(USER_ID_STORAGE_KEY, createdUser.id);
+    return createdUser.id;
+}
+
+window.ensureMoodSwingsUserId = ensureMoodSwingsUserId;
+
+(async function bootstrapMoodSwingsUser() {
+    try {
+        await ensureMoodSwingsUserId();
+    } catch (error) {
+        console.error('Unable to initialize user session:', error);
+    }
+})();
+
 // When the 'Select Your Daily Mood' button is clicked
 document.getElementById('mood-btn').addEventListener('click', function(e) {
     e.preventDefault(); // Stop the page from jumping
