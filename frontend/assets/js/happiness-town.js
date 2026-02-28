@@ -202,32 +202,53 @@ if (upbeatMusicBtn)
 if (upbeatMusicCloseBtn) upbeatMusicCloseBtn.addEventListener('click', closeUpbeatMusic);
 
 // ====== SHARE YOUR HAPPINESS & POSITIVITY BOARD ======
-const API_BASE =
-  window.location.origin.includes('localhost:8000') || window.location.origin.includes('127.0.0.1:8000')
-    ? window.location.origin
-    : 'http://127.0.0.1:8000';
-
-const USER_ID_STORAGE_KEY = 'moodSwingsUserId';
+const client = window.MoodSwingsClient.createClient();
 const noteInput = document.getElementById('happy-note');
+const noteLabel = document.querySelector('label[for="happy-note"]');
+const noteHelp = document.getElementById('happy-note-help');
 const submitButton = document.getElementById('happy-submit');
 const submitStatus = document.getElementById('submit-status');
 const boardStatus = document.getElementById('board-status');
 const boardList = document.getElementById('positivity-board');
+const createAnotherButton = document.createElement('button');
+
+createAnotherButton.type = 'button';
+createAnotherButton.className = 'btn btn-outline-primary mt-3 w-100 d-none';
+createAnotherButton.id = 'happy-create-another';
+createAnotherButton.textContent = 'Create another note';
+submitStatus.insertAdjacentElement('afterend', createAnotherButton);
+
+function setSubmitStatus(message, state) {
+  submitStatus.textContent = message;
+  submitStatus.classList.remove('status-success', 'status-error', 'status-neutral');
+
+  if (state === 'success') {
+    submitStatus.classList.add('status-success');
+    return;
+  }
+
+  if (state === 'error') {
+    submitStatus.classList.add('status-error');
+    return;
+  }
+
+  submitStatus.classList.add('status-neutral');
+}
+
+function setNoteComposerVisibility(isVisible) {
+  if (noteLabel) noteLabel.classList.toggle('d-none', !isVisible);
+  if (noteHelp) noteHelp.classList.toggle('d-none', !isVisible);
+  noteInput.classList.toggle('d-none', !isVisible);
+  submitButton.classList.toggle('d-none', !isVisible);
+  createAnotherButton.classList.toggle('d-none', isVisible);
+}
 
 async function ensureUserId() {
-  const storedId = localStorage.getItem(USER_ID_STORAGE_KEY);
-  if (storedId) {
-    return storedId;
+  if (typeof window.ensureMoodSwingsUserId !== 'function') {
+    throw new Error('ensureMoodSwingsUserId is not available. Include index.js before happiness-town.js.');
   }
 
-  const response = await fetch(`${API_BASE}/users`, { method: 'POST' });
-  if (!response.ok) {
-    throw new Error('Unable to create user session.');
-  }
-
-  const data = await response.json();
-  localStorage.setItem(USER_ID_STORAGE_KEY, data.id);
-  return data.id;
+  return window.ensureMoodSwingsUserId();
 }
 
 function renderNotes(notes) {
@@ -253,12 +274,7 @@ async function loadPositivityBoard(userId) {
   boardStatus.textContent = 'Loading positivity board...';
 
   try {
-    const response = await fetch(`${API_BASE}/notes/latest?user_id=${encodeURIComponent(userId)}`);
-    if (!response.ok) {
-      throw new Error('Failed to load notes.');
-    }
-
-    const notes = await response.json();
+    const notes = await client.getLatestNotesExcludingUser(userId);
     renderNotes(notes);
     boardStatus.textContent = '';
   } catch (error) {
@@ -271,38 +287,35 @@ async function submitHappyNote() {
   const note = noteInput.value.trim();
 
   if (!note) {
-    submitStatus.textContent = 'Please write something before submitting.';
+    setSubmitStatus('Please write something before submitting.', 'error');
     return;
   }
 
   submitButton.disabled = true;
-  submitStatus.textContent = 'Saving your note...';
+  setSubmitStatus('Saving your note...', 'neutral');
 
   try {
     const userId = await ensureUserId();
-    const response = await fetch(`${API_BASE}/notes?user_id=${encodeURIComponent(userId)}`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ note }),
-    });
-
-    if (!response.ok) {
-      throw new Error('Failed to save note.');
-    }
+    await client.createNote(userId, note);
 
     noteInput.value = '';
-    submitStatus.textContent = 'Your positive note has been shared.';
+    setSubmitStatus('Your positive note has been shared.', 'success');
+    setNoteComposerVisibility(false);
     await loadPositivityBoard(userId);
   } catch (error) {
-    submitStatus.textContent = 'Could not save your note. Please try again.';
+    setSubmitStatus('Could not save your note. Please try again.', 'error');
   } finally {
     submitButton.disabled = false;
   }
 }
 
 if (submitButton) submitButton.addEventListener('click', submitHappyNote);
+
+createAnotherButton.addEventListener('click', function () {
+  setNoteComposerVisibility(true);
+  setSubmitStatus('', 'neutral');
+  noteInput.focus();
+});
 
 (async () => {
   try {
