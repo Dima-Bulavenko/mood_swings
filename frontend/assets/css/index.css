@@ -51,6 +51,10 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  /* Push footer to the bottom when content is short */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .container {
@@ -174,10 +178,6 @@ body {
 /* ===== RESPONSIVE ===== */
 /* Desktop */
 @media (min-width: 992px) {
-  .mood-navbar .navbar-collapse {
-    margin-left: var(--space-4);
-  }
-
   .mood-navbar .mood-nav {
     gap: 0.35rem;
   }
@@ -355,8 +355,13 @@ body {
 }
 
 /* ====== FOOTER ====== */
+/* Main content fills remaining space so footer stays at the bottom */
+main {
+  flex: 1;
+}
+
 .mood-footer {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    margin-top: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  margin-top: auto;
 }
