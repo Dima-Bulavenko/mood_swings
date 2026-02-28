@@ -300,6 +300,53 @@ body {
   font-weight: 500;
 }
 
+#submit-status.status-success,
+#submit-status.status-error,
+#submit-status.status-neutral {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+}
+
+#submit-status.status-success {
+  color: #1b5e20;
+  background-color: rgba(129, 199, 132, 0.28);
+}
+
+#submit-status.status-success::before {
+  content: '✓';
+  font-weight: 700;
+}
+
+#submit-status.status-error {
+  color: #b71c1c;
+  background-color: rgba(239, 83, 80, 0.22);
+}
+
+#submit-status.status-error::before {
+  content: '!';
+  font-weight: 700;
+}
+
+#submit-status.status-neutral {
+  color: #e65100;
+  background-color: rgba(255, 204, 128, 0.32);
+}
+
+#happy-create-another {
+  border-radius: var(--radius-nav);
+  background: linear-gradient(135deg, #ffa726, #ef6c00);
+  border: none;
+  color: white;
+}
+
+#happy-create-another:hover {
+  background: linear-gradient(135deg, #ff9800, #e65100);
+  box-shadow: 0 6px 14px rgba(239, 108, 0, 0.3);
+}
+
 .positivity-board {
   list-style: none;
   padding: 0;
