@@ -1,14 +1,12 @@
 /* ====== WARM SUNSHINE BACKGROUND ====== */
 body {
-  background-image: url('/frontend/assets/images/pinkclouds.jpg');
-  background-size: cover;
-  background-position: center;
+  background: linear-gradient(135deg, #fff8e1 0%, #f1f8e9 50%, #fff8e1 100%);
   background-attachment: fixed;
 }
 
 /* ====== ACTIVITY CARDS ====== */
 .card.happy-card {
-  background: linear-gradient(145deg, #e91e63, #c2185b);
+  background: linear-gradient(145deg, #ffa726, #ef6c00);
   min-height: 280px;
   border: none;
   transition:
@@ -18,7 +16,7 @@ body {
 
 .card.happy-card:hover {
   transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 12px 30px rgba(233, 30, 99, 0.35);
+  box-shadow: 0 12px 30px rgba(239, 108, 0, 0.35);
 }
 
 .card.happy-card .card-body {
@@ -60,7 +58,7 @@ body {
 .breathe-close {
   display: block;
   margin: 0 auto 20px;
-  background: #c2185b;
+  background: #ef6c00;
   border: 1px solid white;
   color: white;
   padding: 6px 14px;
@@ -70,15 +68,15 @@ body {
 }
 
 .breathe-close:hover {
-  background: #ad1457;
+  background: #e65100;
 }
 
 /* ====== LOADING SPINNER ====== */
 .loading-spinner {
   width: 50px;
   height: 50px;
-  border: 5px solid rgba(233, 30, 99, 0.3);
-  border-top-color: #e91e63;
+  border: 5px solid rgba(239, 108, 0, 0.3);
+  border-top-color: #ef6c00;
   border-radius: 50%;
   animation: spin 1s linear infinite;
   margin: 20px auto;
@@ -121,7 +119,7 @@ body {
 .cloud-1 {
   width: 12px;
   height: 28px;
-  background: #f48fb1;
+  background: #ffcc80;
   left: 15%;
   animation: fallConfetti 6s linear infinite;
 }
@@ -140,7 +138,7 @@ body {
 .cloud-3 {
   width: 8px;
   height: 32px;
-  background: #ff8a65;
+  background: #aed581;
   left: 65%;
   animation: fallConfetti 7s linear infinite 3s;
 }
@@ -149,7 +147,7 @@ body {
 .cloud-4 {
   width: 16px;
   height: 16px;
-  background: #e91e63;
+  background: #ffa726;
   left: 85%;
   border-radius: 50%;
   animation: fallConfetti 9s linear infinite 4.5s;
@@ -239,7 +237,7 @@ body {
   animation: ticker 25s linear infinite;
   font-size: 1.2rem;
   font-weight: bold;
-  color: #880e4f;
+  color: #e65100;
 }
 
 @keyframes ticker {
@@ -271,25 +269,25 @@ body {
 
 #happy-note {
   border-radius: var(--radius-nav);
-  border: 1px solid rgba(233, 30, 99, 0.2);
+  border: 1px solid rgba(239, 108, 0, 0.2);
   min-height: 7rem;
   resize: vertical;
 }
 
 #happy-note:focus {
-  border-color: #e91e63;
-  box-shadow: 0 0 0 0.2rem rgba(233, 30, 99, 0.18);
+  border-color: #ef6c00;
+  box-shadow: 0 0 0 0.2rem rgba(239, 108, 0, 0.18);
 }
 
 #happy-submit {
-  background: linear-gradient(135deg, #e91e63, #c2185b);
+  background: linear-gradient(135deg, #ffa726, #ef6c00);
   border: none;
   color: white;
 }
 
 #happy-submit:hover {
-  background: linear-gradient(135deg, #d81b60, #ad1457);
-  box-shadow: 0 6px 14px rgba(233, 30, 99, 0.3);
+  background: linear-gradient(135deg, #ff9800, #e65100);
+  box-shadow: 0 6px 14px rgba(239, 108, 0, 0.3);
 }
 
 .status-text {
@@ -311,10 +309,10 @@ body {
 .positivity-note {
   padding: 0.9rem 1rem;
   border-radius: var(--radius-nav);
-  background-color: rgba(248, 187, 208, 0.35);
+  background-color: rgba(255, 167, 38, 0.2);
 }
 
 .positivity-empty {
   margin: 0;
-  color: rgba(136, 14, 79, 0.6);
+  color: rgba(230, 81, 0, 0.6);
 }
