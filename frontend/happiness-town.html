@@ -88,7 +88,16 @@
                   <p class="card-text flex-grow-1">
                     Get moving! Put on your dancing shoes and let the rhythm lift your spirits even higher.
                   </p>
-                  <button class="btn btn-primary mt-auto" id="danceBtn">Start Dancing</button>
+                  <!-- Opens a feel-good dance video overlay -->
+                  <button
+                    type="button"
+                    class="btn btn-primary mt-auto"
+                    data-bs-toggle="modal"
+                    data-bs-target="#danceModal"
+                    aria-label="Start dancing with an upbeat dance video"
+                  >
+                    Start Dancing
+                  </button>
                 </div>
               </div>
             </div>
@@ -99,7 +108,16 @@
                   <p class="card-text flex-grow-1">
                     Nothing beats a good laugh! Enjoy a comedy clip to keep the good vibes rolling.
                   </p>
-                  <button class="btn btn-primary mt-auto" id="comedyBtn">Watch Now</button>
+                  <!-- Opens a family-friendly comedy clip overlay -->
+                  <button
+                    type="button"
+                    class="btn btn-primary mt-auto"
+                    data-bs-toggle="modal"
+                    data-bs-target="#comedyModal"
+                    aria-label="Watch a funny comedy clip"
+                  >
+                    Watch Now
+                  </button>
                 </div>
               </div>
             </div>
@@ -110,7 +128,16 @@
                   <p class="card-text flex-grow-1">
                     Boost your confidence with powerful positive affirmations to brighten your day even more.
                   </p>
-                  <button class="btn btn-primary mt-auto" id="affirmationsBtn">Listen Now</button>
+                  <!-- Opens a positive affirmations video overlay -->
+                  <button
+                    type="button"
+                    class="btn btn-primary mt-auto"
+                    data-bs-toggle="modal"
+                    data-bs-target="#affirmationsModal"
+                    aria-label="Read positive affirmations"
+                  >
+                    Read now
+                  </button>
                 </div>
               </div>
             </div>
@@ -121,7 +148,16 @@
                   <p class="card-text flex-grow-1">
                     Turn up the volume and enjoy feel-good music that keeps the happiness flowing.
                   </p>
-                  <button class="btn btn-primary mt-auto" id="upbeatMusicBtn">Listen Now</button>
+                  <!-- Opens an upbeat music video overlay -->
+                  <button
+                    type="button"
+                    class="btn btn-primary mt-auto"
+                    data-bs-toggle="modal"
+                    data-bs-target="#upbeatMusicModal"
+                    aria-label="Listen to upbeat feel-good music"
+                  >
+                    Listen Now
+                  </button>
                 </div>
               </div>
             </div>
@@ -167,56 +203,114 @@
       </section>
 
       <!-- DANCE OVERLAY -->
-      <div id="danceOverlay" hidden>
-        <div class="breathe-box">
-          <button id="danceCloseBtn" class="breathe-close">✕ Close</button>
-          <div id="danceSpinner" class="loading-spinner"></div>
-          <iframe id="danceVideo" width="560" height="315" src="" title="Dance Party" frameborder="0" allowfullscreen></iframe>
+      <div class="modal fade" id="danceModal" tabindex="-1" aria-labelledby="danceModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="danceModalLabel">Dance Party</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="ratio ratio-16x9">
+                <iframe
+                  id="danceIframe"
+                  src="about:blank"
+                  data-src="https://www.youtube.com/embed/hdcTmpvDO0I?enablejsapi=1"
+                  title="Dance party upbeat music video"
+                  frameborder="0"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- COMEDY OVERLAY -->
-      <div id="comedyOverlay" hidden>
-        <div class="breathe-box">
-          <button id="comedyCloseBtn" class="breathe-close">✕ Close</button>
-          <div id="comedySpinner" class="loading-spinner"></div>
-          <iframe id="comedyVideo" width="560" height="315" src="" title="Comedy Break" frameborder="0" allowfullscreen></iframe>
+      <div class="modal fade" id="comedyModal" tabindex="-1" aria-labelledby="comedyModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="comedyModalLabel">Comedy Break</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="ratio ratio-16x9">
+                <iframe
+                  id="comedyIframe"
+                  src="about:blank"
+                  data-src="https://www.youtube.com/embed/tgbNymZ7vqY?enablejsapi=1"
+                  title="Comedy break feel-good video"
+                  frameborder="0"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- AFFIRMATIONS OVERLAY -->
-      <div id="affirmationsOverlay" hidden>
-        <div class="breathe-box">
-          <button id="affirmationsCloseBtn" class="breathe-close">✕ Close</button>
-          <div id="affirmationsSpinner" class="loading-spinner"></div>
-          <iframe
-            id="affirmationsVideo"
-            width="560"
-            height="315"
-            src=""
-            title="Positive Affirmations"
-            frameborder="0"
-            allowfullscreen
-          ></iframe>
+      <div class="modal fade" id="affirmationsModal" tabindex="-1" aria-labelledby="affirmationsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="affirmationsModalLabel">Positive Affirmations</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p class="mb-2">I am enough exactly as I am.</p>
+              <p class="mb-2">I choose joy and gratitude today.</p>
+              <p class="mb-2">I deserve good things in my life.</p>
+              <p class="mb-2">My energy brings light to others.</p>
+              <p class="mb-2">I can handle whatever comes my way.</p>
+              <p class="mb-2">I celebrate my progress every day.</p>
+              <p class="mb-2">I am growing stronger and brighter.</p>
+              <p class="mb-0">Today is full of positive possibilities.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- UPBEAT MUSIC OVERLAY -->
-      <div id="upbeatMusicOverlay" hidden>
-        <div class="breathe-box">
-          <button id="upbeatMusicCloseBtn" class="breathe-close">✕ Close</button>
-          <div id="upbeatMusicSpinner" class="loading-spinner"></div>
-          <iframe
-            id="upbeatMusicVideo"
-            width="560"
-            height="315"
-            src=""
-            title="Upbeat Music"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
+      <div class="modal fade" id="upbeatMusicModal" tabindex="-1" aria-labelledby="upbeatMusicModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="upbeatMusicModalLabel">Upbeat Music</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="ratio ratio-16x9">
+                <iframe
+                  id="upbeatMusicIframe"
+                  src="about:blank"
+                  data-src="https://www.youtube.com/embed/FcYp2AZUl1Q?enablejsapi=1"
+                  title="Upbeat music video for positive energy"
+                  frameborder="0"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
         </div>
       </div>
     </main>
@@ -234,7 +328,8 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="/frontend/assets/js/client.js"></script>
     <script src="/frontend/assets/js/index.js"></script>
-    <script src="/frontend/assets/js/happiness-town.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/frontend/assets/js/modal-media.js?v=20260228-1"></script>
+    <script src="/frontend/assets/js/happiness-town.js?v=20260228-8"></script>
   </body>
 </html>
