@@ -4,6 +4,7 @@ from uuid import uuid4
 
 from fastapi import Depends, FastAPI, HTTPException, status
 from fastapi.middleware.cors import CORSMiddleware
+from mangum import Mangum
 from pydantic import BaseModel, Field
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session, sessionmaker
@@ -21,8 +22,15 @@ from service.mood_service import MoodService
 from service.note_service import NoteService
 from service.user_service import UserService
 
+from environs import env
+
+env.read_env(override=True)
+DEBUG = env.bool("DEBUG", default=True)
 
 DATABASE_URL = "sqlite:///./mood_swings.db"
+
+if DEBUG is False:
+    DATABASE_URL = env.str("DATABASE_URL", default=DATABASE_URL)
 
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(bind=engine, autocommit=False, autoflush=False)
@@ -202,3 +210,12 @@ def get_user_history_endpoint(
 ) -> UserMoodHistoryChart:
     """Return user mood history for the last 7 days with missing days as null."""
     return analytics_service.get_user_mood_history_chart(user_id=user_id, days=7)
+
+
+@app.get("/health", tags=["health"])
+def health_check() -> dict[str, str]:
+    """Health check endpoint to verify that the service is running."""
+    return {"status": "ok"}
+
+
+handler = Mangum(app, lifespan="off")
