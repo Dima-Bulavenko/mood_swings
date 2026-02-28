@@ -147,8 +147,9 @@ moods of all users. Users can also view mood trends on the dashboard.
 
 ## Wireframes
 - Wireframes created using AI image generation
-- ![App Flow](/frontend/assets/images/wireframe1.png)
-- ![Town Map](/frontend/assets/images/wireframe2.png)
+
+![App Flow](/frontend/assets/images/wireframe1.png)
+![Town Map](/frontend/assets/images/wireframe2.png)
 
 ## Features
 - 🎭 **Daily mood selection** - users can log their mood once per day
@@ -162,15 +163,18 @@ moods of all users. Users can also view mood trends on the dashboard.
   - Most popular mood by day of the week
   - Personal mood history over the last 7 days
   - Most common words from happiness notes
-
 - **Data Pipeline**: Follows a structured 7-step process including data generation, EDA, feature engineering, model training, evaluation, saving, and wordcloud generation.
 - **Data Seeding**: Load initial data from CSV file into the database using pandas. The CSV serves as the data source for analysis, while the database provides persistent storage for application runtime access.
 - **Models**: Implements Random Forest and XGBoost classifiers to predict user town based on mood, hour of day, and day of week features. Both achieve 100% accuracy on synthetic data.
 - **Feature Engineering**: Converts categorical mood labels to numerical values, applies MinMaxScaler normalization, and splits data 80/20 for training/testing.
 - **Visualizations**: Includes EDA charts (bar charts, heatmaps, Plotly interactive visualizations) and town-specific wordclouds generated from user notes with custom color themes.
+- 🚫 Custom 404 page — a styled page is in place for any unknown routes, 
+wired up and served by the backend when a user navigates to a page that doesn't exist
 
 ## ScreenShots
-
+![Home Page](/frontend/assets/images/Screenshot-index.png)
+![Mood Tracker](/frontend/assets/images/Screenshot-moodtracker.png)
+![Up-SAD Down](/frontend/assets/images/Screenshot-UPSADdown.png)
 
 ## Frontend
  ### Technologies Used
