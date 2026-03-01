@@ -24,7 +24,7 @@ from infrastructure.sqlalchemy.models import Base, MoodModel, NoteModel, UserMod
 # ---------------------------------------------------------------------------
 # Configuration
 # ---------------------------------------------------------------------------
-DATABASE_URL = "postgresql://neondb_owner:npg_xvuz6mIcE2Tb@ep-icy-cell-abewb2pl-pooler.eu-west-2.aws.neon.tech/mood_swings?sslmode=require&channel_binding=require"
+DATABASE_URL = "sqlite:///./mood_swings.db"
 NUM_USERS = 100
 DAYS_BACK = 90          # how many days of history to generate
 MOOD_SKIP_CHANCE = 0.25  # probability that a user skips a given day entirely
