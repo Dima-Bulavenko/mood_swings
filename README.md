@@ -1,4 +1,4 @@
-# Mood Swings
+# [Mood Swings](https://dima-bulavenko.github.io/mood_swings/index.html)
 
 ## About
 Mood Swings is a web app that allows users to track and explore their daily moods. 
@@ -7,16 +7,20 @@ are feeling. Each town offers a unique experience, from sharing happy notes to
 breathing exercises. Each page also displays a live word cloud showing the current 
 moods of all users. Users can also view mood trends on the dashboard.
 
-## Live Link
+## [Live Link](https://dima-bulavenko.github.io/mood_swings/index.html)
 
-## Deployment
+![screenshot](frontend/assets/images/amIresponsive.png)
+
+Source: [Mood Swings amiresponsive](https://fireship.dev/amiresponsive?url=https://dima-bulavenko.github.io/mood_swings/index.html)
 
 
 ## Wireframes
 - Wireframes created using AI image generation
 
-![App Flow](/frontend/assets/images/wireframe1.png)
-![Town Map](/frontend/assets/images/wireframe2.png)
+| Wireframe  | Implementation  |
+| --------------------------------- | :------------------------------:|
+| App Flow |![App Flow](/frontend/assets/images/wireframe1.png) |
+| Town Map | ![Town Map](/frontend/assets/images/wireframe2.png) |
 
 ## Features
 This project features a FastAPI backend with analytics engine. 
@@ -60,10 +64,25 @@ This project features a FastAPI backend with analytics engine.
 - **Happiness Notes** – Submit notes (≤100 characters) and read others' recent notes
 - **Analytics Dashboard** – API endpoints exposing mood frequency, weekly trends, top words/word frequency, and personal history
 
-## ScreenShots
-![Home Page](/frontend/assets/images/Screenshot-index.png)
-![Mood Tracker](/frontend/assets/images/Screenshot-moodtracker.png)
-![Up-SAD Down](/frontend/assets/images/Screenshot-UPSADdown.png)
+## Features
+
+
+| Feature  | Implementation  |
+| --------------------------------- | :------------------------------:|
+| Home page | ![Home Page](frontend/assets/images/welcome-page.png) |
+| Mood choices | ![](frontend/assets/images/mood-choices.png) |
+| The Happy Place wordcloud | ![](frontend/assets/images/wordcloud1.png) |
+| Calm-Down Corner | ![](frontend/assets/images/calm-dowm-corner.png) |
+| Calm-Down Corner Breathing excercice | ![](frontend/assets/images/breath.png) |
+| Calm-Down Corner wordcloud | ![](frontend/assets/images/wordcloud2.png) |
+| UP-SAD Down | ![](frontend/assets/images/up-sad-down.png) |
+| UP-SAD Down funny videos| ![](frontend/assets/images/funny.png) |
+| UP-SAD Down wordcloud | ![](frontend/assets/images/wordcloud3.png) |
+| Positivity Board | ![](frontend/assets/images/positivity-board.png) |
+| Mood Tracker | ![](frontend/assets/images/mood-tracker.png) |
+| Meet the team | ![](frontend/assets/images/team.png) |
+
+
 
 ## Frontend
  ### Technologies Used
@@ -103,6 +122,50 @@ frontend/
 3. Open `index.html` in your browser
 
 > 💡 We recommend using the **Live Server** extension in VS Code for the best experience
+
+# Deployment
+
+The site is deployed using GitHub Pages. Visit the deployed site [here](https://dima-bulavenko.github.io/mood_swings/)
+
+To Deploy the site using GitHub Pages:
+
+1. Login (or signup) to GitHub.
+2. Go to the repository for this project, [here](https://github.com/Dima-Bulavenko/mood_swings)
+3. Click the settings button.
+4. Select pages in the left-hand navigation menu.
+5. From the Branch dropdown select main branch and press save.
+6. The site has now been deployed. Please note that this process may take a few minutes before the site goes live.
+
+### How to Fork a repository
+
+
+1. On GitHub, navigate to the scaphix/jane_austen_quote_quiz repository.
+2. In the top-right corner of the page, click on Fork 
+
+![](frontend/assets/images/fork-repo.png)
+
+
+3. Select the dropdown menu and click on owner for the forked repository.
+4. Click Create fork.
+
+![](frontend/assets/images/create-fork.png)
+
+### How to Clone a repository
+
+1. On GitHub, go to the repository for this project, scaphix/jane_austen_quote_quiz.
+2. Above the list of files, click on the code button.
+3. Copy the URL for the repository.
+
+    - To clone the repository using HTTPS, under "HTTPS", click the copy button.
+    - To clone the repository using an SSH key, including a certificate issued by your organization's SSH certificate authority, click SSH, then click the copy button.
+    - To clone a repository using GitHub CLI, click GitHub CLI, then click the copy button.
+
+4. Open Terminal.
+5. Change the current working directory to the location where you want the cloned directory.
+6. Type git clone, and then paste the URL you copied earlier.
+7. Press Enter. Your local clone will be created.
+
+![](frontend/assets/images/clone-repo.png)
 
 ## Backend
 ### Architecture
