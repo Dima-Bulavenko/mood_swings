@@ -136,6 +136,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: clamp(1rem, 3vw, 2rem);
+  overflow-y: auto;
   z-index: 9999;
 }
 
@@ -149,6 +151,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: min(100%, 56rem);
+  padding: clamp(1rem, 3vw, 2rem);
   gap: 30px;
 }
 
@@ -187,6 +191,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: clamp(1rem, 3vw, 2rem);
+  overflow-y: auto;
   z-index: 9999;
 }
 
@@ -202,6 +208,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: clamp(1rem, 3vw, 2rem);
+  overflow-y: auto;
   z-index: 9999;
 }
 
@@ -216,19 +224,20 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  max-width: 500px;
-  padding: 20px;
+  width: min(100%, 38rem);
+  max-width: 38rem;
+  padding: clamp(1rem, 3vw, 1.5rem);
 }
 
 .poetry-scroll {
   overflow: hidden;
-  height: 300px;
+  height: clamp(220px, 50vh, 300px);
   width: 100%;
 }
 
 .poetry-text {
-  font-size: 1.3rem;
-  line-height: 2rem;
+  font-size: clamp(1rem, 2.4vw, 1.3rem);
+  line-height: 1.8;
   font-style: italic;
   animation: scrollPoem 35s linear infinite;
   margin: 0;
@@ -251,9 +260,63 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: clamp(1rem, 3vw, 2rem);
+  overflow-y: auto;
   z-index: 9999;
 }
 
 #sadWordCloudOverlay[hidden] {
   display: none;
+}
+
+#funnyVideo {
+  width: min(100%, 56rem);
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: 0;
+}
+
+.sad-spotify-frame {
+  width: min(100%, 38rem);
+  max-width: 100%;
+  border: 0;
+  border-radius: 12px;
+}
+
+#sadWordCloudOverlay img {
+  width: min(100%, 38rem);
+  max-height: min(70vh, 42rem);
+  object-fit: contain;
+}
+
+@media (max-width: 767.98px) {
+  .card.sad-card {
+    min-height: auto;
+  }
+
+  .card.sad-card .card-body {
+    padding: 1.5rem;
+  }
+
+  .ticker-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .card.sad-card .card-body {
+    padding: 1.25rem;
+  }
+
+  .breathe-box,
+  .poetry-box {
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .card.sad-card {
+    min-height: 300px;
+  }
 }

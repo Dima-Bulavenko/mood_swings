@@ -20,6 +20,7 @@ body {
 
 .dashboard-card {
     border: 0;
+    border-radius: min(2rem, 4vw);
     box-shadow: var(--shadow-card);
     background-color: rgba(255, 255, 255, 0.92);
 }
@@ -53,16 +54,53 @@ body {
     height: 360px;
 }
 
+.chart-wrap canvas {
+    max-width: 100%;
+}
+
+@media (max-width: 767.98px) {
+    .dashboard-main {
+        padding-top: 1.5rem !important;
+        padding-bottom: 1.5rem !important;
+    }
+
+    .dashboard-header .lead {
+        font-size: 1rem;
+    }
+
+    .dashboard-card {
+        border-radius: 1.5rem;
+    }
+
+    .chart-wrap {
+        height: 240px;
+    }
+
+    .chart-wrap-tall {
+        height: 300px;
+    }
+}
+
 @media (max-width: 575.98px) {
     .dashboard-card .card-body {
         padding: var(--space-4);
     }
 
     .chart-wrap {
-        height: 260px;
+        height: 220px;
     }
 
     .chart-wrap-tall {
-        height: 320px;
+        height: 280px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .chart-wrap {
+        height: 340px;
+    }
+
+    .chart-wrap-tall {
+        height: 400px;
     }
 }

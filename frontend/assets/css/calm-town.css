@@ -35,6 +35,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: clamp(1rem, 3vw, 2rem);
+  overflow-y: auto;
   z-index: 9999;
 }
 
@@ -48,6 +50,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: min(100%, 56rem);
+  padding: clamp(1rem, 3vw, 2rem);
   gap: 30px;
 }
 
@@ -100,6 +104,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: clamp(1rem, 3vw, 2rem);
+  overflow-y: auto;
   z-index: 9999;
 }
 
@@ -117,6 +123,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: clamp(1rem, 3vw, 2rem);
+  overflow-y: auto;
   z-index: 9999;
 }
 
@@ -284,11 +292,62 @@ body {
   color: black;
 }
 
+#headspaceVideo,
+#adrieneVideo,
+#musicVideo {
+  width: min(100%, 56rem);
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: 0;
+}
+
+#wordCloudOverlay img {
+  width: min(100%, 56rem);
+  max-height: min(70vh, 46rem);
+  object-fit: contain;
+}
+
 @keyframes ticker {
   0% {
     transform: translateX(30vw);
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .card.calm-card {
+    min-height: auto;
+  }
+
+  .card.calm-card .card-body {
+    padding: 1.5rem;
+  }
+
+  .ticker-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .card.calm-card .card-body {
+    padding: 1.25rem;
+  }
+
+  .breathe-box {
+    gap: 1rem;
+  }
+
+  .breatheCircle {
+    width: 96px;
+    height: 96px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .card.calm-card {
+    min-height: 300px;
   }
 }

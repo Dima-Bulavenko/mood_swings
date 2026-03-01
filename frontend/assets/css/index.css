@@ -61,6 +61,17 @@ body {
   max-width: var(--container-max);
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+iframe {
+  display: block;
+  max-width: 100%;
+}
+
 /* Buttons (global) */
 .btn {
   min-height: 2.75rem;
@@ -107,7 +118,18 @@ body {
   gap: var(--space-2);
   font-family: var(--font-heading);
   font-weight: 700;
+  min-width: 0;
   color: var(--color-primary);
+}
+
+.mood-logo {
+  width: clamp(2rem, 4vw, 2.5rem);
+  height: auto;
+  flex-shrink: 0;
+}
+
+.mood-navbar .mood-logo + .mood-brand {
+  margin-right: auto;
 }
 
 .mood-navbar .navbar-brand.mood-brand:hover,
@@ -220,6 +242,13 @@ body {
   }
 }
 
+@media (max-width: 767.98px) {
+  html body {
+    background-attachment: scroll;
+    background-position: center top;
+  }
+}
+
 /* ===== PREVIEW PAGE ===== */
 .mood-preview {
   padding-top: var(--space-7);
@@ -230,11 +259,15 @@ body {
   font-family: var(--font-heading);
   font-size: var(--text-xl);
   font-weight: 700;
+  line-height: 1.15;
 }
 
 .mood-preview-text {
   margin: 0;
   font-size: var(--text-md);
+  max-width: 52rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ===== INDEX PAGE ===== */
@@ -242,6 +275,16 @@ body {
 .hero {
   padding-top: clamp(2rem, 4vw, 3.5rem);
   padding-bottom: clamp(2rem, 4vw, 3.5rem);
+}
+
+.hero h1 {
+  line-height: 1.15;
+}
+
+.hero .lead {
+  max-width: 52rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #mood-picker,
@@ -285,6 +328,7 @@ body {
   width: 100%;
   min-height: 4.8rem;
   text-align: center;
+  white-space: normal;
 }
 
 /* Keep same size even with Bootstrap utility classes in HTML */
@@ -345,12 +389,52 @@ body {
   }
 
   .hero .lead {
-    font-size: 1.02rem;
+    font-size: 1rem;
+  }
+
+  .mood-preview-text {
+    font-size: 1rem;
+  }
+
+  .mood-navbar {
+    margin-bottom: var(--space-3);
+  }
+
+  .mood-navbar .container {
+    column-gap: var(--space-2);
+  }
+
+  #mood-picker .row,
+  #skip-section .row,
+  #recommendation .row {
+    --bs-gutter-x: 1rem;
   }
 
   #skip-section .btn,
   #recommendation .btn {
-    min-height: 4.2rem;
+    min-height: 3.75rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero,
+  #mood-picker,
+  #skip-section,
+  #recommendation,
+  .mood-preview {
+    padding-top: clamp(1.5rem, 6vw, 2.25rem);
+    padding-bottom: clamp(1.5rem, 6vw, 2.5rem);
+  }
+
+  .hero .display-4,
+  .mood-preview-title {
+    font-size: clamp(2rem, 8vw, 2.75rem);
+  }
+
+  #mood-picker h2,
+  #skip-section h2,
+  #recommendation h2 {
+    font-size: clamp(1.5rem, 6vw, 2rem);
   }
 }
 
@@ -364,4 +448,19 @@ main {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   margin-top: auto;
+}
+
+.mood-footer p {
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 1400px) {
+  :root {
+    --container-max: 1180px;
+  }
+
+  .hero .lead,
+  .mood-preview-text {
+    max-width: 58rem;
+  }
 }
