@@ -40,9 +40,14 @@
           .then((response) => response.data);
       },
 
-      getLatestNotesExcludingUser(userId) {
+      getLatestNotes(options = {}) {
+        const params = {
+          limit: options.limit ?? 5,
+          offset: options.offset ?? 0,
+        };
+
         return instance
-          .get("/notes/latest", { params: { user_id: userId } })
+          .get("/notes/latest", { params })
           .then((response) => response.data);
       },
 

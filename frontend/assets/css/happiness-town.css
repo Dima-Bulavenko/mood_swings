@@ -359,9 +359,33 @@ body {
   padding: 0.9rem 1rem;
   border-radius: var(--radius-nav);
   background-color: rgba(255, 167, 38, 0.2);
+  opacity: 0;
+  transform: translateY(8px);
+  animation: positivityNoteIn 360ms ease forwards;
+  animation-delay: var(--note-delay, 0ms);
 }
 
 .positivity-empty {
   margin: 0;
   color: rgba(230, 81, 0, 0.6);
+}
+
+@keyframes positivityNoteIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .positivity-note {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
 }

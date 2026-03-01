@@ -210,7 +210,12 @@ const submitButton = document.getElementById('happy-submit');
 const submitStatus = document.getElementById('submit-status');
 const boardStatus = document.getElementById('board-status');
 const boardList = document.getElementById('positivity-board');
+const boardPrevButton = document.getElementById('board-prev');
+const boardNextButton = document.getElementById('board-next');
 const createAnotherButton = document.createElement('button');
+const BOARD_PAGE_SIZE = 5;
+let boardOffset = 0;
+let boardHasMore = false;
 
 createAnotherButton.type = 'button';
 createAnotherButton.className = 'btn btn-outline-primary mt-3 w-100 d-none';
@@ -262,24 +267,45 @@ function renderNotes(notes) {
     return;
   }
 
-  notes.forEach((note) => {
+  notes.forEach((note, index) => {
     const item = document.createElement('li');
     item.className = 'positivity-note';
+    item.style.setProperty('--note-delay', `${index * 60}ms`);
     item.textContent = `✨ ${note.note}`;
     boardList.appendChild(item);
   });
 }
 
-async function loadPositivityBoard(userId) {
+function updateBoardPaginationControls() {
+  if (boardPrevButton) {
+    boardPrevButton.disabled = boardOffset === 0;
+  }
+
+  if (boardNextButton) {
+    boardNextButton.disabled = !boardHasMore;
+  }
+}
+
+async function loadPositivityBoard() {
   boardStatus.textContent = 'Loading positivity board...';
+  if (boardPrevButton) boardPrevButton.disabled = true;
+  if (boardNextButton) boardNextButton.disabled = true;
 
   try {
-    const notes = await client.getLatestNotesExcludingUser(userId);
+    const notes = await client.getLatestNotes({
+      limit: BOARD_PAGE_SIZE,
+      offset: boardOffset,
+    });
+
+    boardHasMore = notes.length === BOARD_PAGE_SIZE;
     renderNotes(notes);
     boardStatus.textContent = '';
+    updateBoardPaginationControls();
   } catch (error) {
     boardStatus.textContent = 'Unable to load notes from the backend right now.';
+    boardHasMore = false;
     renderNotes([]);
+    updateBoardPaginationControls();
   }
 }
 
@@ -301,7 +327,8 @@ async function submitHappyNote() {
     noteInput.value = '';
     setSubmitStatus('Your positive note has been shared.', 'success');
     setNoteComposerVisibility(false);
-    await loadPositivityBoard(userId);
+    boardOffset = 0;
+    await loadPositivityBoard();
   } catch (error) {
     setSubmitStatus('Could not save your note. Please try again.', 'error');
   } finally {
@@ -317,10 +344,29 @@ createAnotherButton.addEventListener('click', function () {
   noteInput.focus();
 });
 
+if (boardPrevButton) {
+  boardPrevButton.addEventListener('click', async function () {
+    if (boardOffset === 0) return;
+
+    boardOffset = Math.max(0, boardOffset - BOARD_PAGE_SIZE);
+    await loadPositivityBoard();
+  });
+}
+
+if (boardNextButton) {
+  boardNextButton.addEventListener('click', async function () {
+    if (!boardHasMore) return;
+
+    boardOffset += BOARD_PAGE_SIZE;
+    await loadPositivityBoard();
+  });
+}
+
 (async () => {
   try {
-    const userId = await ensureUserId();
-    await loadPositivityBoard(userId);
+    await ensureUserId();
+    boardOffset = 0;
+    await loadPositivityBoard();
   } catch (error) {
     boardStatus.textContent = 'Unable to connect to backend. Start FastAPI and refresh.';
     renderNotes([]);
