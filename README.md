@@ -274,14 +274,12 @@ This project was built by the Mood Coders team:
 - [Chahinez] — Data
 
 ### Images
-- The HappyPlace background
-https://www.istockphoto.com/vector/abstract-fresh-green-light-yellow-gradient-with-wavy-texture-glowing-smooth-fluid-gm2160692092-581206282
-- Calm-Down corner Background
-https://www.istockphoto.com/vector/blue-gradient-background-a-seamless-abstract-background-featuring-a-smooth-gradient-gm2197713783-615653745
-- The UP-SAD Down Background
-https://www.istockphoto.com/vector/calm-pastel-blue-and-violet-mesh-gradient-gm2170087661-590032872
- - Home Page / Dashboard / 404 Background
- https://www.istockphoto.com/vector/abstract-background-gradient-soft-tone-purple-pink-beige-pastel-colors-copy-space-gm2208849925-625984584
+
+This project utilizes visual assets from the following sources:
+
+Background Textures: All general background images were sourced via iStock.
+
+Homepage Illustration: The main cartoon background was refined and edited using Gemini’s image editing tools to ensure visual consistency and style alignment across the project.
 
 ### Resources & Links
 - [Bootstrap 5](https://getbootstrap.com/)
