@@ -56,20 +56,13 @@ function setupModalMediaReset(modalId) {
   });
 }
 
-setupModalMediaReset('danceModal');
-setupModalMediaReset('comedyModal');
-setupModalMediaReset('upbeatMusicModal');
-
-setupModalMediaReset('danceModal');
-setupModalMediaReset('comedyModal');
-setupModalMediaReset('upbeatMusicModal');
 
 // ====== DANCE PARTY ======
 function openDance() {
   const danceSpinner = document.getElementById('danceSpinner');
   danceSpinner.style.display = 'block';
   danceVideo.style.display = 'block';
-  danceVideo.src = 'https://www.youtube.com/embed/gCzgc_RelBA?autoplay=1';
+  danceVideo.src = 'https://www.youtube.com/embed/hdcTmpvDO0I?autoplay=1';
   danceVideo.setAttribute(
     'allow',
     'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share',
@@ -88,6 +81,7 @@ function openDance() {
 
 function closeDance() {
   danceVideo.src = '';
+  danceVideo.remove();
   document.getElementById('danceSpinner').style.display = 'none';
   danceOverlay.hidden = true;
 }
@@ -136,38 +130,16 @@ if (comedyCloseBtn) comedyCloseBtn.addEventListener('click', closeComedy);
 
 // ====== POSITIVE AFFIRMATIONS ======
 function openAffirmations() {
-  const affirmationsSpinner = document.getElementById('affirmationsSpinner');
-  affirmationsSpinner.style.display = 'block';
-  affirmationsVideo.style.display = 'block';
-  affirmationsVideo.src = 'https://www.youtube.com/embed/z0He0Bp45C4?autoplay=1';
-  affirmationsVideo.setAttribute(
-    'allow',
-    'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share',
-  );
-  affirmationsVideo.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
   affirmationsOverlay.hidden = false;
-  // Fallback hides spinner even if iframe load event is delayed.
-  window.setTimeout(function () {
-    affirmationsSpinner.style.display = 'none';
-  }, 1200);
-  affirmationsVideo.onload = function () {
-    affirmationsSpinner.style.display = 'none';
-    affirmationsVideo.style.display = 'block';
-  };
 }
 
 function closeAffirmations() {
-  affirmationsVideo.src = '';
-  document.getElementById('affirmationsSpinner').style.display = 'none';
   affirmationsOverlay.hidden = true;
 }
 
-if (affirmationsBtn)
-  affirmationsBtn.addEventListener('click', function (event) {
-    event.preventDefault();
-    openAffirmations();
-  });
+if (affirmationsBtn) affirmationsBtn.addEventListener('click', openAffirmations);
 if (affirmationsCloseBtn) affirmationsCloseBtn.addEventListener('click', closeAffirmations);
+
 
 // ====== UPBEAT MUSIC ======
 function openUpbeatMusic() {
@@ -199,7 +171,19 @@ if (upbeatMusicBtn)
     event.preventDefault();
     openUpbeatMusic();
   });
+  
 if (upbeatMusicCloseBtn) upbeatMusicCloseBtn.addEventListener('click', closeUpbeatMusic);
+// ====== WORD CLOUD ======
+const wordCloudOverlay = document.getElementById('wordCloudOverlay');
+const wordCloudCloseBtn = document.getElementById('wordCloudCloseBtn');
+const wordCloudBtn = document.getElementById('wordCloudBtn');
+
+if (wordCloudBtn) wordCloudBtn.addEventListener('click', function () {
+  wordCloudOverlay.hidden = false;
+});
+if (wordCloudCloseBtn) wordCloudCloseBtn.addEventListener('click', function () {
+  wordCloudOverlay.hidden = true;
+});
 
 // ====== SHARE YOUR HAPPINESS & POSITIVITY BOARD ======
 const client = window.MoodSwingsClient.createClient();

@@ -47,11 +47,10 @@ body {
   color: var(--color-text);
   background-color: var(--color-background);
   line-height: 1.6;
-  background-image: url('../images/pinkclouds.jpg');
+  background-image: linear-gradient(rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.55)), url('../images/home.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  /* Push footer to the bottom when content is short */
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -366,14 +365,14 @@ iframe {
 .mood-word:hover,
 .mood-word:focus {
   border-color: rgba(108, 99, 255, 0.45);
-  background-color: rgba(230, 225, 255, 0.5);
-  color: var(--color-primary);
+  background-color: rgba(230, 225, 255, 0.712);
+  color: black
 }
 
 .mood-word.selected {
   border-color: var(--color-primary);
-  background-color: rgba(108, 99, 255, 0.14);
-  color: var(--color-primary);
+  background-color: rgba(107, 99, 255, 0.76);
+  color: black;
 }
 
 /* Small screens */

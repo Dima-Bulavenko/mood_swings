@@ -31,46 +31,25 @@ body {
 #danceOverlay,
 #comedyOverlay,
 #affirmationsOverlay,
-#upbeatMusicOverlay {
+#upbeatMusicOverlay,
+#wordCloudOverlay {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.85);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: clamp(1rem, 3vw, 2rem);
+  overflow-y: auto;
   z-index: 9999;
 }
 
 #danceOverlay[hidden],
 #comedyOverlay[hidden],
 #affirmationsOverlay[hidden],
-#upbeatMusicOverlay[hidden] {
+#upbeatMusicOverlay[hidden],
+#wordCloudOverlay[hidden] {
   display: none;
-}
-
-.breathe-box {
-  text-align: center;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-}
-
-.breathe-close {
-  display: block;
-  margin: 0 auto 20px;
-  background: #ef6c00;
-  border: 1px solid white;
-  color: white;
-  padding: 6px 14px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.2s ease;
-}
-
-.breathe-close:hover {
-  background: #e65100;
 }
 
 /* ====== LOADING SPINNER ====== */
@@ -88,6 +67,17 @@ body {
   to {
     transform: rotate(360deg);
   }
+}
+
+.breathe-close {
+  display: block;
+  margin: 0 auto 20px;
+  background: #ef6c00;
+  border: none;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
 /* ====== FALLING CONFETTI BACKGROUND ====== */
@@ -251,62 +241,6 @@ body {
   }
 }
 
-/* ====== HAPPINESS-SPECIFIC STYLES ====== */
-.happiness-card {
-  border: 0;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-card);
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(6px);
-}
-
-.happiness-card .card-body {
-  padding: clamp(1rem, 2.5vw, 1.5rem);
-}
-
-.happiness-label {
-  font-family: var(--font-heading);
-  font-weight: 600;
-}
-
-#happy-note {
-  border-radius: var(--radius-nav);
-  border: 1px solid rgba(239, 108, 0, 0.2);
-  min-height: 7rem;
-  resize: vertical;
-}
-
-#happy-note:focus {
-  border-color: #ef6c00;
-  box-shadow: 0 0 0 0.2rem rgba(239, 108, 0, 0.18);
-}
-
-#happy-submit {
-  background: linear-gradient(135deg, #ffa726, #ef6c00);
-  border: none;
-  color: white;
-}
-
-#happy-submit:hover {
-  background: linear-gradient(135deg, #ff9800, #e65100);
-  box-shadow: 0 6px 14px rgba(239, 108, 0, 0.3);
-}
-
-.status-text {
-  min-height: 1.4rem;
-  margin-top: var(--space-2);
-  margin-bottom: 0;
-  font-size: 0.95rem;
-  font-weight: 500;
-}
-
-.board-pagination {
-  flex-wrap: wrap;
-}
-
-.board-pagination .btn {
-  flex: 1 1 10rem;
-}
 
 #danceModal .ratio,
 #comedyModal .ratio,
@@ -321,134 +255,26 @@ body {
   object-fit: contain;
 }
 
-#submit-status.status-success,
-#submit-status.status-error,
-#submit-status.status-neutral {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.45rem 0.75rem;
-  border-radius: 999px;
-}
-
-#submit-status.status-success {
-  color: #1b5e20;
-  background-color: rgba(129, 199, 132, 0.28);
-}
-
-#submit-status.status-success::before {
-  content: '✓';
-  font-weight: 700;
-}
-
-#submit-status.status-error {
-  color: #b71c1c;
-  background-color: rgba(239, 83, 80, 0.22);
-}
-
-#submit-status.status-error::before {
-  content: '!';
-  font-weight: 700;
-}
-
-#submit-status.status-neutral {
-  color: #e65100;
-  background-color: rgba(255, 204, 128, 0.32);
-}
-
-#happy-create-another {
-  border-radius: var(--radius-nav);
-  background: linear-gradient(135deg, #ffa726, #ef6c00);
-  border: none;
+#affirmationsOverlay .poetry-text {
   color: white;
 }
 
-#happy-create-another:hover {
-  background: linear-gradient(135deg, #ff9800, #e65100);
-  box-shadow: 0 6px 14px rgba(239, 108, 0, 0.3);
+#affirmationsOverlay .poetry-scroll {
+  overflow: hidden;
+  height: clamp(220px, 50vh, 300px);
+  width: 100%;
 }
 
-.positivity-board {
-  list-style: none;
-  padding: 0;
+#affirmationsOverlay .poetry-text {
+  color: white;
+  font-size: clamp(1rem, 2.4vw, 1.3rem);
+  line-height: 1.8;
+  font-style: italic;
+  animation: scrollPoem 35s linear infinite;
   margin: 0;
-  display: grid;
-  gap: var(--space-3);
 }
 
-.positivity-note {
-  padding: 0.9rem 1rem;
-  border-radius: var(--radius-nav);
-  background-color: rgba(255, 167, 38, 0.2);
-  opacity: 0;
-  transform: translateY(8px);
-  animation: positivityNoteIn 360ms ease forwards;
-  animation-delay: var(--note-delay, 0ms);
-}
-
-.positivity-empty {
-  margin: 0;
-  color: rgba(230, 81, 0, 0.6);
-}
-
-@keyframes positivityNoteIn {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .positivity-note {
-    opacity: 1;
-    transform: none;
-    animation: none;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .card.happy-card {
-    min-height: auto;
-  }
-
-  .card.happy-card .card-body {
-    padding: 1.5rem;
-  }
-
-  .ticker-text {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .card.happy-card .card-body {
-    padding: 1.25rem;
-  }
-
-  .board-pagination {
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-
-  .board-pagination .btn {
-    width: 100%;
-    flex: 0 0 auto;
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-  }
-
-  .status-text {
-    min-height: 0;
-  }
-}
-
-@media (min-width: 1400px) {
-  .card.happy-card {
-    min-height: 300px;
-  }
+@keyframes scrollPoem {
+  0%   { transform: translateY(300px); }
+  100% { transform: translateY(-100%); }
 }
