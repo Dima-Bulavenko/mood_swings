@@ -123,9 +123,12 @@ function renderWeeklyTrendChart(data) {
 	}
 
 	setStatus('weekly-trend-status', '');
+
 	const formattedMoods = data.moods.map(toDisplayMoodName);
+
 	const chart = new window.Chart(canvas, {
 		type: 'bar',
+		plugins: [window.ChartDataLabels],
 		data: {
 			labels: data.labels,
 			datasets: [
@@ -140,25 +143,25 @@ function renderWeeklyTrendChart(data) {
 			responsive: true,
 			maintainAspectRatio: false,
 			plugins: {
-				tooltip: {
-					callbacks: {
-						label(context) {
-							const moodName = formattedMoods[context.dataIndex];
-							const count = data.values[context.dataIndex];
-							return `${moodName}: ${count}`;
-						},
+				legend: { display: false },
+				tooltip: { enabled: false },
+				datalabels: {
+					anchor: 'center',
+					align: 'center',
+					color: 'white',
+					font: { weight: 'bold', size: 11 },
+					formatter(_value, ctx) {
+						return formattedMoods[ctx.dataIndex] ?? '';
 					},
-				},
-				legend: {
-					display: false,
+					display(ctx) {
+						return ctx.dataset.data[ctx.dataIndex] > 0;
+					},
 				},
 			},
 			scales: {
 				y: {
 					beginAtZero: true,
-					ticks: {
-						precision: 0,
-					},
+					ticks: { precision: 0 },
 				},
 			},
 		},
