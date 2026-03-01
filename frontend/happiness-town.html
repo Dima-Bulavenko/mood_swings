@@ -210,9 +210,13 @@
               <article class="card happiness-card h-100 rounded-5 shadow">
                 <div class="card-body">
                   <h2 class="h4 mb-3">Public positivity board</h2>
-                  <p class="mb-3">Latest happy notes from other users:</p>
+                  <p class="mb-3">Latest happy notes from all users:</p>
                   <p id="board-status" class="status-text" role="status" aria-live="polite"></p>
                   <ul id="positivity-board" class="positivity-board" aria-live="polite"></ul>
+                  <div class="d-flex gap-2 mt-3">
+                    <button id="board-prev" class="btn btn-outline-primary" type="button">Previous 5</button>
+                    <button id="board-next" class="btn btn-outline-primary" type="button">Next 5</button>
+                  </div>
                 </div>
               </article>
             </div>
