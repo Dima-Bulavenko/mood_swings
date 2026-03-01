@@ -83,6 +83,15 @@ This project features a FastAPI backend with analytics engine.
 | Meet the team | ![](frontend/assets/images/team.png) |
 
 
+## Agile Development Process
+
+### GitHub Projects
+
+
+[GitHub Projects](https://github.com/users/Dima-Bulavenko/projects/15) served as an Agile tool for this project. Through it, User Stories and issues were planned, then subsequently tracked on a regular basis using the Kanban project board.
+
+![screenshot](frontend/assets/images/project-board.png)
+
 
 ## Frontend
  ### Technologies Used
@@ -139,7 +148,7 @@ To Deploy the site using GitHub Pages:
 ### How to Fork a repository
 
 
-1. On GitHub, navigate to the scaphix/jane_austen_quote_quiz repository.
+1. On GitHub, navigate to the repository for this project, [here](https://github.com/Dima-Bulavenko/mood_swings)
 2. In the top-right corner of the page, click on Fork 
 
 ![](frontend/assets/images/fork-repo.png)
@@ -152,7 +161,7 @@ To Deploy the site using GitHub Pages:
 
 ### How to Clone a repository
 
-1. On GitHub, go to the repository for this project, scaphix/jane_austen_quote_quiz.
+1. On GitHub, Go to the repository for this project, [here](https://github.com/Dima-Bulavenko/mood_swings)
 2. Above the list of files, click on the code button.
 3. Copy the URL for the repository.
 
