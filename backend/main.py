@@ -171,12 +171,13 @@ def create_note(
 
 
 @app.get("/notes/latest", response_model=list[Note], tags=["notes"])
-def get_last_five_notes_excluding_user(
-    user_id: str,
+def get_latest_notes_endpoint(
+    limit: int = 5,
+    offset: int = 0,
     note_service: NoteService = Depends(get_note_service),
 ) -> list[Note]:
-    """Return the latest five notes excluding notes created by the provided user."""
-    return note_service.get_last_five_excluding_user(user_id)
+    """Return notes for the positivity board with pagination."""
+    return note_service.get_latest_notes(limit=limit, offset=offset)
 
 
 @app.get("/mood-frequency", response_model=MoodFrequencyChart, tags=["analytics"])
