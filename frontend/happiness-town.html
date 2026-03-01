@@ -39,6 +39,7 @@
             </li>
             <li class="nav-item"><a class="nav-link" href="calm-town.html">Calm-Down Corner</a></li>
             <li class="nav-item"><a class="nav-link" href="sadness-town.html">UP-SAD Down</a></li>
+            <li class="nav-item "><a class="nav-link" href="word-wall.html">Positivity Board</a></li>
           </ul>
           <!-- Right-aligned Mood Tracker link -->
           <ul class="navbar-nav mood-nav">
@@ -179,47 +180,6 @@
               </div>
             </div>
 
-          </div>
-        </div>
-      </section>
-
-      <!-- Share your happiness & Positivity Board -->
-      <section class="py-5">
-        <div class="container">
-          <div class="row g-4">
-            <div class="col-lg-5">
-              <article class="card happiness-card h-100 rounded-5 shadow">
-                <div class="card-body">
-                  <h2 class="h4 mb-3">Share your happiness</h2>
-                  <label for="happy-note" class="happiness-label mb-2">What made you happy today?</label>
-                  <textarea
-                    id="happy-note"
-                    class="form-control"
-                    maxlength="100"
-                    placeholder="I had a great walk in the sun..."
-                    aria-describedby="happy-note-help"
-                  ></textarea>
-                  <div id="happy-note-help" class="form-text">Max 100 characters.</div>
-                  <button id="happy-submit" class="btn btn-primary mt-3 w-100" type="button">Save my positive note</button>
-                  <p id="submit-status" class="status-text" role="status" aria-live="polite"></p>
-                </div>
-              </article>
-            </div>
-
-            <div class="col-lg-7">
-              <article class="card happiness-card h-100 rounded-5 shadow">
-                <div class="card-body">
-                  <h2 class="h4 mb-3">Public positivity board</h2>
-                  <p class="mb-3">Latest happy notes from all users:</p>
-                  <p id="board-status" class="status-text" role="status" aria-live="polite"></p>
-                  <ul id="positivity-board" class="positivity-board" aria-live="polite"></ul>
-                  <div class="d-flex flex-column flex-sm-row gap-2 mt-3 board-pagination">
-                    <button id="board-prev" class="btn btn-outline-primary" type="button">Previous 5</button>
-                    <button id="board-next" class="btn btn-outline-primary" type="button">Next 5</button>
-                  </div>
-                </div>
-              </article>
-            </div>
           </div>
         </div>
       </section>
