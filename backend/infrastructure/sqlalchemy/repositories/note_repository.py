@@ -52,12 +52,12 @@ class SQLAlchemyNoteRepository(NoteRepository):
         models = self._session.execute(stmt).scalars().all()
         return [self._to_domain(model) for model in models]
 
-    def get_last_five_excluding_user(self, user_id: str) -> list[Note]:
+    def get_latest_notes(self, limit: int = 5, offset: int = 0) -> list[Note]:
         stmt = (
             select(NoteModel)
-            .where(NoteModel.user_id != user_id)
             .order_by(desc(NoteModel.date_create), desc(NoteModel.id))
-            .limit(5)
+            .offset(offset)
+            .limit(limit)
         )
         models = self._session.execute(stmt).scalars().all()
         return [self._to_domain(model) for model in models]

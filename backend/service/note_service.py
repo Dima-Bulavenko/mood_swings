@@ -24,6 +24,6 @@ class NoteService:
 		"""Retrieve all notes."""
 		return self.note_repository.get()
 
-	def get_last_five_excluding_user(self, user_id: str) -> list[Note]:
-		"""Retrieve the latest five notes excluding notes of a specific user."""
-		return self.note_repository.get_last_five_excluding_user(user_id)
+	def get_latest_notes(self, limit: int = 5, offset: int = 0) -> list[Note]:
+		"""Retrieve latest notes with pagination, including notes of the current user."""
+		return self.note_repository.get_latest_notes(limit=limit, offset=offset)
