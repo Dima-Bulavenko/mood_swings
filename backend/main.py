@@ -197,10 +197,11 @@ def get_weekly_trend_endpoint(
 
 @app.get("/top-happy-words", response_model=TopHappyWordsChart, tags=["analytics"])
 def get_top_happy_words_endpoint(
+    limit: int = 10,
     analytics_service: AnalyticsService = Depends(get_analytics_service),
 ) -> TopHappyWordsChart:
     """Return top 10 most common words in users' happiness notes."""
-    return analytics_service.get_top_happy_words_chart(limit=10)
+    return analytics_service.get_top_happy_words_chart(limit=limit)
 
 
 @app.get("/user-history", response_model=UserMoodHistoryChart, tags=["analytics"])

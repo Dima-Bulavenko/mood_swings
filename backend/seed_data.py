@@ -24,7 +24,7 @@ from infrastructure.sqlalchemy.models import Base, MoodModel, NoteModel, UserMod
 # ---------------------------------------------------------------------------
 # Configuration
 # ---------------------------------------------------------------------------
-DATABASE_URL = "sqlite:///./mood_swings.db"
+DATABASE_URL = "postgresql://neondb_owner:npg_xvuz6mIcE2Tb@ep-icy-cell-abewb2pl-pooler.eu-west-2.aws.neon.tech/mood_swings?sslmode=require&channel_binding=require"
 NUM_USERS = 100
 DAYS_BACK = 90          # how many days of history to generate
 MOOD_SKIP_CHANCE = 0.25  # probability that a user skips a given day entirely
@@ -34,8 +34,8 @@ random.seed(42)  # reproducible data
 # ---------------------------------------------------------------------------
 # Mood pools – grouped by emotional "flavour" for realistic user profiles
 # ---------------------------------------------------------------------------
-HAPPY_MOODS = ["joyful", "grateful", "excited", "proud", "peaceful", "happy"]
-CALM_MOODS = ["peaceful", "meh", "tired"]
+HAPPY_MOODS = ["joyful", "grateful", "excited", "proud", "happy"]
+CALM_MOODS = ["peaceful", "grateful", "happy", "joyful"]
 SAD_MOODS = ["sad", "lonely", "meh", "hurt", "broken-hearted", "unmotivated", "dejected"]
 ANXIOUS_MOODS = ["tired", "angry", "anxious", "overwhelmed", "lost", "spiralling"]
 ALL_MOODS = HAPPY_MOODS + SAD_MOODS + ANXIOUS_MOODS
@@ -159,7 +159,7 @@ HAPPY_NOTES = [
 # ---------------------------------------------------------------------------
 
 def build_session():
-    engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
+    engine = create_engine(DATABASE_URL)
     Base.metadata.create_all(bind=engine)
     return sessionmaker(bind=engine, autocommit=False, autoflush=False)()
 
@@ -173,12 +173,14 @@ def pick_moods_for_day(profile, day_of_week: int) -> list[str]:
         weight = min(weight + 0.10, 1.0) if primary == HAPPY_MOODS else weight
 
     pool = primary if random.random() < weight else secondary
-    mood = random.choice(pool)
+
+    weights = [0.35 if mood_name == "tired" else 1.0 for mood_name in pool]
+    mood = random.choices(pool, weights=weights, k=1)[0]
 
     # 20% chance of a second mood
     moods = [mood]
     if random.random() < 0.20:
-        moods.append(random.choice(pool))
+        moods.append(random.choices(pool, weights=weights, k=1)[0])
 
     return list(set(moods))  # deduplicate
 

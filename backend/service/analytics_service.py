@@ -84,6 +84,17 @@ class AnalyticsService:
             "had",
             "this",
             "that",
+            "from",
+            "got",
+            "day",
+            "today",
+            "me",
+            "really",
+            "so",
+            "time",
+            "received",
+            "something",
+            "about",
         }
 
         words_series = (
