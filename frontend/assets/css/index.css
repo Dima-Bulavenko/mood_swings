@@ -47,7 +47,7 @@ body {
   color: var(--color-text);
   background-color: var(--color-background);
   line-height: 1.6;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)), url('../images/home.png');
+  background-image: linear-gradient(rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.55)), url('../images/home.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
