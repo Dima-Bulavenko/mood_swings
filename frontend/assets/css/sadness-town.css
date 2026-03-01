@@ -1,6 +1,6 @@
 /* ====== SKY BACKGROUND ====== */
 body {
-  background-image: url('../images/purple.jpg');
+  background-image: url('/frontend/assets/images/purple.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
