@@ -1,6 +1,6 @@
 /* ====== WARM SUNSHINE BACKGROUND ====== */
 body {
-  background-image: url('/frontend/assets/images/orange.jpg');
+  background-image: url('../images/orange.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
