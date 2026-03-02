@@ -64,9 +64,6 @@ This project features a FastAPI backend with analytics engine.
 - **Happiness Notes** – Submit notes (≤100 characters) and read others' recent notes
 - **Analytics Dashboard** – API endpoints exposing mood frequency, weekly trends, top words/word frequency, and personal history
 
-## Features
-
-
 | Feature  | Implementation  |
 | --------------------------------- | :------------------------------:|
 | Home page | ![Home Page](frontend/assets/images/welcome-page.png) |
@@ -87,11 +84,9 @@ This project features a FastAPI backend with analytics engine.
 
 ### GitHub Projects
 
-
 [GitHub Projects](https://github.com/users/Dima-Bulavenko/projects/15) served as an Agile tool for this project. Through it, User Stories and issues were planned, then subsequently tracked on a regular basis using the Kanban project board.
 
 ![screenshot](frontend/assets/images/project-board.png)
-
 
 ## Frontend
  ### Technologies Used
@@ -147,7 +142,6 @@ To Deploy the site using GitHub Pages:
 
 ### How to Fork a repository
 
-
 1. On GitHub, navigate to the repository for this project, [here](https://github.com/Dima-Bulavenko/mood_swings)
 2. In the top-right corner of the page, click on Fork 
 
@@ -175,6 +169,34 @@ To Deploy the site using GitHub Pages:
 7. Press Enter. Your local clone will be created.
 
 ![](frontend/assets/images/clone-repo.png)
+
+### Frontend Manual Testing
+
+Manual testing was carried out by the frontend team across Chrome and mobile browsers to ensure all key user interactions work as expected.
+
+| Test | Description | Result |
+|------|-------------|--------|
+| Navigation links | All nav links route to the correct pages | ✅ Pass |
+| Buttons | All buttons trigger the correct actions | ✅ Pass |
+| Responsive design | All pages display correctly on desktop and mobile screen sizes | ✅ Pass |
+| Mood selection | Users can select their daily mood and are directed to the correct town | ✅ Pass |
+| Breathing exercise animation | The animated breathing exercise on the Calm-Down Corner page runs correctly | ✅ Pass |
+| Happiness notes form | Users can submit a happiness note (≤100 characters) and it displays correctly | ✅ Pass |
+
+### Lighthouse Report
+
+Performance testing was carried out using Chrome DevTools Lighthouse on the deployed site.
+
+| Category | Score |
+|----------|-------|
+| Performance | 98 |
+| Accessibility | 95 |
+| Best Practices | 96 |
+| SEO | 100 |
+
+![Lighthouse Report](frontend/assets/images/lighthouse.png)
+
+> 💡 Lighthouse scores were recorded on the deployed GitHub Pages site: [https://dima-bulavenko.github.io/mood_swings/index.html](https://dima-bulavenko.github.io/mood_swings/index.html)
 
 ## Backend
 ### Architecture
@@ -253,7 +275,7 @@ Install dependencies and initialize the database with the following steps:
 
 ### Tech Stack
 Python (Pandas, Scikit-learn, XGBoost, Plotly, WordCloud)
- ---
+
  ## Future Enhancements
 - Sentiment analysis
 - Time-series modeling
